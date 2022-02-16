@@ -14,6 +14,11 @@
 
 """Homepage for ringgaard.com"""
 
+import os
+import sys
+import time
+import traceback
+
 import sling
 import sling.net
 import sling.flags as flags
@@ -27,11 +32,74 @@ flags.define("--port",
 
 flags.parse()
 
+# HTML page wrapers.
+
+page_header = """<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="icon" href="/common/image/appicon.ico" type="image/x-icon" />
+<script type="module" src="/home/app/home.js"></script>
+</head>
+<body style="display: none;">
+<home-header></home-header>
+""";
+
+page_footer = """
+<home-footer></home-footer>
+</body>
+</html>
+"""
+
 # Initialize HTTP server.
 app = sling.net.HTTPServer(flags.arg.port)
 
 # Add static files.
 app.static("/common", "app", internal=True)
+app.static("/home/app", "app")
+app.static("/home/image", "image")
+
+# Conver unix epoch to RFC time.
+def ts2rfc(t):
+  return time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime(t))
+
+# Page template.
+class PageTemplate:
+ def __init__(self, template):
+   self.template = template
+
+# Generate HTML page for template.
+@sling.net.response(PageTemplate)
+def template_reponse(value, request, response):
+  print("template:", value.template)
+
+  # Read file content and timestamp.
+  try:
+    with open("page/" + value.template, "r") as f:
+      content = f.read()
+      st = os.fstat(f.fileno())
+  except FileNotFoundError as e:
+    log.error("not found:", value.template)
+    return 404
+  except PermissionError as e:
+    log.error("access denied:", value.template)
+    return 403
+  except Exception as e:
+    log.error("file error:", value.template, e)
+    raise
+
+  response.ct = "text/html"
+  response["Last-Modified"] = ts2rfc(st.st_mtime)
+  response.body = page_header + content + page_footer
+
+# Page handler.
+@app.route("/")
+def template_page(request):
+  template_name = request.path[1:]
+  if len(template_name) == 0: template_name = "home"
+  if not template_name.isalnum(): return 404
+  return PageTemplate(template_name)
 
 # Run HTTP server.
 log.info("HTTP server listening on port", flags.arg.port)
