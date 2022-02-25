@@ -40,6 +40,7 @@ page_header = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name=viewport content="width=device-width, initial-scale=1">
+<title>Ringgaard Research</title>
 <link rel="icon" href="/common/image/appicon.ico" type="image/x-icon" />
 <script type="module" src="/home/app/home.js"></script>
 </head>
