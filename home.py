@@ -17,12 +17,13 @@
 import os
 import sys
 import time
-import traceback
+import json
 
 import sling
 import sling.net
 import sling.flags as flags
 import sling.log as log
+import sling.task.alert as alert
 
 flags.define("--port",
              help="HTTP port",
@@ -100,6 +101,19 @@ def template_page(request):
   if len(template_name) == 0: template_name = "home"
   if not template_name.isalnum(): return 404
   return PageTemplate(template_name)
+
+# Feedback handler.
+@app.route("/home/feedback", method="POST")
+def feedback_page(request):
+  # Get feedback message.
+  sender_email = request.param("sender")
+  sender_name = request.param("name").replace("\n", " ")
+  sender = sender_name + " <" + sender_email + ">"
+  message = request.body.decode()
+
+  # Send message alert.
+  log.info("feedback from", sender_name, sender_email)
+  alert.send("Feedback from " + sender_name, message, sender=sender)
 
 # Run HTTP server.
 log.info("HTTP server listening on port", flags.arg.port)

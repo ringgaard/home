@@ -1,0 +1,52 @@
+<home-ribbon>Contact</home-ribbon>
+
+<home-section>
+
+<h2 style="text-align: center;">We would like to hear from you!</h2>
+<p style="text-align: center;">
+If you have any questions, comment, or requests,
+you are welcome to contact us.
+</p>
+
+<hr>
+
+<table>
+<tr>
+<td valign="top" width="80%">
+
+<home-feedback>
+
+<label for="name">NAME</label>
+<input id="name" name="name" placeholder="Enter your name" autocomplete="on"/>
+
+<label for="email">EMAIL</label>
+<input id="email" name="email" placeholder="Enter your email address" autocomplete="on"/>
+
+<label for="message">MESSAGE</label>
+<textarea id="message" name="message" placeholder="Enter your message."></textarea>
+
+<div>
+<button type="submit" id="submit">Submit</button>
+<span id="status"></span>
+</div>
+
+</home-feedback>
+
+</td>
+
+<td valign="top">
+
+<h4>Address</h2>
+<home-address-info></home-address-info>
+
+<h4>Contact Information</h4>
+<home-contact-info></home-contact-info>
+
+<h4>Company Information</h4>
+<home-company-info></home-company-info>
+
+</td>
+</tr>
+</table>
+</home-section>
+

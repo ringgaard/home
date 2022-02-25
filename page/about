@@ -1,0 +1,42 @@
+<home-ribbon>About</home-ribbon>
+
+<home-section>
+
+<h2>Michael Ringgaard</h2>
+<p>I'm <a href="/kb/Q45320427">Michael Ringgaard</a>, founder and CEO of
+Ringgaard Research. Ringgaard Research is a not-for-profit company that
+develops and maintains the
+<a href="https://github.com/ringgaard/sling">SLING</a> system as well as doing
+research relating to knowledge management and natural language processing.
+After 13 year as a software engineer at Google Research working with natural
+language processing, I resigned from Google in September 2020 to start for
+myself.</p>
+
+<h2>History</h2>
+<p>I started development of SLING at Google back in 2016, although the earliest
+prototypes date back to 2014. I wanted to design a system that was efficient
+for working with knowledge bases as well as general semantic annotation of text.
+We used this for building a general frame semantic parser. The parser was made
+open source in 2017 under an Apache license and published on
+<a href="https://github.com/ringgaard/sling">GitHub</a>, together with a
+<a href="http://arxiv.org/abs/1710.07032">paper</a> describing the parser.</p>
+
+<p>The parser used an academic corpus (OntoNotes) which was not very useful
+from a practical point of view, so in 2019 I started working on a way of using
+Wikipedia and <a href="https://www.wikidata.org/">Wikidata</a> for constructing
+training data for the parser. Part of this work involved taking Wikidata, which
+is the knowledge base behind Wikipedia, and converting it into SLING frames.
+These are then combined into a SLING store which allows you to efficiently read
+the whole knowledge base into memory to do fast inference over the entire
+knowledge graph.</p>
+
+<h2>SLING</h2>
+<p>Since I left Google in September 2020, I have been working on making a
+pipeline that collects updates to Wikidata in real-time, as well as downloads
+and processes Wikipedia in many different languages. These datasets are
+reconciled with other data sources into one single knowledge base every night
+to produce a new knowledge base on a daily basis. This also produces alias
+tables which are used for searching the knowledge base.</p>
+
+</home-section>
+

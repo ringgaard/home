@@ -1,2 +1,51 @@
-<h1>Hello world</h1>
+<home-section>
+
+<h2>Ringggaard Research</h2>
+
+<p>Ringgaard Research ApS is a not-for-profit company that develops and
+maintains the SLING system as well as doing research relating to knowledge
+management and natural language processing.</p>
+
+<hr>
+
+<table>
+<tr>
+
+<td>
+  <home-feature>
+    <home-icon icon="&#xf121;"></home-icon>
+    <h4>SLING</h4>
+    <p>SLING is an open source project under an Apache license and all the code is
+    available on GitHub. SLING is written mostly in C++ but can be used from Python
+    by using the SLING Python API (pysling).</p>
+    <p><a href="https://github.com/ringgaard/sling">SLING on GitHub</a></p>
+  </home-feature>
+</td>
+
+<td>
+  <home-feature>
+    <home-icon icon="&#xf129;"></home-icon>
+    <h4>Knowledge base</h4>
+    <p>The SLING knowledge base contains approximately two billion facts about 100
+    million entities. Every day a new knowledge base is built from Wikidata as
+    well as a number of other information sources.</p>
+    <p><a href="/kb/">Browse knowledge base</a></p>
+  </home-feature>
+</td>
+
+<td>
+  <home-feature>
+    <home-icon icon="&#xf1c0;"></home-icon>
+    <h4>SLINGDB</h4>
+    <p>SLINGDB is a lightweight persistent key-value database with a HTTP
+    interface. It can be installed independently of the other SLING components
+    and is distributed as a standalone Debian package.</p>
+    <p><a href="https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md">Find Out More</a></p>
+  </home-feature>
+</td>
+
+<tr>
+</table>
+
+</home-section>
 

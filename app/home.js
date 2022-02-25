@@ -53,7 +53,8 @@ const cfg = {
 function social_links() {
   let h = new Array();
   for (let site of cfg.social) {
-    h.push(`<home-icon icon="${site.icon}" href="${site.url}"></home-icon>`);
+    h.push(`<home-icon-link icon="${site.icon}" href="${site.url}">
+            </home-icon-link>`);
   }
   return h.join("");
 }
@@ -64,6 +65,10 @@ stylesheet(`
   font-style: normal;
   font-weight: 400;
   src: url('/home/app/fontawesome-webfont.woff2') format('woff2');
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -110,14 +115,32 @@ Component.register(HomeLogo);
 
 export class HomeIcon extends Component {
   render() {
-    return `<a href="${this.props.href}"><div>${this.props.icon}</div></a>`;
+    return `${this.props.icon}`;
   }
 
   static stylesheet() {
     return `
       $ {
         font-family: "FontAwesome";
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
+    `;
+  }
+}
+
+Component.register(HomeIcon);
+
+export class HomeIconLink extends Component {
+  render() {
+    return `<a href="${this.props.href}">
+              <home-icon icon="${this.props.icon}"></div>
+            </a>`;
+  }
+
+  static stylesheet() {
+    return `
       $ a {
         border-radius: 50%;
         height: 32px;
@@ -130,20 +153,17 @@ export class HomeIcon extends Component {
         justify-content: center;
         text-decoration: none;
       }
-      $ div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      $ home-icon {
         color: white;
       }
-      $ div:hover {
+      $ home-icon:hover {
         color: #656161;
       }
     `;
   }
 }
 
-Component.register(HomeIcon);
+Component.register(HomeIconLink);
 
 export class HomeRibbon extends Component {
   static stylesheet() {
@@ -155,6 +175,7 @@ export class HomeRibbon extends Component {
         padding: 24px 7rem 24px 7rem;
         font: bold 40px Helvetica;
         color: white;
+        text-transform: uppercase;
       }
     `;
   }
@@ -169,9 +190,19 @@ export class HomeSection extends Component {
         display: block;
         margin-left: 7rem;
         margin-right: 7rem;
-        color: #9a9898;
+        color: #666666;
       }
-      a {
+      $ h2 {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: #656161;
+      }
+      $ h4 {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: #656161;
+      }
+      $ a {
         color: #00a0d6;
         text-decoration: none;
       }
@@ -180,6 +211,21 @@ export class HomeSection extends Component {
 }
 
 Component.register(HomeSection);
+
+export class HomeFeature extends Component {
+  static stylesheet() {
+    return `
+      $ home-icon {
+       font-size: 4.5rem;
+      }
+      $ h4 {
+       text-align: center;
+      }
+    `;
+  }
+}
+
+Component.register(HomeFeature);
 
 export class HomeBanner extends Component {
   render() {
@@ -224,7 +270,7 @@ export class HomeBanner extends Component {
         margin-left: auto;
       }
 
-      $ home-icon {
+      $ home-icon-link {
         padding-left: 8px;
       }
     `;
@@ -259,6 +305,7 @@ export class HomeNavbar extends Component {
         display: inline-block;
         padding: 0.3rem 1.6rem 0.3rem 0rem;
         color: #656161;
+        text-decoration: none;
       }
       $ a:hover {
         color: #00a0d6;
@@ -268,6 +315,45 @@ export class HomeNavbar extends Component {
 }
 
 Component.register(HomeNavbar);
+
+export class HomeAddressInfo extends Component {
+  render() {
+    return `
+      <div>${cfg.address}</div>
+      <div>${cfg.postal}</div>
+      <div>${cfg.country}</div>
+    `;
+  }
+}
+
+Component.register(HomeAddressInfo);
+
+export class HomeContactInfo extends Component {
+  render() {
+    return `
+      <div><b>Email:</b> ${cfg.email}</div>
+      <div><b>Phone:</b> ${cfg.phone}</div>
+    `;
+  }
+}
+
+Component.register(HomeContactInfo);
+
+export class HomeCompanyInfo extends Component {
+  render() {
+    return `
+      <div>${cfg.company}</div>
+      <div>CVR: ${cfg.cvrno}</div>
+      <div>Bank: ${cfg.bank}</div>
+      <div>Bank account: ${cfg.account}</div>
+      <div>EU VAT#: ${cfg.vatno}</div>
+      <div>SWIFT: ${cfg.swift}</div>
+      <div>IBAN: ${cfg.iban}</div>
+    `;
+  }
+}
+
+Component.register(HomeCompanyInfo);
 
 export class HomeBottom extends Component {
   render() {
@@ -280,9 +366,7 @@ export class HomeBottom extends Component {
           </div>
           <div class="column">
             <div class="title">CONTACT</div>
-            <div>${cfg.address}</div>
-            <div>${cfg.postal}</div>
-            <div>${cfg.country}</div>
+            <home-address-info></home-address-info>
             <div>${cfg.phone}</div>
             <div>${cfg.email}</div>
           </div>
@@ -292,13 +376,7 @@ export class HomeBottom extends Component {
           </div>
           <div class="column">
             <div class="title">COMPANY</div>
-            <div>${cfg.company}</div>
-            <div>CVR: ${cfg.cvrno}</div>
-            <div>Bank: ${cfg.bank}</div>
-            <div>Bank account: ${cfg.account}</div>
-            <div>EU VAT#: ${cfg.vatno}</div>
-            <div>SWIFT: ${cfg.swift}</div>
-            <div>IBAN: ${cfg.iban}</div>
+            <home-company-info></home-company-info>
           </div>
         </div>
         <hr>
@@ -335,6 +413,7 @@ export class HomeBottom extends Component {
         font-size: 0.9rem;
         background: #303030;
         width: 100%;
+        margin-top: 1rem;
       }
 
       $ .row {
@@ -368,20 +447,20 @@ export class HomeBottom extends Component {
         margin-top: 10px;
       }
 
-      $ home-icon {
+      $ home-icon-link {
         padding-left: 8px;
       }
 
-      $ home-icon a {
+      $ home-icon-link a {
         background: white;
       }
 
-      $ home-icon div {
-        color: black;
+      $ home-icon-link a:hover {
+        background: #e0dfdf;
       }
 
-      $ home-icon a:hover {
-        background: #e0dfdf;
+      $ home-icon-link home-icon {
+        color: black;
       }
 
       $ .title {
@@ -454,6 +533,95 @@ export class HomeFooter extends Component {
 }
 
 Component.register(HomeFooter);
+
+export class HomeFeedback extends Component {
+  onconnected() {
+    this.bind("#submit", "click", e => this.onsubmit(e));
+  }
+
+  status(msg) {
+    this.find("#status").innerHTML = msg;
+  }
+
+  async onsubmit(e) {
+    let name = this.find("#name").value.trim();
+    let email = this.find("#email").value.trim();
+    let message = this.find("#message").value.trim();
+    if (!name) {
+      this.status("Name is missing");
+    } else if (!email) {
+      this.status("E-mail address is missing");
+    } else if (!message) {
+      this.status("Message is missing");
+    } else {
+      let n = Component.escape(name);
+      let e = Component.escape(email);
+      let r = await fetch(`/home/feedback?sender=${e}&name=${n}`, {
+        method: "POST",
+        body: message,
+      });
+      if (r.ok) {
+        this.status("Message has been sent");
+      } else {
+        this.status("Error sending message");
+      }
+    }
+  }
+
+
+  static stylesheet() {
+    return `
+      $ {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        color: #656161;
+        gap: 10px;
+      }
+      $ label {
+        font-weight: bold;
+      }
+      $ input {
+        border: 0 none;
+        background: rgba(154, 152, 152, 0.2);
+        box-shadow: none;
+        width: 50%;
+        line-height: 2rem;
+        padding: 0.425rem 0.425rem;
+        font: inherit;
+        outline: 0;
+      }
+      $ textarea {
+        border: 0 none;
+        background: rgba(154, 152, 152, 0.2);
+        box-shadow: none;
+        width: 80%;
+        min-width: 80%;
+        min-height: 25rem;
+        resize: vertical;
+        line-height: 2rem;
+        padding: 0.425rem 0.425rem;
+        font: inherit;
+        outline: 0;
+      }
+      $ button {
+        background: #00A0D6;
+        color: #fff;
+        border: 1px solid #00A0D6;
+        text-transform: uppercase;
+        font: inherit;
+        font-weight: bold;
+        padding: 7px 20px;
+      }
+      $ button:hover {
+        background: #fff;
+        color: #00A0D6;
+      }
+    `;
+  }
+}
+
+Component.register(HomeFeedback);
 
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";
