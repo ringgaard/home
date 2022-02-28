@@ -177,6 +177,12 @@ export class HomeRibbon extends Component {
         color: white;
         text-transform: uppercase;
       }
+
+      @media screen and (max-width: 767px) {
+        $ {
+          padding: 24px 1rem 24px 1rem;
+        }
+      }
     `;
   }
 }
@@ -194,6 +200,7 @@ export class HomeSection extends Component {
       }
       $ h2 {
         text-transform: uppercase;
+        text-align: center;
         font-size: 1.4rem;
         color: #656161;
       }
@@ -206,17 +213,44 @@ export class HomeSection extends Component {
         color: #00a0d6;
         text-decoration: none;
       }
+
+      @media screen and (max-width: 767px) {
+        $ {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
     `;
   }
 }
 
 Component.register(HomeSection);
 
+export class HomeFeatures extends Component {
+  static stylesheet() {
+    return `
+      $ {
+       display: flex;
+      }
+
+      @media screen and (max-width: 767px) {
+        $  {
+          flex-wrap: wrap;
+        }
+      }
+    `;
+  }
+}
+
+Component.register(HomeFeatures);
+
 export class HomeFeature extends Component {
   static stylesheet() {
     return `
       $ home-icon {
        font-size: 4.5rem;
+       margin-right: 1rem;
       }
       $ h4 {
        text-align: center;
@@ -261,6 +295,7 @@ export class HomeBanner extends Component {
         font-weight: bold;
         font-size: 2.5rem;
         letter-spacing: -1px;
+        line-height: 1;
         color: #656161;
         margin: 16px 0px 16px 0px;
       }
@@ -271,7 +306,14 @@ export class HomeBanner extends Component {
       }
 
       $ home-icon-link {
-        padding-left: 8px;
+        padding: 8px 0px 8px 8px;
+      }
+
+      @media screen and (max-width: 767px) {
+        $ {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
       }
     `;
   }
@@ -309,6 +351,13 @@ export class HomeNavbar extends Component {
       }
       $ a:hover {
         color: #00a0d6;
+      }
+
+      @media screen and (max-width: 767px) {
+        $ {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
       }
     `;
   }
@@ -409,9 +458,9 @@ export class HomeBottom extends Component {
     return `
       $ {
         display: block;
-        color: #9a9898;
         font-size: 0.9rem;
-        background: #303030;
+        background: #2e4656; /*#303030;*/
+        color: #ebebeb; /*#9a9898;*/
         width: 100%;
         margin-top: 1rem;
       }
@@ -437,6 +486,7 @@ export class HomeBottom extends Component {
         font-family: "Helvetica", "sans";
         font-weight: bold;
         font-size: 2.5rem;
+        line-height: 1;
         color: white;
         padding-bottom: 10px;
       }
@@ -448,7 +498,7 @@ export class HomeBottom extends Component {
       }
 
       $ home-icon-link {
-        padding-left: 8px;
+        padding: 8px 0px 8px 8px;
       }
 
       $ home-icon-link a {
@@ -507,6 +557,16 @@ export class HomeBottom extends Component {
         margin-left: 10px;
         margin-right: 10px;
       }
+
+      @media screen and (max-width: 767px) {
+        $ .row {
+          padding: 1rem 1rem 1rem 1rem;
+          justify-content: initial;
+          flex-wrap: wrap;
+        }
+        $ hr {
+          margin: 0rem 1rem;
+        }
     `;
   }
 }
@@ -577,6 +637,8 @@ export class HomeFeedback extends Component {
         font-size: 1rem;
         color: #656161;
         gap: 10px;
+        flex: 1;
+        min-width: 300px;
       }
       $ label {
         font-weight: bold;

@@ -10,9 +10,7 @@ you are welcome to contact us.
 
 <hr>
 
-<table>
-<tr>
-<td valign="top" width="80%">
+<home-features>
 
 <home-feedback>
 
@@ -31,22 +29,21 @@ you are welcome to contact us.
 </div>
 
 </home-feedback>
+</home-feature>
 
-</td>
+<home-feature>
 
-<td valign="top">
-
-<h4>Address</h2>
+<h3>Address</h3>
 <home-address-info></home-address-info>
 
-<h4>Contact Information</h4>
+<h3>Contact Information</h3>
 <home-contact-info></home-contact-info>
 
-<h4>Company Information</h4>
+<h3>Company Information</h3>
 <home-company-info></home-company-info>
+</home-feature>
 
-</td>
-</tr>
-</table>
+</home-features>
+
 </home-section>
 
