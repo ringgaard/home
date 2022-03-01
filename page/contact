@@ -40,7 +40,7 @@ you are welcome to contact us.
 <home-contact-info></home-contact-info>
 
 <h3>Company Information</h3>
-<home-company-info></home-company-info>
+<home-company-info detailed=1></home-company-info>
 </home-feature>
 
 </home-features>

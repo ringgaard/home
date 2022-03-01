@@ -74,7 +74,7 @@ class PageTemplate:
 # Generate HTML page for template.
 @sling.net.response(PageTemplate)
 def template_reponse(value, request, response):
-  print("template:", value.template)
+  log.info("template", value.template)
 
   # Read file content and timestamp.
   try:

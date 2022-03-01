@@ -15,6 +15,7 @@ const cfg = {
   country: "Denmark",
   phone: "+45 23295087",
   email: "contact@ringgaard.com",
+  twitter: "mringgaard",
 
   company: "Ringgaard Research ApS",
   cvrno: "41641908",
@@ -23,12 +24,6 @@ const cfg = {
   account: "5470-2674428",
   swift: "NYKBDKKK",
   iban: "DK4754700002674428",
-
-  social: [
-    {icon: "&#xf09b;", url: "https://github.com/ringgaard/sling"},
-    {icon: "&#xf099;", url: "https://twitter.com/mringgaard"},
-    {icon: "&#xf0e0;", url: "mailto:contact@ringgaard.com"},
-  ],
 
   navbar: [
     {name: "Home", url: "/"},
@@ -39,6 +34,8 @@ const cfg = {
   quicklinks: [
     {name: "About", url: "/about"},
     {name: "Contact", url: "/contact"},
+    {name: "Case", url: "/case"},
+    {name: "KB", url: "/kb"},
   ],
 
   menu: [
@@ -48,11 +45,35 @@ const cfg = {
   ],
 
   copyright: "Copyright 2021 Ringgaard Research ApS. All rights reserved.",
-}
+};
+
+const contact = [
+  {
+    icon: "&#xf0e0;",
+    text: cfg.email,
+    url: `mailto:${cfg.email}`,
+  },
+  {
+    icon: "&#xf095;",
+    text: cfg.phone,
+    url: `tel:${cfg.phone}`,
+  },
+  {
+    icon: "&#xf099;",
+    text: cfg.twitter,
+    url: `https://twitter.com/${cfg.twitter}`,
+  },
+];
+
+const social = [
+  {icon: "&#xf09b;", url: "https://github.com/ringgaard/sling"},
+  {icon: "&#xf099;", url: `https://twitter.com/${cfg.twitter}`},
+  {icon: "&#xf0e0;", url: `mailto:${cfg.email}`},
+];
 
 function social_links() {
   let h = new Array();
-  for (let site of cfg.social) {
+  for (let site of social) {
     h.push(`<home-icon-link icon="${site.icon}" href="${site.url}">
             </home-icon-link>`);
   }
@@ -213,6 +234,15 @@ export class HomeSection extends Component {
         color: #00a0d6;
         text-decoration: none;
       }
+      hr {
+        margin: 2rem 0 2rem 0;
+      }
+      .picture-box {
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 16%) 0px 2px 4px 0px,
+                    rgb(0 0 0 / 23%) 0px 2px 4px 0px;
+        padding: 10px;
+      }
 
       @media screen and (max-width: 767px) {
         $ {
@@ -248,9 +278,11 @@ Component.register(HomeFeatures);
 export class HomeFeature extends Component {
   static stylesheet() {
     return `
+      $ {
+       padding-right: 1rem;
+      }
       $ home-icon {
        font-size: 4.5rem;
-       margin-right: 1rem;
       }
       $ h4 {
        text-align: center;
@@ -379,9 +411,33 @@ Component.register(HomeAddressInfo);
 
 export class HomeContactInfo extends Component {
   render() {
+    let h = new Array();
+    for (let c of contact) {
+      h.push(`
+        <div>
+          <a href="${c.url}">
+            <home-icon icon="${c.icon}"></home-icon>${c.text}
+          </a>
+        </div>
+      `);
+    }
+    return h.join("");
+  }
+
+  static stylesheet() {
     return `
-      <div><b>Email:</b> ${cfg.email}</div>
-      <div><b>Phone:</b> ${cfg.phone}</div>
+      $ {
+        white-space: nowrap;
+      }
+      $ home-icon {
+        display: inline;
+        padding-right: 4px;
+        font-size: 1rem;
+      }
+      $ a {
+        color: inherit;
+        text-decoration: none;
+      }
     `;
   }
 }
@@ -390,15 +446,21 @@ Component.register(HomeContactInfo);
 
 export class HomeCompanyInfo extends Component {
   render() {
-    return `
+    let h = new Array();
+    h.push(`
       <div>${cfg.company}</div>
       <div>CVR: ${cfg.cvrno}</div>
       <div>Bank: ${cfg.bank}</div>
       <div>Bank account: ${cfg.account}</div>
-      <div>EU VAT#: ${cfg.vatno}</div>
-      <div>SWIFT: ${cfg.swift}</div>
-      <div>IBAN: ${cfg.iban}</div>
-    `;
+    `);
+    if (this.props["detailed"]) {
+      h.push(`
+        <div>EU VAT#: ${cfg.vatno}</div>
+        <div>SWIFT: ${cfg.swift}</div>
+        <div>IBAN: ${cfg.iban}</div>
+      `);
+    }
+    return h.join("");
   }
 }
 
@@ -416,8 +478,7 @@ export class HomeBottom extends Component {
           <div class="column">
             <div class="title">CONTACT</div>
             <home-address-info></home-address-info>
-            <div>${cfg.phone}</div>
-            <div>${cfg.email}</div>
+            <home-contact-info></home-contact-info>
           </div>
           <div class="column">
             <div class="title">QUICK LINKS</div>
@@ -447,7 +508,7 @@ export class HomeBottom extends Component {
   quicklinks() {
     let h = new Array();
     h.push("<ul>");
-    for (let item of cfg.menu) {
+    for (let item of cfg.quicklinks) {
       h.push(`<li><a href="${item.url}">${item.name}</a></li>`);
     }
     h.push("</ul>");
