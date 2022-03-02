@@ -18,7 +18,7 @@ than 13 years.</p>
 
 <home-features>
 
-<home-feature style="flex: 50; min-width: 400px;">
+<home-feature style="flex: 50; min-width: 350px;">
 <p><b>SLING Case</b> is a <em>case-based knowledge management tool</em> for
 gathering information about subjects of interest and organizing these into case
 files. This can be used by <em>researchers, investigators, journalists</em>
@@ -47,7 +47,7 @@ as well as many other places.</p>
 <p><a href="/c/">Open SLING Case tool...</a></p>
 </home-feature>
 
-<home-feature style="flex: 50; background-color: #ecf0f1; min-width: 400px;">
+<home-feature style="flex: 50; background-color: #ecf0f1; min-width: 350;">
 <h4>Features</h4>
 <ul>
 <li>High degree of <b>privacy</b>. Your data is stored locally on your own

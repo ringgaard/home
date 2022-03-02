@@ -116,6 +116,17 @@ def feedback_page(request):
   log.info("feedback from", sender_name, sender_email)
   alert.send("Feedback from " + sender_name, message, sender=sender)
 
+# Robots.txt handler.
+app.page("/robots.txt", """User-agent: *
+Disallow: /kb/
+Disallow: /c/
+Disallow: /case/
+Disallow: /common/
+Disallow: /media/
+Disallow: /data/
+Allow: /
+""", "text/plain")
+
 # Run HTTP server.
 log.info("HTTP server listening on port", flags.arg.port)
 app.run()
