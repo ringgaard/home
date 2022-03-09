@@ -83,10 +83,12 @@ def template_reponse(value, request, response):
       st = os.fstat(f.fileno())
   except FileNotFoundError as e:
     log.error("not found:", value.template)
-    return 404
+    response.error(404, "Not found")
+    return
   except PermissionError as e:
     log.error("access denied:", value.template)
-    return 403
+    response.error(403, "Access denied")
+    return
   except Exception as e:
     log.error("file error:", value.template, e)
     raise
