@@ -239,8 +239,8 @@ export class HomeSection extends Component {
       }
       .picture-box {
         background-color: white;
-        box-shadow: rgb(0 0 0 / 16%) 0px 2px 4px 0px,
-                    rgb(0 0 0 / 23%) 0px 2px 4px 0px;
+        box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px,
+                    rgb(0 0 0 / 23%) 0px 4px 8px 0px;
         padding: 10px;
       }
 

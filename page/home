@@ -10,7 +10,7 @@ than 13 years.</p>
 
 <hr>
 
-<h2>SLING Case</h2>
+<h2>KnolCase</h2>
 
 <a href="/c/1001">
   <img class="picture-box" src="/home/image/sling-case-screenshot.png" style="max-width: 90%; margin: 1rem;">
@@ -19,7 +19,7 @@ than 13 years.</p>
 <home-features>
 
 <home-feature style="flex: 50; min-width: 350px;">
-<p><b>SLING Case</b> is a <em>case-based knowledge management tool</em> for
+<p><b>KnolCase</b> is a <em>case-based knowledge management tool</em> for
 gathering information about subjects of interest and organizing these into case
 files. This can be used by <em>researchers, investigators, journalists</em>
 and others to collect, organize, share, and publish facts about topics.
@@ -33,7 +33,7 @@ linked topics.</p>
 of privacy.
 You can choose to share your case file so others can view it or you can publish
 the case topics in the public SLING knowledge base. You can also share your
-case file privately.
+case files privately.
 Then your data will only be available to other users you have shared the
 secret key with.
 The data is end-to-end encrypted and only the encrypted version is stored
@@ -44,7 +44,7 @@ contributions available to a broader audience. Then your information will
 ultimately be available in places like Google search knowledge panels, Siri,
 as well as many other places.</p>
 
-<p><a href="/c/">Open SLING Case tool...</a></p>
+<p><a href="/c/">Try KnolCase...</a></p>
 </home-feature>
 
 <home-feature style="flex: 50; background-color: #ecf0f1; min-width: 350;">
