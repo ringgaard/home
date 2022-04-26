@@ -28,14 +28,16 @@ const cfg = {
   navbar: [
     {name: "Home", url: "/"},
     {name: "About", url: "/about"},
+    {name: "KnolCase", url: "/c"},
+    {name: "KnolBase", url: "/kb"},
     {name: "Contact", url: "/contact"},
   ],
 
   quicklinks: [
     {name: "About", url: "/about"},
     {name: "Contact", url: "/contact"},
-    {name: "Case", url: "/case"},
-    {name: "KB", url: "/kb"},
+    {name: "KnolCase", url: "/c"},
+    {name: "KnolBase", url: "/kb"},
   ],
 
   menu: [
