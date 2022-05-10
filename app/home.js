@@ -27,9 +27,9 @@ const cfg = {
 
   navbar: [
     {name: "Home", url: "/"},
-    {name: "About", url: "/about"},
     {name: "KnolCase", url: "/c"},
     {name: "KnolBase", url: "/kb"},
+    {name: "About", url: "/about"},
     {name: "Contact", url: "/contact"},
   ],
 
@@ -99,6 +99,22 @@ body {
   font-weight: 400;
   margin: 0px;
   line-height: 1.7;
+}
+
+button {
+  background: #00A0D6;
+  color: #fff;
+  border: 1px solid #00A0D6;
+  text-transform: uppercase;
+  font: inherit;
+  font-weight: bold;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: #00A0D6;
 }
 `);
 
@@ -728,19 +744,6 @@ export class HomeFeedback extends Component {
         padding: 0.425rem 0.425rem;
         font: inherit;
         outline: 0;
-      }
-      $ button {
-        background: #00A0D6;
-        color: #fff;
-        border: 1px solid #00A0D6;
-        text-transform: uppercase;
-        font: inherit;
-        font-weight: bold;
-        padding: 7px 20px;
-      }
-      $ button:hover {
-        background: #fff;
-        color: #00A0D6;
       }
     `;
   }

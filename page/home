@@ -44,7 +44,10 @@ contributions available to a broader audience. Then your information will
 ultimately be available in places like Google search knowledge panels, Siri,
 as well as many other places.</p>
 
-<p><a href="/c/">Try KnolCase...</a></p>
+<div style="display: flex; margin: 2rem; justify-content: center;">
+  <button onclick="location.href='/c/'">Launch KnolCase</button>
+</div>
+
 </home-feature>
 
 <home-feature style="flex: 50; background-color: #ecf0f1; min-width: 350;">
@@ -57,7 +60,7 @@ computer until you explicitly choose to share it with others.
 encrypted.</li>
 <li>Cases can be <b>shared</b> with others or <b>published</b> to a public
 knowledge base.</li>
-<li><b>Collaborations</b> with live edits for collaboration in closed groups.
+<li><b>Collaborations</b> with live edits for working together in closed groups.
 It's easy to set up your own collaboration server.</li>
 <li><b>End-to-end encryption</b> for sharing cases privately.</li>
 <li>Compatible with <b>Wikidata</b>.</li>
@@ -89,7 +92,8 @@ keyboard.</li>
   <h4>SLING</h4>
   <p>SLING is an open source project under an Apache license and all the code is
   available on GitHub. SLING is written mostly in C++ but can be used from Python
-  by using the SLING Python API (pysling).</p>
+  by using the SLING Python API (pysling). There is also a JS module so you can
+  use SLING in the browser.</p>
   <p><a href="https://github.com/ringgaard/sling">SLING on GitHub</a></p>
 </home-feature>
 
