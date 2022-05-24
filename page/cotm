@@ -1,0 +1,82 @@
+<home-ribbon>Featured Cases</home-ribbon>
+
+<home-section>
+
+<h2>2022</h2>
+
+<home-cotm
+  time="May 2022"
+  case="1196"
+  title="Krag &amp; Virkner"
+  description="Jens Otto Krag and Helle Virkner were the Danish &quot;Kennedys&quot; in the 1960s"
+  image="https://jyllands-posten.dk/pictures/image/14026493/ik8hz7/ALTERNATES/native-app-2048/5xm0xkil.jpg">
+</home-cotm>
+
+<home-cotm
+  time="April 2022"
+  case="1187"
+  title="The ECCO family"
+  description="The shy ECCO family came to the media&apos;s attention when they decided to keep its more than 250 shops in Russia open"
+  image="https://logos-download.com/wp-content/uploads/2016/03/Ecco-logo.png">
+</home-cotm>
+
+<home-cotm
+  time="March 2022"
+  case="1138"
+  title="Brian Nielsen bio"
+  description="Former Danish boxer Brian Nielsen now lives in Malaga, Spain"
+  image="https://briannielsengolf.dk/wp-content/uploads/2019/09/brian.jpg">
+</home-cotm>
+
+<home-cotm
+  time="February 2022"
+  case="1131"
+  title="The Bunny Killer"
+  description="Who killed Eve Stratford and Lynne Weedon?"
+  image="https://alchetron.com/cdn/murders-of-eve-stratford-and-lynne-weedon-fba647db-8ae8-4bad-aceb-9d22a441f4e-resize-750.jpeg">
+</home-cotm>
+
+<home-cotm
+  time="January 2022"
+  case="1100"
+  title="The Marian Koch case"
+  description="The 15-year-old Marian Koch from Aalborg disappears in 1972"
+  image="https://drive.ringgaard.com/i/lc5vT.png">
+</home-cotm>
+
+<h2>2021</h2>
+
+<home-cotm
+  time="December 2021"
+  case="1082"
+  title="Silkroad cast"
+  description="Cast of the movie Silkroad"
+  image="https://cdn.flickeringmyth.com/wp-content/uploads/2021/01/Silk-Road-Digital-Artwork.jpg">
+</home-cotm>
+
+<home-cotm
+  time="November 2021"
+  case="1056"
+  title="Cynthia Blanton bio"
+  description="Cynthia was a Playboy centerfold, Miss March 1967"
+  image="https://i.redd.it/y4d6gazss8181.jpg">
+</home-cotm>
+
+<home-cotm
+  time="October 2021"
+  case="1016"
+  title="Puliafito and the drugs"
+  description="Breaking Bad IRL: USC dean sold methamphetamine and other drugs"
+  image="https://media.zenfs.com/en/la_times_articles_853/d52bc094072cc0a9981e47efbe29271b">
+</home-cotm>
+
+<home-cotm
+  time="September 2021"
+  case="1001"
+  title="Terravision"
+  description="Is Terravision the predecessor of Google Earth?"
+  image="https://artcom.de/wp-content/uploads/2015/03/1996_Terravision_02-670x377.jpg">
+</home-cotm>
+
+</home-section>
+

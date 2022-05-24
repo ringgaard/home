@@ -751,6 +751,63 @@ export class HomeFeedback extends Component {
 
 Component.register(HomeFeedback);
 
+export class HomeCotm extends Component {
+  render() {
+    let p = this.props;
+    console.log(p.description);
+    return `
+      <div class="picture">
+        <a href="/c/${p.case}">
+          <img src="https://ringgaard.com/media/${p.image}">
+        </a>
+      </div>
+      <div class="descr">
+        <div class="time">${p.time}</div>
+        <div class="title">
+          Case #${p.case}:
+          <a href="/c/${p.case}">${p.title}</a>
+        </div>
+        <div class="subtitle">${p.description}</div>
+      </div>
+    `;
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: flex;
+        margin: 16px;
+      }
+      $ a {
+        text-decoration: none;
+      }
+      $ img {
+        max-width: 150px;
+        max-height: 150px;
+      }
+      $ .picture {
+        width: 150px;
+        margin: 5px;
+      }
+      $ .descr {
+        margin: 5px;
+      }
+      $ .time {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      $ .title {
+        font-size: 16px;
+      }
+      $ .subtitle {
+        font-size: 16px;
+        font-style: italic;
+      }
+    `;
+  }}
+
+Component.register(HomeCotm);
+
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";
 

@@ -1,5 +1,8 @@
 <home-section>
 
+<home-features>
+
+<home-feature style="flex: 60; min-width: 350px;">
 <h2>Ringggaard Research</h2>
 
 <p><b>Ringgaard Research ApS</b> is a not-for-profit company that develops and
@@ -7,6 +10,21 @@ maintains the SLING system as well as doing research relating to knowledge
 management and natural language processing. Ringgaard Research was founded in
 September 2020 by Michael Ringgaard, after working at Google Research for more
 than 13 years.</p>
+</home-feature>
+
+</home-feature>
+
+<home-feature style="flex: 40; background-color: #ecf0f1; min-width: 350;">
+<h2>Case of the Month</h2>
+<home-cotm
+  time="May 2022"
+  case="1196"
+  title="Krag &amp; Virkner"
+  description="Jens Otto Krag and Helle Virkner were the Danish &quot;Kennedys&quot; in the 1960s"
+  image="https://jyllands-posten.dk/pictures/image/14026493/ik8hz7/ALTERNATES/native-app-2048/5xm0xkil.jpg">
+</home-cotm>
+<a href="/cotm" style="float: right;">more...</a>
+</home-features>
 
 <hr>
 
