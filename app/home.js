@@ -757,7 +757,7 @@ export class HomeCotm extends Component {
     console.log(p.description);
     return `
       <div class="picture">
-        <a href="/c/${p.case}">
+        <a href="/c/${p.case}" target="_blank">
           <img src="https://ringgaard.com/media/${p.image}">
         </a>
       </div>
@@ -765,7 +765,7 @@ export class HomeCotm extends Component {
         <div class="time">${p.time}</div>
         <div class="title">
           Case #${p.case}:
-          <a href="/c/${p.case}">${p.title}</a>
+          <a href="/c/${p.case}" target="_blank">${p.title}</a>
         </div>
         <div class="subtitle">${p.description}</div>
       </div>
