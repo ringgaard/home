@@ -154,7 +154,7 @@ Component.register(HomeLogo);
 
 export class HomeIcon extends Component {
   render() {
-    return `${this.props.icon}`;
+    return `${this.attrs.icon}`;
   }
 
   static stylesheet() {
@@ -173,8 +173,8 @@ Component.register(HomeIcon);
 
 export class HomeIconLink extends Component {
   render() {
-    return `<a href="${this.props.href}">
-              <home-icon icon="${this.props.icon}"></div>
+    return `<a href="${this.attrs.href}">
+              <home-icon icon="${this.attrs.icon}"></div>
             </a>`;
   }
 
@@ -471,7 +471,7 @@ export class HomeCompanyInfo extends Component {
       <div>Bank: ${cfg.bank}</div>
       <div>Bank account: ${cfg.account}</div>
     `);
-    if (this.props["detailed"]) {
+    if (this.attrs.detailed) {
       h.push(`
         <div>EU VAT#: ${cfg.vatno}</div>
         <div>SWIFT: ${cfg.swift}</div>
@@ -753,8 +753,7 @@ Component.register(HomeFeedback);
 
 export class HomeCotm extends Component {
   render() {
-    let p = this.props;
-    console.log(p.description);
+    let p = this.attrs;
     return `
       <div class="picture">
         <a href="/c/${p.case}" target="_blank">
