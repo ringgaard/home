@@ -1,0 +1,30 @@
+<home-ribbon>KnolBase</home-ribbon>
+
+<home-section>
+
+<p>KnolBase is a federated knownledge that contains approximately two billion
+facts about 100 million entities.<p>
+
+<p>Every day a new knowledge base is built from Wikidata live-feed as well as a
+number of other information sources:</p>
+<ul>
+<li><a href="/kb/Q52">Wikipedia</a> (30 languages)</li>
+<li><a href="/kb/Q795419">CVR</a> (Danish Central Business Register)</a></li>
+<li><a href="/kb/">Reddit</a> (photos)</a></li>
+<li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
+<li><a href="/kb/Q37312">IMDB</a> (photos)</a></li>
+</ul>
+
+<h3>W3C Reconcialition Service API</h3>
+
+<p>KnolBase has a W3C Reconcialition Service API so it can be used as a
+reconciation service for <a href="https://openrefine.org/">OpenRefine</a> by
+specifying <a href="https://ringgaard.com/reconcile/">https://ringgaard.com/reconcile/</a>
+as the service endpoint.</p>
+
+<div style="display: flex; margin: 2rem; justify-content: center;">
+  <button onclick="location.href='/kb/'">Browse KnolBase</button>
+</div>
+
+</home-section>
+

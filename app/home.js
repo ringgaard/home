@@ -27,8 +27,8 @@ const cfg = {
 
   navbar: [
     {name: "Home", url: "/"},
-    {name: "KnolCase", url: "/c"},
-    {name: "KnolBase", url: "/kb"},
+    {name: "KnolCase", url: "/knolcase"},
+    {name: "KnolBase", url: "/knolbase"},
     {name: "About", url: "/about"},
     {name: "Contact", url: "/contact"},
   ],
@@ -36,8 +36,8 @@ const cfg = {
   quicklinks: [
     {name: "About", url: "/about"},
     {name: "Contact", url: "/contact"},
-    {name: "KnolCase", url: "/c"},
-    {name: "KnolBase", url: "/kb"},
+    {name: "KnolCase", url: "/knolcase"},
+    {name: "KnolBase", url: "/knolbase"},
   ],
 
   menu: [

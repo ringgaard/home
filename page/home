@@ -37,7 +37,7 @@ than 13 years.</p>
 <home-features>
 
 <home-feature style="flex: 50; min-width: 350px;">
-<p><b>KnolCase</b> is a <em>case-based knowledge management tool</em> for
+<p><b>KnolCase</b> is a <em>collaborative  case-based knowledge management tool</em> for
 gathering information about subjects of interest and organizing these into case
 files. This can be used by <em>researchers, investigators, journalists</em>
 and others to collect, organize, share, and publish facts about topics.
@@ -101,7 +101,7 @@ keyboard.</li>
 
 <hr>
 
-<h2>Technologies</h2>
+<h2>Products</h2>
 
 <home-features>
 
@@ -117,11 +117,20 @@ keyboard.</li>
 
 <home-feature>
   <home-icon icon="&#xf129;"></home-icon>
-  <h4>Knowledge base</h4>
-  <p>The SLING knowledge base contains approximately two billion facts about 100
-  million entities. Every day a new knowledge base is built from Wikidata as
-  well as a number of other information sources.</p>
+  <h4>KnolBase</h4>
+  <p>KnolBase is a federated knownledge that contains approximately two billion
+  facts about 100 million entities. Every day a new knowledge base is built from
+  Wikidata as well as a number of other information sources.</p>
   <p><a href="/kb/">Browse knowledge base</a></p>
+</home-feature>
+
+<home-feature>
+  <home-icon icon="&#xf07b;"></home-icon>
+  <h4>KnolCase</h4>
+  <p>KnolCase is a collaborative case-based knowledge management tool for
+  gathering information about subjects of interest and organizing these into
+  case files.</p>
+  <p><a href="/c/">Launch KnolCase</a></p>
 </home-feature>
 
 <home-feature>
