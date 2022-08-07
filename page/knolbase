@@ -5,14 +5,16 @@
 <p>KnolBase is a federated knownledge that contains approximately two billion
 facts about 100 million entities.<p>
 
-<p>Every day a new knowledge base is built from Wikidata live-feed as well as a
-number of other information sources:</p>
+<p>Every day a new knowledge base is built from a Wikidata live-feed as well as
+a number of other information sources:</p>
 <ul>
-<li><a href="/kb/Q52">Wikipedia</a> (30 languages)</li>
+<li><a href="/kb/Q52">Wikipedia</a> (aliases, infoboxes, summaries, categories, popularity, 30 languages)</li>
 <li><a href="/kb/Q795419">CVR</a> (Danish Central Business Register)</a></li>
-<li><a href="/kb/">Reddit</a> (photos)</a></li>
+<li><a href="/kb/">Reddit</a> (celebrities and photos)</a></li>
 <li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
 <li><a href="/kb/Q37312">IMDB</a> (photos)</a></li>
+<li><a href="/kb/Q55259097">Global LEI index</a> (companies)</a></li>
+<li><a href="/kb/Q90405608">FactGrid</a> (historic research database)</a></li>
 </ul>
 
 <h3>W3C Reconcialition Service API</h3>
