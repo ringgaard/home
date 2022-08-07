@@ -3,9 +3,9 @@
 <home-section>
 
 <p>KnolBase is a federated knownledge that contains approximately two billion
-facts about 100 million entities.<p>
+facts about 100 million entities.
 
-<p>Every day a new knowledge base is built from a Wikidata live-feed as well as
+Every day a new knowledge base is built from a Wikidata live-feed as well as
 a number of other information sources:</p>
 <ul>
 <li><a href="/kb/Q52">Wikipedia</a> (aliases, infoboxes, summaries, categories, popularity, 30 languages)</li>
@@ -14,8 +14,22 @@ a number of other information sources:</p>
 <li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
 <li><a href="/kb/Q37312">IMDB</a> (photos)</a></li>
 <li><a href="/kb/Q55259097">Global LEI index</a> (companies)</a></li>
-<li><a href="/kb/Q90405608">FactGrid</a> (historic research database)</a></li>
+<li><a href="/kb/Q90405608">FactGrid</a> (research database for historians)</a></li>
+<li><a href="/knolcase">KnolCase</a> (published case topics)</a></li>
 </ul>
+
+<p>KnolBase is built nightly using a pipeline similar to the one descriped
+<a href="https://github.com/ringgaard/sling/blob/master/doc/guide/wikiflow.md">here</a>,
+but it uses the <em>reconcile_items</em> task instead of <em>fuse_items</em> to
+build the knowledge base.
+
+This requires a number of additional data set to be build from external sources,
+making this much more complex to run. Instead of trying to build this yourself,
+it is recommened to download the prebuilt KnolBase knowledge base from
+ringgaard.com using this command:
+<pre>
+sling fetch --dataset kb,nametab,phrasetab
+</pre>
 
 <h3>W3C Reconcialition Service API</h3>
 

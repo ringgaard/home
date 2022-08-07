@@ -116,6 +116,12 @@ button:hover {
   background: #fff;
   color: #00A0D6;
 }
+
+pre {
+  background: #ecf0f1;
+  padding: 8px;
+}
+
 `);
 
 const logo = "\
