@@ -28,7 +28,7 @@ but it uses the <em>reconcile_items</em> task instead of <em>fuse_items</em> to
 build the knowledge base.
 
 This requires a number of additional data set to be build from external sources,
-making this much more complex to run. Instead of build this yourself,
+making this much more complex to run. Instead of building this yourself,
 it is recommened downloading the prebuilt KnolBase knowledge base from
 ringgaard.com using this command:
 <pre>
@@ -39,7 +39,7 @@ sling fetch --dataset kb,nametab,phrasetab
 
 <img src="/home/image/kb-browser.png" style="float: right; width: 30%">
 
-<p>You can use the knowledge base browser for viewing the follwing information
+<p>You can use the knowledge base browser for viewing the following information
 in the knowledge base:</p>
 <ul>
 <li>Item id, name, and description (click the Wikidata QID to navigate to the Wikidata page for the item)</li>
