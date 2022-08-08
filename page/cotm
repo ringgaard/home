@@ -5,6 +5,22 @@
 <h2>2022</h2>
 
 <home-cotm
+  time="July 2022"
+  case="1205"
+  title="Bent Fabricius-Bjerre (1924-2020)"
+  description="Bent Fabricius-Bjerre aka Bent Fabric died in 2020 leaving his media empire to his family"
+  image="https://i.redd.it/r3tjpogym4481.jpg">
+</home-cotm>
+
+<home-cotm
+  time="June 2022"
+  case="1103"
+  title="Inge Lehmann"
+  description="Danish seismologist who discovered the Earth's inner core"
+  image="https://img2.storyblok.com/900x900/smart/f/95823/960x960/6c30352ab6/ung-inge-lehmann-fotograf-ukendt.jpg">
+</home-cotm>
+
+<home-cotm
   time="May 2022"
   case="1196"
   title="Krag &amp; Virkner"

@@ -2,13 +2,17 @@
 
 <home-section>
 
+<h3>Knowledge Base</h3>
+
 <p>KnolBase is a federated knownledge that contains approximately two billion
 facts about 100 million entities.
+
+KnolBase uses the in-memory SLING frame store for representing knowledge.
 
 Every day a new knowledge base is built from a Wikidata live-feed as well as
 a number of other information sources:</p>
 <ul>
-<li><a href="/kb/Q52">Wikipedia</a> (aliases, infoboxes, summaries, categories, popularity, 30 languages)</li>
+<li><a href="/kb/Q52">Wikipedia</a> (aliases, photos, infoboxes, summaries, categories, popularity, 30 languages)</li>
 <li><a href="/kb/Q795419">CVR</a> (Danish Central Business Register)</a></li>
 <li><a href="/kb/">Reddit</a> (celebrities and photos)</a></li>
 <li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
@@ -24,23 +28,56 @@ but it uses the <em>reconcile_items</em> task instead of <em>fuse_items</em> to
 build the knowledge base.
 
 This requires a number of additional data set to be build from external sources,
-making this much more complex to run. Instead of trying to build this yourself,
-it is recommened to download the prebuilt KnolBase knowledge base from
+making this much more complex to run. Instead of build this yourself,
+it is recommened downloading the prebuilt KnolBase knowledge base from
 ringgaard.com using this command:
 <pre>
 sling fetch --dataset kb,nametab,phrasetab
 </pre>
 
-<h3>W3C Reconcialition Service API</h3>
+<h3>Browser</h3>
 
-<p>KnolBase has a W3C Reconcialition Service API so it can be used as a
-reconciliation service for <a href="https://openrefine.org/">OpenRefine</a> by
-specifying <a href="https://ringgaard.com/reconcile/">https://ringgaard.com/reconcile/</a>
-as the service endpoint.</p>
+<img src="/home/image/kb-browser.png" style="float: right; width: 30%">
+
+<p>You can use the knowledge base browser for viewing the follwing information
+in the knowledge base:</p>
+<ul>
+<li>Item id, name, and description (click the Wikidata QID to navigate to the Wikidata page for the item)</li>
+<li>Summary from Wikipedia (click on the Wikipedia link to navigate to Wikipedia page)</li>
+<li>Item properties (click property value to navigate to item)</li>
+<li>Photos (click on photo to view gallery)</li>
+<li>Cross references (click reference value to visit external site)</li>
+<li>Wikipedia categories</li>
+</ul>
+
+<p>When you type a name or alias for an entity in the search
+field, it shows the items matching the query. Select the an item from the search
+list, or press Enter to show the first item in the search list.
+
+By default, the browser do prefix matching, but if you end the query with a period,
+it will perform full matching only showing the items that completely match the query.
+You can also do keyword matching by adding a question mark to the query.</p>
 
 <div style="display: flex; margin: 2rem; justify-content: center;">
   <button onclick="location.href='/kb/'">Browse KnolBase</button>
 </div>
+
+<h3>W3C Reconciliation Service API</h3>
+
+<p>KnolBase has a <a href="https://reconciliation-api.github.io/specs/0.2/">W3C Reconciliation Service API</a> so it can be used as a
+reconciliation service for <a href="https://openrefine.org/">OpenRefine</a> by
+specifying <a href="https://ringgaard.com/reconcile/">https://ringgaard.com/reconcile/</a> as the service endpoint.
+
+The KnolBase reconciliation service is much faster than the default Wikibase reconciler on <a href="https://wikidata.reconci.link/en/api">wikidata.reconci.link</a>
+because of the SLING in-memory achitecture.
+
+The KnolBase reconciliation service supports the following APIs:
+<ul>
+<li>Reconciliation service (matching names to items in the knowledge base)</li>
+<li>Preview service (preview panels for items)</li>
+<li>Suggest service (suggest entities, types, and properties)</li>
+<li>Data Extension service (extend rows with data from knowledge base)</li>
+</ul>
 
 </home-section>
 

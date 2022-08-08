@@ -17,11 +17,11 @@ than 13 years.</p>
 <home-feature style="flex: 40; background-color: #ecf0f1; min-width: 350;">
 <h2>Case of the Month</h2>
 <home-cotm
-  time="May 2022"
-  case="1196"
-  title="Krag &amp; Virkner"
-  description="Jens Otto Krag and Helle Virkner were the Danish &quot;Kennedys&quot; in the 1960s"
-  image="https://jyllands-posten.dk/pictures/image/14026493/ik8hz7/ALTERNATES/native-app-2048/5xm0xkil.jpg">
+  time="July 2022"
+  case="1205"
+  title="Bent Fabricius-Bjerre (1924-2020)"
+  description="Bent Fabricius-Bjerre aka Bent Fabric died in 2020 leaving his media empire to his family"
+  image="https://i.redd.it/r3tjpogym4481.jpg">
 </home-cotm>
 <a href="/cotm" style="float: right;">more cases...</a>
 </home-features>
@@ -121,7 +121,7 @@ keyboard.</li>
   <p>KnolBase is a federated knownledge that contains approximately two billion
   facts about 100 million entities. Every day a new knowledge base is built from
   Wikidata as well as a number of other information sources.</p>
-  <p><a href="/kb/">Browse knowledge base</a></p>
+  <p><a href="/knolbase">More...</a></p>
 </home-feature>
 
 <home-feature>
@@ -130,7 +130,7 @@ keyboard.</li>
   <p>KnolCase is a collaborative case-based knowledge management tool for
   gathering information about subjects of interest and organizing these into
   case files.</p>
-  <p><a href="/c/">Launch KnolCase</a></p>
+  <p><a href="/knolcase">More...</a></p>
 </home-feature>
 
 <home-feature>
