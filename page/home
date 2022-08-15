@@ -106,16 +106,6 @@ keyboard.</li>
 <home-features>
 
 <home-feature>
-  <home-icon icon="&#xf121;"></home-icon>
-  <h4>SLING</h4>
-  <p>SLING is an open source project under an Apache license and all the code is
-  available on GitHub. SLING is written mostly in C++ but can be used from Python
-  by using the SLING Python API (pysling). There is also a JS module so you can
-  use SLING in the browser.</p>
-  <p><a href="https://github.com/ringgaard/sling">SLING on GitHub</a></p>
-</home-feature>
-
-<home-feature>
   <home-icon icon="&#xf129;"></home-icon>
   <h4>KnolBase</h4>
   <p>KnolBase is a federated knownledge base that contains approximately two billion
@@ -131,6 +121,24 @@ keyboard.</li>
   gathering information about subjects of interest and organizing these into
   case files.</p>
   <p><a href="/knolcase">More...</a></p>
+</home-feature>
+
+</home-features>
+
+<hr>
+
+<h2>Technologies</h2>
+
+<home-features>
+
+<home-feature>
+  <home-icon icon="&#xf121;"></home-icon>
+  <h4>SLING</h4>
+  <p>SLING is an open source project under an Apache license and all the code is
+  available on GitHub. SLING is written mostly in C++ but can be used from Python
+  by using the SLING Python API (pysling). There is also a JS module so you can
+  use SLING in the browser.</p>
+  <p><a href="https://github.com/ringgaard/sling">SLING on GitHub</a></p>
 </home-feature>
 
 <home-feature>
