@@ -2,9 +2,9 @@
 
 <home-section>
 
-<h3>Knowledge Base</h3>
+<h3>Knowledge base</h3>
 
-<p>KnolBase is a federated knownledge that contains approximately two billion
+<p>KnolBase is a federated knowledge base that contains approximately two billion
 facts about 100 million entities.
 
 KnolBase uses the in-memory SLING frame store for representing knowledge.
@@ -50,14 +50,61 @@ in the knowledge base:</p>
 <li>Wikipedia categories</li>
 </ul>
 
-<p>When you type a name or alias for an entity in the search
-field, it shows the items matching the query. Select the an item from the search
-list, or press Enter to show the first item in the search list.
+<p>If you type or paste a name or alias for an entity in the search
+field, it shows the items matching the query. Clicking an item from the
+search list will show the item, or press Enter to show the first item in the
+search list.
+</p>
 
-By default, the browser do prefix matching, but if you end the query with a period,
-it will perform full matching only showing the items that completely match the query.
-You can also do keyword matching by adding a question mark to the query.</p>
+<p>The following types of searches can be performed:</p>
+<ul>
 
+<li>
+<b>Prefix search</b><br/>
+By default, the browser do prefix matching finding items with names or aliases
+that starts with the query string.
+</li>
+
+<li>
+<b>Full match</b><br/>
+If the query ends with period, only items with names or aliases that completely
+match the query string are shown.
+</li>
+
+<li>
+<b>Keyword search</b><br/>
+You can do keyword matching by adding a question mark to the end of the query.
+This searches for matches in the names, aliases, description, summary, and a
+number of other <a href="https://github.com/ringgaard/sling/blob/master/data/wiki/search.sling">properties</a>.
+
+The order of the search terms are not important.
+Only items matching all search terms (except for stopwords) will be matched.
+
+Keyword search also searches over a number of different languages, currently
+English, Danish, German, French, Spanish, and Italian.
+</li>
+
+<li>
+<b>Identifier search</b><br/>
+You can search for items by their item id(s), e.g. Wikidata QID. An item can have
+multiple ids, if it has been merged during the reconciliation process.
+
+<li>
+<b>References search</b><br/>
+Items can be looked up by their <em>external ids</em>. These are identifiers for the
+item in other systems. If an item does not have a Wikidata QID, it is
+assigned ids based on its external ids, e.g. an item with CVR number 41641908
+will have P1059/41641908 as its id.
+
+You can see the current list of indexed identifiers <a href="https://github.com/ringgaard/sling/blob/master/data/wiki/xrefs.sling">here</a>.
+
+You can also use <a href="#memo">mnemonics</a> to search cross-referenced properties,
+e.g. searching for "cvr:41641908" will find the item with CVR number 41641908.
+</li>
+
+</ul>
+
+</p>
 <div style="display: flex; margin: 2rem; justify-content: center;">
   <button onclick="location.href='/kb/'">Browse KnolBase</button>
 </div>
@@ -68,7 +115,7 @@ You can also do keyword matching by adding a question mark to the query.</p>
 reconciliation service for <a href="https://openrefine.org/">OpenRefine</a> by
 specifying <a href="https://ringgaard.com/reconcile/">https://ringgaard.com/reconcile/</a> as the service endpoint.
 
-The KnolBase reconciliation service is much faster than the default Wikibase reconciler on <a href="https://wikidata.reconci.link/en/api">wikidata.reconci.link</a>
+The KnolBase reconciliation service is much faster than the default Wikibase reconciler
 because of the SLING in-memory achitecture.
 
 The KnolBase reconciliation service supports the following APIs:
@@ -76,8 +123,61 @@ The KnolBase reconciliation service supports the following APIs:
 <li>Reconciliation service (matching names to items in the knowledge base)</li>
 <li>Preview service (preview panels for items)</li>
 <li>Suggest service (suggest entities, types, and properties)</li>
-<li>Data Extension service (extend rows with data from knowledge base)</li>
+<li>Data Extension service (extend rows with data from the knowledge base)</li>
 </ul>
+
+<h3 id="memo">External id search mnemonics</h3>
+
+<p>The following search mnemonics are supported:</p>
+
+<table id="mnemonics"></table>
+
+<script>
+  const mnemonics = [
+    {mnemonic: "case", prop: "PCASE", name: "SLING case number"},
+    {mnemonic: "cvr", prop: "P1059", name: "Danish CVR company number"},
+    {mnemonic: "cvrid", prop: "PCVR", name: "Danish CVR unit number"},
+    {mnemonic: "coh", prop: "P2622", name: "UK Companies House company ID"},
+    {mnemonic: "sec", prop: "P5531", name: "US SEC Central Index Key"},
+    {mnemonic: "irs", prop: "P1297", name: "US IRS Employer Identification Number"},
+    {mnemonic: "abn", prop: "P3548", name: "Australian Business Number"},
+    {mnemonic: "acn", prop: "P3549", name: "Australian Company Number"},
+    {mnemonic: "cnpj", prop: "P6204", name: "Brazilian CNPJ"},
+    {mnemonic: "siren", prop: "P1616", name: "French SIREN number"},
+    {mnemonic: "kvk", prop: "P3220", name: "Dutch KvK company ID"},
+    {mnemonic: "okpo", prop: "P2391", name: "Russian OKPO ID"},
+    {mnemonic: "ein", prop: "P4829", name: "Swiss Enterprise Identification Number"},
+    {mnemonic: "oc", prop: "P1320", name: "OpenCorporates ID"},
+    {mnemonic: "lei", prop: "P1278", name: "Legal Entity Identifier"},
+    {mnemonic: "imdb", prop: "P345", name: "IMDB ID"},
+    {mnemonic: "tw", prop: "P2002", name: "Twitter username"},
+    {mnemonic: "fb", prop: "P2013", name: "Facebook ID"},
+    {mnemonic: "ig", prop: "P2003", name: "Instagram username"},
+    {mnemonic: "sr", prop: "P3984", name: "subreddit"},
+    {mnemonic: "tiktok", prop: "P7085", name: "TikTok username"},
+    {mnemonic: "of", prop: "P8604", name: "OnlyFans ID"},
+    {mnemonic: "vimeo", prop: "P4015", name: "Vimeo identifier"},
+    {mnemonic: "pb", prop: "P5346", name: "Playmate ID"},
+    {mnemonic: "ph", prop: "P6290", name: "Penthouse ID"},
+    {mnemonic: "babe", prop: "PBABE", name: "Babepedia ID"},
+    {mnemonic: "vef", prop: "PVEF", name: "VEF thread ID"},
+    {mnemonic: "iafd", prop: "P3869", name: "IAFD female performer ID"},
+    {mnemonic: "viaf", prop: "P214", name: "VIAF ID"},
+    {mnemonic: "mid", prop: "P646", name: "Freebase MID"},
+    {mnemonic: "kg", prop: "P2671", name: "Google Knowledge Graph ID"},
+    {mnemonic: "fg", prop: "P8168", name: "FactGrid ID"},
+  ];
+
+  let h = new Array();
+  for (let m of mnemonics) {
+    h.push(`
+    <tr>
+      <td>${m.mnemonic}:</td>
+      <td>${m.name} (${m.prop})</td>
+    </tr>`);
+  }
+  document.getElementById("mnemonics").innerHTML = h.join("");
+</script>
 
 </home-section>
 

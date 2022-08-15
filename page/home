@@ -142,6 +142,14 @@ keyboard.</li>
   <p><a href="https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md">Find Out More</a></p>
 </home-feature>
 
+<home-feature>
+  <home-icon icon="&#xf1ec;"></home-icon>
+  <h4>Myelin</h4>
+  <p>Myelin is a JIT compiler for neural networks. It compiles a neural network with learned weight
+  into x64 assembly code at runtime.
+  <p><a href="https://github.com/ringgaard/sling/blob/master/doc/guide/myelin.md">Find Out More</a></p>
+</home-feature>
+
 </home-features>
 
 </home-section>
