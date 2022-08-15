@@ -118,7 +118,7 @@ keyboard.</li>
 <home-feature>
   <home-icon icon="&#xf129;"></home-icon>
   <h4>KnolBase</h4>
-  <p>KnolBase is a federated knownledge that contains approximately two billion
+  <p>KnolBase is a federated knownledge base that contains approximately two billion
   facts about 100 million entities. Every day a new knowledge base is built from
   Wikidata as well as a number of other information sources.</p>
   <p><a href="/knolbase">More...</a></p>
