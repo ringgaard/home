@@ -225,6 +225,8 @@ export class HomeRibbon extends Component {
 
       @media screen and (max-width: 767px) {
         $ {
+          font: bold 24px Helvetica;
+          background: #00a0d6;
           padding: 24px 1rem 24px 1rem;
         }
       }
@@ -303,13 +305,16 @@ export class HomeFeature extends Component {
   static stylesheet() {
     return `
       $ {
-       padding-right: 1rem;
+        padding-right: 1rem;
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 300px;
       }
       $ home-icon {
-       font-size: 4.5rem;
+        font-size: 4.5rem;
       }
       $ h4 {
-       text-align: center;
+        text-align: center;
       }
     `;
   }
@@ -343,13 +348,13 @@ export class HomeBanner extends Component {
       }
 
       $ home-logo svg {
-        width: 60px;
+        width: 50px;
       }
 
       $ .title {
         font-family: "Helvetica", "sans";
         font-weight: bold;
-        font-size: 2.5rem;
+        font-size: 1rem;
         letter-spacing: -1px;
         line-height: 1;
         color: #656161;
