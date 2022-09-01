@@ -17,11 +17,11 @@ than 13 years.</p>
 <home-feature style="flex: 40; background-color: #ecf0f1; min-width: 350;">
 <h2>Case of the Month</h2>
 <home-cotm
-  time="July 2022"
-  case="1205"
-  title="Bent Fabricius-Bjerre (1924-2020)"
-  description="Bent Fabricius-Bjerre aka Bent Fabric died in 2020 leaving his media empire to his family"
-  image="https://i.redd.it/r3tjpogym4481.jpg">
+  time="August 2022"
+  case="1252"
+  title="Jyllands-Postens gravergruppe"
+  description="Investigative journalists at Jyllands-Posten"
+  image="http://jyllands-posten.org/images/jpgraver-vindere.jpg">
 </home-cotm>
 <a href="/cotm" style="float: right;">more cases...</a>
 </home-features>

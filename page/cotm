@@ -5,6 +5,14 @@
 <h2>2022</h2>
 
 <home-cotm
+  time="August 2022"
+  case="1252"
+  title="Jyllands-Postens gravergruppe"
+  description="Investigative journalists at Jyllands-Posten"
+  image="http://jyllands-posten.org/images/jpgraver-vindere.jpg">
+</home-cotm>
+
+<home-cotm
   time="July 2022"
   case="1205"
   title="Bent Fabricius-Bjerre (1924-2020)"
