@@ -77,6 +77,9 @@ You can do keyword matching by adding a question mark to the end of the query.
 This searches for matches in the names, aliases, description, summary, and a
 number of other <a href="https://github.com/ringgaard/sling/blob/master/data/wiki/search.sling">properties</a>.
 
+Keyword search also searches for offline items, e.g. articles, genes,
+chemical compounds, stars, and galaxies.
+
 The order of the search terms are not important.
 Only items matching all search terms (except for stopwords) will be matched.
 
@@ -111,12 +114,12 @@ e.g. searching for "cvr:41641908" will find the item with CVR number 41641908.
 
 <h3>W3C Reconciliation Service API</h3>
 
-<p>KnolBase has a <a href="https://reconciliation-api.github.io/specs/0.2/">W3C Reconciliation Service API</a> so it can be used as a
-reconciliation service for <a href="https://openrefine.org/">OpenRefine</a> by
+<p>KnolBase has a <a href="https://reconciliation-api.github.io/specs/0.2/">W3C Reconciliation Service API</a>
+so it can be used as a reconciliation service for <a href="https://openrefine.org/">OpenRefine</a> by
 specifying <a href="https://ringgaard.com/reconcile/">https://ringgaard.com/reconcile/</a> as the service endpoint.
 
 The KnolBase reconciliation service is much faster than the default Wikibase reconciler
-because of the SLING in-memory achitecture.
+because of the SLING in-memory architecture.
 
 The KnolBase reconciliation service supports the following APIs:
 <ul>
@@ -154,7 +157,7 @@ The KnolBase reconciliation service supports the following APIs:
     {mnemonic: "fb", prop: "P2013", name: "Facebook ID"},
     {mnemonic: "ig", prop: "P2003", name: "Instagram username"},
     {mnemonic: "sr", prop: "P3984", name: "subreddit"},
-    {mnemonic: "tiktok", prop: "P7085", name: "TikTok username"},
+    {mnemonic: "tt", prop: "P7085", name: "TikTok username"},
     {mnemonic: "of", prop: "P8604", name: "OnlyFans ID"},
     {mnemonic: "vimeo", prop: "P4015", name: "Vimeo identifier"},
     {mnemonic: "pb", prop: "P5346", name: "Playmate ID"},
