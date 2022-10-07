@@ -18,6 +18,7 @@ import os
 import sys
 import time
 import json
+import re
 
 import sling
 import sling.net
@@ -66,6 +67,10 @@ app.static("/home/image", "image")
 def ts2rfc(t):
   return time.strftime("%a, %d %b %Y %H:%M:%S GMT", time.gmtime(t))
 
+# Check if page name is valid.
+def valid_page_name(name):
+  return re.fullmatch(r"[A-Za-z0-9\-\/]+", name)
+
 # Page template.
 class PageTemplate:
  def __init__(self, template):
@@ -78,9 +83,15 @@ def template_reponse(value, request, response):
 
   # Read file content and timestamp.
   try:
-    with open("page/" + value.template, "r") as f:
+    fn = "page/" + value.template
+    if fn.endswith("/"): fn = fn + "home";
+    with open(fn, "r") as f:
       content = f.read()
       st = os.fstat(f.fileno())
+  except IsADirectoryError as e:
+    response.status = 307
+    response["Location"] = value.template + "/"
+    return
   except FileNotFoundError as e:
     log.error("not found:", value.template)
     response.error(404, "Not found")
@@ -102,7 +113,7 @@ def template_reponse(value, request, response):
 def template_page(request):
   template_name = request.path[1:]
   if len(template_name) == 0: template_name = "home"
-  if not template_name.isalnum(): return 404
+  if not valid_page_name(template_name): return 400
   return PageTemplate(template_name)
 
 # Feedback handler.

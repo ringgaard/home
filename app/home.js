@@ -90,6 +90,13 @@ stylesheet(`
   src: url('/home/app/fontawesome-webfont.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/home/app/material.woff2) format('woff2');
+}
+
 html {
   height: 100%;
 }
@@ -768,14 +775,14 @@ export class HomeCotm extends Component {
     return `
       <div class="picture">
         <a href="/c/${p.case}" target="_blank">
-          <img src="https://ringgaard.com/media/${p.image}">
+          <img src="https://ringgaard.com/thumb/${p.image}">
         </a>
       </div>
       <div class="descr">
         <div class="time">${p.time}</div>
         <div class="title">
           Case #${p.case}:
-          <a href="/c/${p.case}" target="_blank">${p.title}</a>
+          <a href="https://ringgaard.com/c/${p.case}" target="_blank">${p.title}</a>
         </div>
         <div class="subtitle">${p.description}</div>
       </div>
@@ -814,9 +821,48 @@ export class HomeCotm extends Component {
         font-style: italic;
       }
     `;
-  }}
+  }
+}
 
 Component.register(HomeCotm);
+
+export class KbTopic extends Component {
+  render() {
+    let qid = this.attrs.qid;
+    let title = this.attrs.title || qid;
+    return `<a href="https://ringgaard.com/kb/${qid}">${title}</a>`;
+  }
+}
+
+Component.register(KbTopic);
+
+export class HIcon extends Component {
+  static stylesheet() {
+    return `
+      $ {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+
+        font-size: 1.2rem;
+        vertical-align: middle;
+      }
+    `;
+  }
+}
+
+Component.register(HIcon);
 
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";

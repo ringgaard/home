@@ -5,6 +5,14 @@
 <h2>2022</h2>
 
 <home-cotm
+  time="September 2022"
+  case="1255"
+  title="Schaumburg-Müller"
+  description="From actor Christiane Schaumburg-Müller to law professor Sten Schaumburg-Müller in nine steps"
+  image="https://em-epi-static.azureedge.net/altdk-cache/a/d/b/a/6/f/adba6f43c4bca7fd9359c3d2d5badb1e6b21a8e6.jpg">
+</home-cotm>
+
+<home-cotm
   time="August 2022"
   case="1252"
   title="Jyllands-Postens gravergruppe"

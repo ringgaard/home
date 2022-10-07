@@ -1,0 +1,267 @@
+<home-ribbon>KnolCase</home-ribbon>
+
+<home-section>
+
+<h2>Clipboard</h3>
+
+<p>The clipboard is used for many things in KnolCase besides coping and pasting
+text.
+
+You can cut, copy and paste topics between folders. When editing a topic,
+you can also copy statements, properties, and values.
+
+<p>Ctrl-C copies selected topic(s) to the clipboard.
+<p>Ctrl-D copies the id of the selected topic to the clipboard.
+<p>Ctrl-E copies the name of the selected topic to the clipboard.
+
+<h3>Copying and moving topics</h3>
+
+<p>Copy topics between folders.
+<p>Select multiple topics
+<p>Select all topics
+<p>Multiple references in folders to same topic.
+<p>Scrap folder deleted topics (cut).
+<p>Copying topics between cases preserves internal links between topics.
+<p>Topic clipboard format
+
+<h3>Editing topics</h3>
+
+<h3>Pictures</h3>
+
+<p><kb-topic qid="Q1304336" title="A picture is worth a thousand words"></kb-topic> it is said.
+You can add pictures to a topic by selecting a topic and pasting an image URL
+into it. This adds the picture to the photo gallery of the topic.
+You can browse the photo gallery by clicking on the photo to the right in the
+topic panel.
+To get the URL for a picture on any webpage, right-click on the image and
+select "Copy image address" in the context menu (Chrome).
+
+<p>Pictures on the internet often disappears after a short time. To prevent the
+pictures in your case topics from disappearing, you can cache the images on the
+SLING media cache service by selecting "Cache images" in the KnolCase menu in
+the top right-hand corner. Then images will be cached in the background and you
+will still be able to view them after they have disappeared from their original
+location.
+
+<p>Some sites do not allow <kb-topic qid="Q719934" title="hot-linking"></kb-topic>
+which prevents images from these sites to be displayed properly in KnolCase.
+In this case, you can paste the image into the topic instead of just the image URL.
+You can copy an image by right-clicking on an image on a  webpage and selecting
+"Copy image" in the context menu (Chrome).
+When you paste an image into a topic, it will first be stored on
+drive.ringgaard.com using a randomized URL, and then this image is added to the
+topic.
+
+<p>You can also paste <i>gallery URLs</i> into a topic. A gallery URL starts with
+"gallery:" followed by a list of image URLs separated by space. This format is
+supported by the
+<a href="https://ringgaard.com/photosearch/">Reddit photo search</a> tool.
+Albums from Reddit and Imgur are also supported.
+You can search for images for a topic by clicking the
+<h-icon>image_search</h-icon> button on the topic toolbar.
+
+<h3>Articles</h3>
+
+<p>Pasting a URLs from an article or webpage into the search box will create a
+new topic for this page. You can also select a topic and paste the URL to add
+information to an existing topic.
+This is useful for keeping references to pages where you have found information
+about a topic.
+KnolCase uses the meta tags from the page to create a topic with information
+about the page.
+It supports Facebook OpenGraph, Twitter Cards, JSON-LD, Dublin Core, Sailthru,
+as well as a number of generic meta tags.
+
+<ul>
+<li>title</li>
+<li>description</li>
+<li>webpage type</li>
+<li>summary</li>
+<li>language</li>
+<li>author</li>
+<li>image</li>
+<li>canonical url</li>
+<li>publisher</li>
+<li>publication date</li>
+</ul>
+
+<p>KnolCase has a database of more than 3000 news sites with their Wikidata QIDs
+to identify the publisher of a webpage.
+
+<h3>Data tables</h3>
+
+<p>You can import tables from spreadsheets by copying some rows and columns
+into the clipboard and pasting these into a folder in KnolCase.
+You can copy data from any source that supports comma-separated or tab-separated
+values (CVS/TSV format).
+
+<p>The first row should contain the property/column names. These can be property
+ids (PIDs) or propety names.
+
+<p>Each of the remaining rows are imported as a new topic.
+If a column name ends with #, e.g. ID#, it is expected to contain item or topic
+ids.
+Otherwise, the value is parsed according to the data type of the property, e.g.
+dates, number, urls, quantities, etc.
+
+<h3>Plugins</h3>
+
+<p>KnolCase has a number of <a href="https://github.com/ringgaard/sling/tree/master/case/plugin"><i>plug-ins</i></a>.
+These are extensions that are loaded on-the-fly when you paste a URL that
+matches the plug-in URL pattern.
+Pictures, tables, and articles are examples of plug-ins that are used for
+importing data from the clipboard, but KnolCase also has more specialized
+plug-ins:
+
+<ul>
+
+<li><b>Twitter</b><br/>
+If you paste a user profile URL from twitter.com into the search box, you can
+add a new topic for the user to the current folder.
+You can also paste the URL into the selected topic to extend this with
+information from Twitter. This will retrieve name, description, gender (he/she),
+location, profile photo and twitter username from Twitter.
+If there is already an item in KnolBase with this twitter name, the topic will
+be extended with the existing item.
+URLs in the description, e.g. Facebook or Instagram, will be converted to
+external references.
+</li>
+
+<li><b>VIAF</b><br/>
+VIAF entity from viaf.org
+</li>
+
+<li><b>CVR</b><br/>
+CVR persons and companies from virk.dk
+</li>
+
+<li><b>OpenCorporates</b><br/>
+companies from opencorporates.com
+</li>
+
+<li><b>E-mail</b><br/>
+E-mail address
+</li>
+
+<li><b>Phone number</b><br/>
+Phone number
+</li>
+
+<li><b>Linktree</b><br/>
+Linktree profiles
+</li>
+
+<li><b>Google Maps</b><br/>
+Geo location from Google Maps
+</li>
+
+<li><b>Listal</b><br/>
+Listal profiles from listal.com
+</li>
+
+<li><b>Wikidata</b><br/>
+If you paste a URL from wikidata.org, it will be imported as a new topic with
+all the properties from Wikidata item.
+<a href="/knolbase">KnolBase</a> already contains all items from Wikidata, so
+this is mostly useful for new items that are not yet in Knolbase.
+</li>
+
+<li><b>Wikipedia</b><br/>
+If you paste an article URL from wikipedia.org, a new extension topic for the
+Wikidata item corresponding to the Wikipedia article is added to the current
+folder.
+</li>
+
+<!--
+<p>Babepedia profile from babepedia.com
+<p>Se & Hør profiles from hjemmestrik.dk
+<p>Social media profiles from r/BeautifulFemales
+<p>Video transcoding for avi, wmv, and mp4 video files
+-->
+
+</ul>
+
+These plug-ins let you add a lot of information to topics by just copy and
+pasting URLs.
+For example, you can make a web search for a topic by clicking the
+<h-icon>search</h-icon> button in the topic toolbar.
+You can then find the sites with information about the topic and then copy the
+URL for the webpage using Ctrl+L Ctrl+C.
+Sometimes you might not even need to visit the webpage.
+You can copy the result URL by left-clicking on the blue link and select
+"Copy link address".
+
+<h3>External references</h3>
+
+<p>You can paste URLs from other sites with information about the topic.
+This adds external references to the selected topic. You can also paste the URL
+into the search box to create a new topic stub.
+The following sites are supported:
+
+<ul style="columns: 4;">
+<li>academic.microsoft.com</li>
+<li>adultfilmdatabase.com</li>
+<li>bellazon.com</li>
+<li>bgafd.co.uk</li>
+<li>blogger.com</li>
+<li>blogspot.com</li>
+<li>boobpedia.com</li>
+<li>cameo.com</li>
+<li>danskefilm.dk</li>
+<li>dblp.org</li>
+<li>dfi.dk</li>
+<li>discogs.com</li>
+<li>discord.gg</li>
+<li>egafd.com</li>
+<li>facebook.com</li>
+<li>filmpolski.pl</li>
+<li>filmweb.pl</li>
+<li>fina.org</li>
+<li>findagrave.com</li>
+<li>geni.com</li>
+<li>github.com</li>
+<li>honeydrip.com</li>
+<li>iafd.com</li>
+<li>imdb.com</li>
+<li>instagram.com</li>
+<li>linkedin.com</li>
+<li>linktr.ee</li>
+<li>medium.com</li>
+<li>models.com</li>
+<li>mubi.com</li>
+<li>muckrack.com</li>
+<li>music.apple.com</li>
+<li>myspace.com</li>
+<li>onlyfans.com</li>
+<li>open.spotify.com</li>
+<li>orcid.org</li>
+<li>patreon.com</li>
+<li>pinterest.com</li>
+<li>playboyplus.com</li>
+<li>reddit.com</li>
+<li>researchgate.net</li>
+<li>scholar.google.com</li>
+<li>snapchat.com</li>
+<li>soundcloud.com</li>
+<li>themoviedb.org</li>
+<li>the-sports.org</li>
+<li>tiktok.com</li>
+<li>t.me</li>
+<li>tumblr.com</li>
+<li>twitch.tv</li>
+<li>twitter.com</li>
+<li>vimeo.com</li>
+<li>vimeo.com</li>
+<li>vintage-erotica-forum.com</li>
+<li>vk.com</li>
+<li>worldathletics.org</li>
+<li>youtube.com</li>
+</ul>
+
+<p>Please <a href="/contact">contact us</a> if you have other sites with
+Wikidata reference properties that you want to use. If the property has a
+<kb-topic qid="P8966" title="URL match pattern"></kb-topic> this is usually
+easy to accomplice.
+
+</home-section>
+

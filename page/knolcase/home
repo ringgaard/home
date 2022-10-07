@@ -60,7 +60,16 @@ keyboard.</li>
 </ul>
 </div>
 
-<p>Screenshot of KnolCase:</p>
+<!--
+<h3>KnolCase articles</h3>
+
+<ul>
+<li><a href="home">Introduction</a></li>
+<li><a href="clipboard">Clipboard</a></li>
+</ul>
+-->
+
+<h3>Screenshot of KnolCase</h3>
 
 <a href="/c/1001"><img class="picture-box" src="/home/image/sling-case-screenshot.png" style="max-width: 90%; margin: 1rem;"></a>
 
