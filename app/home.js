@@ -16,6 +16,7 @@ const cfg = {
   phone: "+45 23295087",
   email: "contact@ringgaard.com",
   twitter: "mringgaard",
+  qid: "Q105832622",
 
   company: "Ringgaard Research ApS",
   cvrno: "41641908",
@@ -65,6 +66,46 @@ const contact = [
     text: cfg.twitter,
     url: `https://twitter.com/${cfg.twitter}`,
   },
+  {
+    icon: "&#xf31a;",
+    text: cfg.qid,
+    url: `https://ringgaard.com/kb/${cfg.qid}`,
+  },
+];
+
+const employees = [
+{
+  name: "Michael Ringgaard",
+  photo: "michael.jpg",
+  title: "Founder and CEO",
+
+  social: [{
+      icon: "&#xf0e0;",
+      text: "michael@ringgaard.com",
+      url: `mailto:${cfg.email}`,
+    },{
+      icon: "&#xf095;",
+      text: cfg.phone,
+      url: `tel:${cfg.phone}`,
+    },{
+      icon: "&#xf099;",
+      text: cfg.twitter,
+      url: `https://twitter.com/${cfg.twitter}`,
+    },{
+      icon: "&#xf0e1;",
+      text: "michael-ringgaard",
+      url: `https://linkedin.com/in/michael-ringgaard-7831204/`,
+    },{
+      icon: "&#xf09b;",
+      text: "ringgaard",
+      url: "https://github.com/ringgaard/",
+    },{
+      icon: "&#xf31a;",
+      text: "Q45320427",
+      url: "https://ringgaard.com/kb/Q45320427",
+  },
+  ]
+}
 ];
 
 const social = [
@@ -87,7 +128,7 @@ stylesheet(`
   font-family: "FontAwesome";
   font-style: normal;
   font-weight: 400;
-  src: url('/home/app/fontawesome-webfont.woff2') format('woff2');
+  src: url('/home/app/forkawesome-webfont.woff2') format('woff2');
 }
 
 @font-face {
@@ -112,7 +153,6 @@ button {
   background: #00A0D6;
   color: #fff;
   border: 1px solid #00A0D6;
-  text-transform: uppercase;
   font: inherit;
   font-weight: bold;
   padding: 7px 20px;
@@ -222,12 +262,11 @@ export class HomeRibbon extends Component {
     return `
       $ {
         display: block;
-        background: #00a0d6 url(/home/image/ribbon.png) no-repeat right;
+        background: #00a0d6 url(/home/image/ribbon.png) no-repeat;
         background-blend-mode: multiply;
         padding: 24px 7rem 24px 7rem;
         font: bold 40px Helvetica;
         color: white;
-        text-transform: uppercase;
       }
 
       @media screen and (max-width: 767px) {
@@ -251,16 +290,19 @@ export class HomeSection extends Component {
         margin-left: 7rem;
         margin-right: 7rem;
         color: #666666;
+        font-size: 18px;
       }
       $ h2 {
-        text-transform: uppercase;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 2rem;
+        color: #656161;
+      }
+      $ h3 {
+        font-size: 1.5rem;
         color: #656161;
       }
       $ h4 {
-        text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #656161;
       }
       $ a {
@@ -402,10 +444,7 @@ export class HomeNavbar extends Component {
     return `
       $ {
         display: block;
-        font-family: "Helvetica", "sans";
-        font-weight: bold;
-        font-size: 1.1rem;
-        text-transform: uppercase;
+        font: bold 1rem "Helvetica", "sans";
         margin-left: 7rem;
         margin-right: 7rem;
         padding-top: 20px;
@@ -421,10 +460,9 @@ export class HomeNavbar extends Component {
         color: #00a0d6;
       }
 
-      @media screen and (max-width: 767px) {
+      @media (hover: none) {
         $ {
-          margin-left: 1rem;
-          margin-right: 1rem;
+          display: none;
         }
       }
     `;
@@ -502,15 +540,75 @@ export class HomeCompanyInfo extends Component {
 
 Component.register(HomeCompanyInfo);
 
+export class HomePeople extends Component {
+  render() {
+    let h = new Array();
+    for (let e of employees) {
+      h.push('<div class="person">');
+
+      h.push(`<img src="/home/image/${e.photo}" width="200">`);
+
+      h.push('<div class="info">');
+      h.push(`<div class="name">${e.name}</div>`);
+      h.push(`<div class="title">${e.title}</div>`);
+      for (let s of e.social) {
+        h.push(`
+          <div>
+            <a href="${s.url}">
+              <home-icon icon="${s.icon}"></home-icon> ${s.text}
+            </a>
+          </div>
+        `);
+      }
+      h.push('</div>');
+
+      h.push('</div>');
+    }
+    return h.join("");
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: grid;
+        padding: 20px;
+      }
+      $ .person {
+        display: flex;
+        gap: 16px;
+      }
+      $ .info {
+        font-size: 12px;
+      }
+      $ .name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      $ home-icon {
+        display: inline;
+        padding-right: 4px;
+        font-size: 1rem;
+      }
+      $ a {
+        color: inherit;
+        text-decoration: none;
+      }
+    `;
+  }
+}
+
+Component.register(HomePeople);
+
 export class HomeBottom extends Component {
   render() {
     return `
         <div class="row">
-          <div class="column">
+          <grid class="column">
+            <home-logo class="logo"></home-logo>
             <div class="site">${cfg.sitename}</div>
             <div class="description">${cfg.description}</div>
             <div class="social">${social_links()}</div>
-          </div>
+          </grid>
           <div class="column">
             <div class="title">CONTACT</div>
             <home-address-info></home-address-info>
@@ -556,10 +654,10 @@ export class HomeBottom extends Component {
       $ {
         display: block;
         font-size: 0.9rem;
-        background: #2e4656; /*#303030;*/
-        color: #ebebeb; /*#9a9898;*/
+        background: #2e4656;
+        color: #ebebeb;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 3rem;
       }
 
       $ .row {
@@ -569,8 +667,6 @@ export class HomeBottom extends Component {
       }
 
       $ .column {
-        display: flex;
-        flex-direction: column;
         padding-right: 2rem;
       }
 
@@ -580,12 +676,25 @@ export class HomeBottom extends Component {
       }
 
       $ .site {
+        display: inline;
         font-family: "Helvetica", "sans";
         font-weight: bold;
         font-size: 2.5rem;
         line-height: 1;
         color: white;
         padding-bottom: 10px;
+      }
+
+      $ .logo {
+        margin: 5px 10px 0px 0px;
+        outline: none;
+        float: left;
+      }
+      $ .logo svg {
+        width: 100px;
+      }
+      $ .logo path {
+        fill: #FFFFFF;
       }
 
       $ .social {
@@ -635,12 +744,10 @@ export class HomeBottom extends Component {
       $ .copyright {
         display: inline;
         font-weight: bold;
-        text-transform: uppercase;
       }
 
       $ .menu {
         display: flex;
-        text-transform: uppercase;
         font-weight: bold;
         margin-left: auto;
 
