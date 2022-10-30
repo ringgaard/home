@@ -5,6 +5,14 @@
 <h2>2022</h2>
 
 <home-cotm
+  time="October 2022"
+  case="1282"
+  title="FE-sagen"
+  description="I 2021 bliver chefen for Forsvarets Efterretningstjeneste, Lars Findsen, arresteret i Københavns Lufthavn for landsskadelig virksomhed"
+  image="https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large/image/156/1565002/24135608-.jpg">
+</home-cotm>
+
+<home-cotm
   time="September 2022"
   case="1255"
   title="Schaumburg-Müller"

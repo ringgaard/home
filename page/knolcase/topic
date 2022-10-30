@@ -1,0 +1,57 @@
+<home-ribbon>KnolCase</home-ribbon>
+
+<home-section>
+
+<h2>Case topics</h2>
+
+<p>Adding topics...
+
+<p>Linked cases...
+<p>Save case...
+
+<p>Editing topics...
+
+<p>Uses Wikidata properties, but can use custom properties
+approximately 5000 properties plus 5000 reference properties
+notable properties:
+
+<pre>
+name (shortcut n)
+alias (shortcut a)
+instance of (shortcut t)
+description (shortcut d)
+
+persons: Ctrl+M (male), Ctrl+F (female)
+
+date of birth (dob)
+place of birth (pob)
+date of death (dod)
+place of death (pod)
+residence (res)
+country of citizenship (citi)
+educated at (edu)
+occupation (occ)
+employer (empl)
+</pre>
+
+<p>comments...
+
+<p>Topic edit, save, discard...
+<p>Selecting topics...
+<p>Delete topics and the scap folder...
+<p>Merge topics...
+<p>Extending existing topics...
+<p>Importing facts in extended topics
+
+<h3>Case folders</h3>
+
+<p>Copy and pasting topics...
+<p>Copy topic id and name to clipboard...
+<p>Select all topics...
+<p>Move up/down...
+<p>Add/delete/move folders...
+<p>Rename/delete folder...
+
+</p>
+</home-section>
+

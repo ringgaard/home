@@ -139,7 +139,8 @@ qualifier with the source:
 <li>Type 'source' and then Tab to add a <kb-topic qid="P1343" title="described by source"></kb-topic> property</li>
 <li>Paste the URL for the source and press Tab.</li>
 </ol>
-This will create a new topic for the web article with meta data and add this as the source.</li>
+
+<p>This will create a new topic for the web article with meta data and add this as the source.</p>
 
 <h3>Data tables</h3>
 

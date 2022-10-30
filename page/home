@@ -16,13 +16,15 @@ than 13 years.</p>
 
 <home-feature style="flex: 40; background-color: #ecf0f1; min-width: 350;">
 <h2>Case of the Month</h2>
+
 <home-cotm
-  time="September 2022"
-  case="1255"
-  title="Schaumburg-Müller"
-  description="From actor Christiane Schaumburg-Müller to law professor Sten Schaumburg-Müller in nine steps"
-  image="https://em-epi-static.azureedge.net/altdk-cache/a/d/b/a/6/f/adba6f43c4bca7fd9359c3d2d5badb1e6b21a8e6.jpg">
+  time="October 2022"
+  case="1282"
+  title="FE-sagen"
+  description="I 2021 bliver chefen for Forsvarets Efterretningstjeneste, Lars Findsen, arresteret i Københavns Lufthavn for landsskadelig virksomhed"
+  image="https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large/image/156/1565002/24135608-.jpg">
 </home-cotm>
+
 <a href="/cotm" style="float: right;">more cases...</a>
 </home-features>
 
