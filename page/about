@@ -35,9 +35,12 @@ knowledge graph.</p>
 <p>Since I left Google in September 2020, I have been working on making a
 pipeline that collects updates to Wikidata in real-time, as well as downloads
 and processes Wikipedia in many different languages. These datasets are
-reconciled with other data sources into one single knowledge base every night
-to produce a new knowledge base on a daily basis. This also produces alias
-tables which are used for searching the knowledge base.</p>
+reconciled with other data sources into
+<a href="/knolbase">one single federated knowledge base</a> and published every
+night.
+This also produces alias tables, cross references, and search indices, which are
+used for searching and navigating the knowledge base.
+</p>
 
 </home-section>
 

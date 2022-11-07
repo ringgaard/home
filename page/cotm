@@ -4,6 +4,8 @@
 
 <h2>2022</h2>
 
+<div class="cotm-grid">
+
 <home-cotm
   time="October 2022"
   case="1282"
@@ -84,7 +86,11 @@
   image="https://drive.ringgaard.com/i/lc5vT.png">
 </home-cotm>
 
+</div>
+
 <h2>2021</h2>
+
+<div class="cotm-grid">
 
 <home-cotm
   time="December 2021"
@@ -117,6 +123,8 @@
   description="Is Terravision the predecessor of Google Earth?"
   image="https://artcom.de/wp-content/uploads/2015/03/1996_Terravision_02-670x377.jpg">
 </home-cotm>
+
+</div>
 
 </home-section>
 

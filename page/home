@@ -5,18 +5,19 @@
 <home-feature style="flex: 60; min-width: 350px;">
 <h2>Ringggaard Research</h2>
 
-<p><b>Ringgaard Research ApS</b> is a not-for-profit company that develops and
+<p style="font-size: 24px;">
+<b>Ringgaard Research ApS</b> is a not-for-profit company that develops and
 maintains the SLING system as well as doing research relating to knowledge
 management and natural language processing. Ringgaard Research was founded in
-September 2020 by Michael Ringgaard, after working at Google Research for more
-than 13 years.</p>
+September 2020 by Michael Ringgaard after working at Google Research for more
+than 13 years.
+</p>
 </home-feature>
 
 </home-feature>
 
-<home-feature style="flex: 40; background-color: #ecf0f1; min-width: 350;">
+<home-feature style="flex: 30; background-color: #ecf0f1; min-width: 300;">
 <h2>Case of the Month</h2>
-
 <home-cotm
   time="October 2022"
   case="1282"
@@ -71,7 +72,7 @@ as well as many other places.</p>
 </home-feature>
 
 <home-feature style="flex: 50; background-color: #ecf0f1; min-width: 350;">
-<h4>Features</h4>
+<h4>FEATURES</h4>
 <ul>
 <li>High degree of <b>privacy</b>. Your data is stored locally on your own
 computer until you explicitly choose to share it with others.

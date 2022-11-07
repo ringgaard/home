@@ -35,10 +35,8 @@ const cfg = {
   ],
 
   quicklinks: [
-    {name: "About", url: "/about"},
-    {name: "Contact", url: "/contact"},
-    {name: "KnolCase", url: "/knolcase"},
-    {name: "KnolBase", url: "/knolbase"},
+    {name: "KnolCase", url: "/c/"},
+    {name: "KnolBase", url: "/kb/"},
   ],
 
   menu: [
@@ -167,6 +165,13 @@ button:hover {
 pre {
   background: #ecf0f1;
   padding: 8px;
+  font-size: 14px;
+}
+
+.cotm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
 }
 
 `);
@@ -880,15 +885,15 @@ export class HomeCotm extends Component {
   render() {
     let p = this.attrs;
     return `
+      <div class="time">${p.time}</div>
       <div class="picture">
         <a href="/c/${p.case}" target="_blank">
           <img src="https://ringgaard.com/thumb/${p.image}">
         </a>
       </div>
       <div class="descr">
-        <div class="time">${p.time}</div>
+        <div class="case">Case #${p.case}</div>
         <div class="title">
-          Case #${p.case}:
           <a href="https://ringgaard.com/c/${p.case}" target="_blank">${p.title}</a>
         </div>
         <div class="subtitle">${p.description}</div>
@@ -900,14 +905,19 @@ export class HomeCotm extends Component {
     return `
       $ {
         display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px,
+                    rgba(0, 0, 0, 0.23) 0px 2px 4px 0px;
         margin: 16px;
+        padding: 10px;
+        background-color: white;
       }
       $ a {
         text-decoration: none;
       }
       $ img {
-        max-width: 150px;
-        max-height: 150px;
+        height: 150px;
+        max-width: 300px;
       }
       $ .picture {
         width: 150px;
@@ -920,8 +930,11 @@ export class HomeCotm extends Component {
         font-size: 18px;
         font-weight: bold;
       }
+      $ .case {
+        font-size: 12px;
+      }
       $ .title {
-        font-size: 16px;
+        font-size: 18px;
       }
       $ .subtitle {
         font-size: 16px;
