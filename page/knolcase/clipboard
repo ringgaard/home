@@ -260,6 +260,30 @@ to add a <kb-topic qid="P625" title="coordinate location"></kb-topic> to a
 topic.
 </li>
 
+<li><b>IMDB</b><br/>
+<kb-topic qid="Q37312" title="Internet Movie Database"></kb-topic> is is an
+online database of information related to films and television. It has
+biographies of many actors and other film people.
+The imdb plug-in can retrieve the following information:
+<ul>
+<li>name</li>
+<li>birth name</li>
+<li>nickname</li>
+<li>birth date</li>
+<li>place of birth</li>
+<li>death date</li>
+<li>place of death</li>
+<li>cause of death</li>
+<li>country of origin</li>
+<li>spouses</li>
+<li>children</li>
+<li>parents</li>
+<li>relatives</li>
+<li>height</li>
+<li>IMDB ID</li>
+</ul>
+</li>
+
 <li><b>Listal</b><br/>
 <kb-topic qid="Q111033516" title="Listal.com"></kb-topic> is a social networking
 website that is based around the entertainment industry. It has profiles and
@@ -280,7 +304,6 @@ The listal plug-in can retrieve the following information:
 <li>IMDB ID</li>
 <li>profile picture</li>
 </ul>
-
 </li>
 
 <li><b>Wikidata</b><br/>

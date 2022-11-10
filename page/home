@@ -16,7 +16,7 @@ than 13 years.
 
 </home-feature>
 
-<home-feature style="flex: 30; background-color: #ecf0f1; min-width: 300;">
+<home-feature style="flex: 30; min-width: 300;">
 <h2>Case of the Month</h2>
 <home-cotm
   time="October 2022"
@@ -28,8 +28,6 @@ than 13 years.
 
 <a href="/cotm" style="float: right;">more cases...</a>
 </home-features>
-
-<hr>
 
 <h2>KnolCase</h2>
 
@@ -102,8 +100,6 @@ keyboard.</li>
 
 </home-features>
 
-<hr>
-
 <h2>Products</h2>
 
 <home-features>
@@ -127,8 +123,6 @@ keyboard.</li>
 </home-feature>
 
 </home-features>
-
-<hr>
 
 <h2>Technologies</h2>
 

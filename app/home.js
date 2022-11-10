@@ -363,6 +363,13 @@ export class HomeFeature extends Component {
         flex-grow: 1;
         flex-basis: 0;
         min-width: 300px;
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px,
+                    rgba(0, 0, 0, 0.23) 0px 2px 4px 0px;
+        margin: 16px;
+        padding: 10px;
+        border: 1px solid #eeeeee;
+        background-color: #ffffff;
       }
       $ home-icon {
         font-size: 4.5rem;
@@ -910,7 +917,8 @@ export class HomeCotm extends Component {
                     rgba(0, 0, 0, 0.23) 0px 2px 4px 0px;
         margin: 16px;
         padding: 10px;
-        background-color: white;
+        border: 1px solid #eeeeee;
+        background-color: #ffffff;
       }
       $ a {
         text-decoration: none;
