@@ -17,13 +17,13 @@ than 13 years.
 </home-feature>
 
 <home-feature style="flex: 30; min-width: 300;">
-<h2>Case of the Month</h2>
+<a href="/cotm"><h2>Case of the Month</h2></a>
 <home-cotm
-  time="October 2022"
-  case="1282"
-  title="FE-sagen"
-  description="I 2021 bliver chefen for Forsvarets Efterretningstjeneste, Lars Findsen, arresteret i Københavns Lufthavn for landsskadelig virksomhed"
-  image="https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large/image/156/1565002/24135608-.jpg">
+  time="November 2022"
+  case="1284"
+  title="Glamour Girls of the Silver Screen"
+  description="More than 700 glamorous actresses from the golden era of Hollywood"
+  image="http://www.glamourgirlsofthesilverscreen.com//images/GGstartscreen.jpg">
 </home-cotm>
 
 <a href="/cotm" style="float: right;">more cases...</a>

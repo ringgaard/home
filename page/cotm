@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="November 2022"
+  case="1284"
+  title="Glamour Girls of the Silver Screen"
+  description="More than 700 glamorous actresses from the golden era of Hollywood"
+  image="http://www.glamourgirlsofthesilverscreen.com//images/GGstartscreen.jpg">
+</home-cotm>
+
+<home-cotm
   time="October 2022"
   case="1282"
   title="FE-sagen"

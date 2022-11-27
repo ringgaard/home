@@ -275,12 +275,14 @@ The imdb plug-in can retrieve the following information:
 <li>place of death</li>
 <li>cause of death</li>
 <li>country of origin</li>
+<li>gender</li>
 <li>spouses</li>
 <li>children</li>
 <li>parents</li>
 <li>relatives</li>
 <li>height</li>
 <li>IMDB ID</li>
+<li>social media accounts</li>
 </ul>
 </li>
 
@@ -352,6 +354,7 @@ The following sites are supported:
 <li>blogspot.com</li>
 <li>boobpedia.com</li>
 <li>cameo.com</li>
+<li>crunchbase.com</li>
 <li>danskefilm.dk</li>
 <li>dblp.org</li>
 <li>dfi.dk</li>
