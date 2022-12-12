@@ -990,6 +990,97 @@ export class HIcon extends Component {
 
 Component.register(HIcon);
 
+var birthdays;
+
+export class BirthdayList extends Component {
+  async oninit() {
+    if (!birthdays) {
+      let r = await fetch("/home/birthdays");
+      if (r.ok) birthdays = await r.json();
+    }
+    this.update(birthdays);
+  }
+
+  render() {
+    if (!this.state) return;
+    let h = new Array();
+    for (let b of this.state.birthdays) h.push(new BirthdayCard(b));
+    return h;
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 350px);
+        justify-content: center;
+      }
+    `;
+  }
+}
+
+Component.register(BirthdayList);
+
+export class BirthdayCard extends Component {
+  render() {
+    let p = this.state;
+    let h = '';
+    let kburl = "/kb/" + p.id;
+    h += `<a class="name" href="${kburl}">${p.name}, ${p.age}</a>`;
+    if (p.picture) {
+      let url = Component.escape(p.picture);
+      h += `<a  class="picture" href="${kburl}">`;
+      h += `<img src="https://ringgaard.com/thumb/${url}">`;
+      h += '</a>';
+    }
+    h += '<p class="desc">';
+    h += p.description;
+    if (!p.description || !p.description.includes("born")) {
+      h += `, born ${p.birthdate}`;
+    }
+    h += '</p>';
+
+    return h;
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px,
+                    rgba(0, 0, 0, 0.23) 0px 2px 4px 0px;
+        margin: 16px;
+        padding: 10px;
+        border: 1px solid #eeeeee;
+        background-color: #ffffff;
+      }
+      $ a {
+        text-decoration: none;
+        color: inherit;
+      }
+      $ .name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      $ img {
+        height: 200px;
+        max-width: 300px;
+        margin: auto;
+      }
+      $ .picture {
+        width: 300px;
+        display: flex;
+      }
+      $ .desc {
+        font-size: 16px;
+      }
+    `;
+  }
+}
+
+Component.register(BirthdayCard);
+
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";
 

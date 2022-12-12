@@ -15,11 +15,11 @@
 """Homepage for ringgaard.com"""
 
 import os
+import os.path
 import sys
 import time
 import json
 import re
-
 import sling
 import sling.net
 import sling.flags as flags
@@ -31,6 +31,11 @@ flags.define("--port",
              default=8080,
              type=int,
              metavar="PORT")
+
+flags.define("--birthdays",
+             help="file with list of birthdays",
+             default="/var/data/corpora/media/birthdays.json",
+             metavar="FILE")
 
 flags.parse()
 
@@ -62,6 +67,36 @@ app = sling.net.HTTPServer(flags.arg.port)
 app.static("/common", "app", internal=True)
 app.static("/home/app", "app")
 app.static("/home/image", "image")
+
+# Birthday list.
+birthdays = None
+birthdays_check = None
+birthdays_mtime = None
+
+def get_birthdays():
+  global birthdays, birthdays_check, birthdays_mtime
+  try:
+    if birthdays is not None:
+      now = time.time()
+      if now - birthdays_check > 600:
+        t = os.path.getmtime(flags.arg.birthdays)
+        if t != birthdays_mtime: birthdays = None
+        birthdays_check = now
+
+    if birthdays is None:
+      with open(flags.arg.birthdays) as f:
+        log.info("refresh birthday list")
+        birthdays = json.load(f)
+        birthdays_mtime = os.fstat(f.fileno()).st_mtime
+      birthdays_check = time.time()
+
+    return birthdays
+
+  except Exception as e:
+    log.info("error fetching birthday list:", e)
+    return None
+
+
 
 # Conver unix epoch to RFC time.
 def ts2rfc(t):
@@ -128,6 +163,11 @@ def feedback_page(request):
   # Send message alert.
   log.info("feedback from", sender_name, sender_email)
   alert.send("Feedback from " + sender_name, message, sender=sender)
+
+# Birthday list.
+@app.route("/home/birthdays")
+def birthday_list(request):
+  return get_birthdays()
 
 # Robots.txt handler.
 app.page("/robots.txt", """User-agent: *
