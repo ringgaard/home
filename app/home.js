@@ -1213,6 +1213,7 @@ export class TodaysBirthdays extends Component {
         margin: 16px;
         padding: 10px;
         border: 1px solid #eeeeee;
+        max-width: 350px;
       }
     `;
   }
