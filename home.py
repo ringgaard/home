@@ -67,6 +67,7 @@ app = sling.net.HTTPServer(flags.arg.port)
 app.static("/common", "app", internal=True)
 app.static("/home/app", "app")
 app.static("/home/image", "image")
+app.static("/home/font", "font")
 
 # Birthday list.
 birthdays = None
@@ -167,6 +168,7 @@ def feedback_page(request):
 # Birthday list.
 @app.route("/home/birthdays")
 def birthday_list(request):
+  log.info("return birthdays");
   return get_birthdays()
 
 # Robots.txt handler.

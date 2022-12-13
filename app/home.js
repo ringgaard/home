@@ -126,14 +126,21 @@ stylesheet(`
   font-family: "FontAwesome";
   font-style: normal;
   font-weight: 400;
-  src: url('/home/app/forkawesome-webfont.woff2') format('woff2');
+  src: url('/home/font/forkawesome-webfont.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(/home/app/material.woff2) format('woff2');
+  src: url(/home/font/material.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/home/font/raleway-normal.woff2') format('woff2');
 }
 
 html {
@@ -343,6 +350,7 @@ export class HomeFeatures extends Component {
     return `
       $ {
        display: flex;
+       align-items: center;
       }
 
       @media screen and (max-width: 767px) {
@@ -364,16 +372,27 @@ export class HomeFeature extends Component {
         flex-grow: 1;
         flex-basis: 0;
         min-width: 300px;
-
-        margin: 16px;
-        padding: 10px;
         background-color: #ffffff;
       }
       $ home-icon {
         font-size: 4.5rem;
       }
+      $ h3 {
+        font-family: Raleway, Helvetica, Arial, sans-serif;
+        font-size: 32px;
+        font-weight: normal;
+      }
       $ h4 {
         text-align: center;
+      }
+      $ p {
+        font-family: Raleway, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+      }
+      button {
+        margin-right: 18px;
+        margin-bottom: 18px;
       }
     `;
   }
@@ -1080,6 +1099,126 @@ export class BirthdayCard extends Component {
 }
 
 Component.register(BirthdayCard);
+
+export class TopicResult extends Component {
+  onconnected() {
+    this.attach(this.onclick, "click");
+  }
+
+  onclick(e) {
+    console.log("navigate to", this.state.id);
+    location.href = "/kb/" + this.state.id;
+  }
+
+  render() {
+    let t = this.state;
+    let h = `<div class="name">${t.name}${t.age ? ", " + t.age : ""}</div>`;
+    if (t.description) {
+      h += `<div class="desc">${t.description}</div>`;
+    } else if (t.birthday) {
+      h += `<div class="desc">born ${t.birthday}</div>`;
+    }
+    return h;
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: block;
+        padding: 4px;
+        cursor: pointer;
+        line-height: 1;
+      }
+      $ .name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      $ .desc {
+        font-size: 14px;
+      }
+      $:hover {
+        background-color: #F0F0F0;
+      }
+    `;
+  }
+}
+
+Component.register(TopicResult);
+
+export class TopicList extends Component {
+  visible() { return this.state; }
+
+  render() {
+    let h = new Array();
+    for (let t of this.state) {
+      h.push(new TopicResult(t));
+    }
+    return h;
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        display: block;
+        height: 250px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+
+      $::-webkit-scrollbar {
+        background-color: #F0F0F0;
+        width: 8px;
+        height: 8px;
+      }
+
+      $::-webkit-scrollbar-corner {
+        background-color: #0E0E0E;
+      }
+
+      $::-webkit-scrollbar-thumb {
+        background-color: #A0A0A0;
+        border-radius: 4px;
+      }
+
+      $::-webkit-scrollbar-thumb:hover {
+        background-color: #B0B0B0;
+      }
+    `;
+  }
+}
+
+Component.register(TopicList);
+
+export class TodaysBirthdays extends Component {
+  async oninit() {
+    if (!birthdays) {
+      let r = await fetch("/home/birthdays");
+      if (r.ok) birthdays = await r.json();
+    }
+    this.update(birthdays.birthdays);
+  }
+
+  render() {
+    return [
+      `<div><b><a href="/birthdays">Today's birthdays</a></b></div>`,
+      new TopicList(this.state)
+    ];
+  }
+
+  static stylesheet() {
+    return `
+      $ {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px,
+                    rgba(0, 0, 0, 0.23) 0px 2px 4px 0px;
+        margin: 16px;
+        padding: 10px;
+        border: 1px solid #eeeeee;
+      }
+    `;
+  }
+}
+
+Component.register(TodaysBirthdays);
 
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";

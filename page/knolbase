@@ -18,7 +18,7 @@ a number of other information sources:</p>
 <li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
 <li><a href="/kb/Q37312">IMDB</a> (photos)</a></li>
 <li><a href="/kb/Q55259097">Global LEI index</a> (companies)</a></li>
-<li><a href="/kb/Q90405608">FactGrid</a> (research database for historians)</a></li>
+<li><a href="/kb/Q90405608">FactGrid</a> (research database for historians, optional)</a></li>
 <li><a href="/knolcase">KnolCase</a> (published case topics)</a></li>
 </ul>
 
@@ -103,6 +103,19 @@ You can see the current list of indexed identifiers <a href="https://github.com/
 
 You can also use <a href="#memo">mnemonics</a> to search cross-referenced properties,
 e.g. searching for "cvr:41641908" will find the item with CVR number 41641908.
+</li>
+
+<li>
+<b>URI search</b><br/>
+In the knowledge world, <a href="/kb/Q61694">URIs</a> are often used for
+identifying entities, e.g. in <a href="/kb/Q54872">RDF</a> and
+<a href="/kb/Q6108942">JSON-LD</a>.
+You can look up items by their URIs, e.g. "https://schema.org/Person" is a URI for <a href="/kb/Q5">human</a>.
+Items with <a href="/kb/P2888">exact match</a>,
+<a href="/kb/P1709">equivalent class</a> and
+<a href="/kb/P1709">P1628</a> are indexed.
+KnolCase also uses a URI mapping to map URI prefixes to cross-reference
+properties in the knowledge base.
 </li>
 
 </ul>

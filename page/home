@@ -1,23 +1,28 @@
 <home-section>
 
+<!--- KnolCase --->
+
 <home-features>
 
-<home-feature style="flex: 60; min-width: 350px;">
-<h2>Ringggaard Research</h2>
+<home-feature style="flex: 50; min-width: 350px;">
+<h3>KnolCase: personal and collaborative knowledge management</h3>
+<p>KnolCase is a collaborative case-based knowledge management tool
+for gathering information about subjects of interest and organizing these into
+case files.
 
-<p style="font-size: 24px;">
-<b>Ringgaard Research ApS</b> is a not-for-profit company that develops and
-maintains the SLING system as well as doing research relating to knowledge
-management and natural language processing. Ringgaard Research was founded in
-September 2020 by Michael Ringgaard after working at Google Research for more
-than 13 years.
-</p>
+This can be used by researchers, investigators, journalists
+and others to collect, organize, share, and publish facts about topics.
+
+You can create your own case files with topics like persons, companies,
+organizations, places, articles, notes, documents, and references, and connect
+topics through properties, essentially forming a network of linked topics.</p>
+
+<button onclick="location.href='/knolcase'">Learn more</button>
+<button onclick="location.href='/c/'">Open case</button>
+<button onclick="location.href='/cotm'">Featured cases</button>
 </home-feature>
 
-</home-feature>
-
-<home-feature style="flex: 30; min-width: 300;">
-<a href="/cotm"><h2>Case of the Month</h2></a>
+<home-feature>
 <home-cotm
   time="November 2022"
   case="1284"
@@ -25,108 +30,55 @@ than 13 years.
   description="More than 700 glamorous actresses from the golden era of Hollywood"
   image="http://www.glamourgirlsofthesilverscreen.com//images/GGstartscreen.jpg">
 </home-cotm>
+</home-feature>
 
-<a href="/cotm" style="float: right;">more cases...</a>
 </home-features>
 
-<h2>KnolCase</h2>
+<!--- Ringgaard Research --->
 
-<a href="/c/1001">
-  <img class="picture-box" src="/home/image/sling-case-screenshot.png" style="max-width: 90%; margin: 1rem;">
-</a>
+<home-features>
+
+<home-feature style="max-width: 300px;">
+<home-logo></home-logo>
+</home-feature>
+
+<home-feature>
+<h3>Ringggaard Research</h3>
+<p>Ringgaard Research ApS is a not-for-profit company that develops and
+maintains the SLING system as well as doing research relating to knowledge
+management and natural language processing. Ringgaard Research was founded in
+September 2020 by Michael Ringgaard after working at Google Research for more
+than 13 years.
+</p>
+<button onclick="location.href='/about'">History</button>
+</home-feature>
+
+</home-features>
+
+<!--- KnolBase --->
 
 <home-features>
 
 <home-feature style="flex: 50; min-width: 350px;">
-<p><b>KnolCase</b> is a <em>collaborative  case-based knowledge management tool</em> for
-gathering information about subjects of interest and organizing these into case
-files. This can be used by <em>researchers, investigators, journalists</em>
-and others to collect, organize, share, and publish facts about topics.
-It is a <em>personal, distributed knowledge base</em> tool.
-You can create your own case files with topics like persons, companies,
-organizations, places, articles, notes, documents, references, etc.
-Topics are connected through properties, essentially forming a network of
-linked topics.</p>
-
-<p>The case files are stored locally on your computer giving you a high degree
-of privacy.
-You can choose to share your case file so others can view it or you can publish
-the case topics in the public SLING knowledge base. You can also share your
-case files privately.
-Then your data will only be available to other users you have shared the
-secret key with.
-The data is end-to-end encrypted and only the encrypted version is stored
-centrally.</p>
-
-<p>You can also export your information to Wikidata to make your
-contributions available to a broader audience. Then your information will
-ultimately be available in places like Google search knowledge panels, Siri,
-as well as many other places.</p>
-
-<div style="display: flex; margin: 2rem; justify-content: center;">
-  <button onclick="location.href='/c/'">Launch KnolCase</button>
-</div>
-
+<h3>KnolBase: a federated knowledge base</h3>
+<p>KnolBase is a federated knownledge base that contains approximately
+two billion facts about 100 million entities.
+Every day a new knowledge base is built from Wikidata as well as a number of
+other information sources.
+</p>
+<button onclick="location.href='/knolbase'">Learn more</button>
+<button onclick="location.href='/kb/'">Browse</button>
 </home-feature>
 
-<home-feature style="flex: 50; background-color: #ecf0f1; min-width: 350;">
-<h4>FEATURES</h4>
-<ul>
-<li>High degree of <b>privacy</b>. Your data is stored locally on your own
-computer until you explicitly choose to share it with others.
-<li>Simple to use. <b>No installation required</b>.</li>
-<li>You are <b>anonymous</b>. No user registration needed. All traffic is
-encrypted.</li>
-<li>Cases can be <b>shared</b> with others or <b>published</b> to a public
-knowledge base.</li>
-<li><b>Collaborations</b> with live edits for working together in closed groups.
-It's easy to set up your own collaboration server.</li>
-<li><b>End-to-end encryption</b> for sharing cases privately.</li>
-<li>Compatible with <b>Wikidata</b>.</li>
-<li>Large existing <b>knowledge base with 100 million topics</b> from Wikidata
-as well as other sources like CVR, GLEIF, Twitter, IMDB, Reddit, etc., that
-are updated daily.</li>
-<li><b>No tracking and cookies</b>. All external URLs are "noreferrer"
-(so the sites you navigate to are not informed about where you came from), no
-search engine indexing, and images can be cached to prevent tracking.</li>
-<li><b>Open source</b>. All source code is available on GitHub.</li>
-<li><b>Free</b>. No "premium" features you have to pay for, however donations
-for covering expenses are appreciated.</li>
-<li><b>Ergonomic friendly</b>. You can use most functions using only the
-keyboard.</li>
-
-</ul>
-</home-feature>
+<todays-birthdays></todays-birthdays>
 
 </home-features>
 
-<h2>Products</h2>
-
-<home-features>
-
-<home-feature>
-  <home-icon icon="&#xf129;"></home-icon>
-  <h4>KnolBase</h4>
-  <p>KnolBase is a federated knownledge base that contains approximately two billion
-  facts about 100 million entities. Every day a new knowledge base is built from
-  Wikidata as well as a number of other information sources.</p>
-  <p><a href="/knolbase">More...</a></p>
-</home-feature>
-
-<home-feature>
-  <home-icon icon="&#xf07b;"></home-icon>
-  <h4>KnolCase</h4>
-  <p>KnolCase is a collaborative case-based knowledge management tool for
-  gathering information about subjects of interest and organizing these into
-  case files.</p>
-  <p><a href="/knolcase">More...</a></p>
-</home-feature>
-
-</home-features>
+<!--- Technologies -->
 
 <h2>Technologies</h2>
 
-<home-features>
+<home-features style="align-items: normal;">
 
 <home-feature>
   <home-icon icon="&#xf121;"></home-icon>
@@ -134,8 +86,9 @@ keyboard.</li>
   <p>SLING is an open source project under an Apache license and all the code is
   available on GitHub. SLING is written mostly in C++ but can be used from Python
   by using the SLING Python API (pysling). There is also a JS module so you can
-  use SLING in the browser.</p>
-  <p><a href="https://github.com/ringgaard/sling">SLING on GitHub</a></p>
+  use SLING in the browser.
+  </p>
+  <button onclick="location.href='https://github.com/ringgaard/sling'">SLING on GitHub</button>
 </home-feature>
 
 <home-feature>
@@ -143,8 +96,9 @@ keyboard.</li>
   <h4>SLINGDB</h4>
   <p>SLINGDB is a lightweight persistent key-value database with a HTTP
   interface. It can be installed independently of the other SLING components
-  and is distributed as a standalone Debian package.</p>
-  <p><a href="https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md">Find Out More</a></p>
+  and is distributed as a standalone Debian package.
+  </p>
+  <button onclick="location.href='https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md'">SLINGDB on GitHub</button>
 </home-feature>
 
 <home-feature>
@@ -152,7 +106,8 @@ keyboard.</li>
   <h4>Myelin</h4>
   <p>Myelin is a JIT compiler for neural networks. It compiles neural network
   functions written in Python into optimized x64 assembly or GPU code at runtime.
-  <p><a href="https://github.com/ringgaard/sling/blob/master/doc/guide/myelin.md">Find Out More</a></p>
+  </p>
+  <button onclick="location.href='https://github.com/ringgaard/sling/blob/master/doc/guide/myelin.md'">Myelin on GitHub</button>
 </home-feature>
 
 </home-features>
