@@ -10,7 +10,7 @@ you are welcome to contact us.
 
 <hr>
 
-<home-features>
+<home-features style="align-items: normal;">
 
 <home-feedback>
 
@@ -41,6 +41,10 @@ you are welcome to contact us.
 
 <h3>Company Information</h3>
 <home-company-info detailed=1></home-company-info>
+
+<h3>People</h3>
+<home-people style="padding: 0"></home-people>
+
 </home-feature>
 
 </home-features>

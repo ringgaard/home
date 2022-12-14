@@ -2,7 +2,7 @@
 
 <home-section>
 
-<home-people></home-people>
+<img src="/home/image/michael.jpg" height=300 style="float: right;">
 
 <p>I'm <a href="/kb/Q45320427">Michael Ringgaard</a>, founder and CEO of
 Ringgaard Research. Ringgaard Research is a not-for-profit company that

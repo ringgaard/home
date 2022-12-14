@@ -80,7 +80,7 @@ const employees = [
   social: [{
       icon: "&#xf0e0;",
       text: "michael@ringgaard.com",
-      url: `mailto:${cfg.email}`,
+      url: `mailto:michael@ringgaard.com`,
     },{
       icon: "&#xf095;",
       text: cfg.phone,
@@ -324,6 +324,10 @@ export class HomeSection extends Component {
       }
       hr {
         margin: 2rem 0 2rem 0;
+      }
+      td {
+        padding: 4px;
+        vertical-align: top;
       }
       .picture-box {
         background-color: white;
@@ -574,9 +578,7 @@ export class HomePeople extends Component {
     let h = new Array();
     for (let e of employees) {
       h.push('<div class="person">');
-
       h.push(`<img src="/home/image/${e.photo}" width="200">`);
-
       h.push('<div class="info">');
       h.push(`<div class="name">${e.name}</div>`);
       h.push(`<div class="title">${e.title}</div>`);
@@ -600,14 +602,15 @@ export class HomePeople extends Component {
     return `
       $ {
         display: grid;
-        padding: 20px;
       }
       $ .person {
         display: flex;
+        flex-direction: row;
         gap: 16px;
       }
       $ .info {
         font-size: 12px;
+        line-height: 1.2;
       }
       $ .name {
         font-size: 24px;

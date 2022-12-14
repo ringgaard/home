@@ -9,10 +9,20 @@ A case file groups topics about a subject into a single document.
 Case files are stored locally on your own computer in the browser's local
 database (<kb-topic qid="Q125176" title="IndexedDB"></kb-topic>).
 
+<blockquote><em>NB: Please notice that if you use KnolCase in <kb-topic qid="Q2890907" title="incognito mode"></kb-topic>,
+your case file will be deleted by the browser when you close the browser window,
+so you shouldn't use KnolCase in incognito mode for cases that you want to keep.
+You should also be careful when clearing cookies and browsing data.
+It is important NOT to delete the local site data (for ringgaard.com).
+Otherwise all your case files will be deleted.
+There are no backup copies on ringgaard.com of your case files, so they will be gone for good.
+You're advised to back up your case data on a regular basis.
+</em></blockquote>
+
 <p>Each case file is assigned a unique case number.
 You can view or edit a case by going to the url for the case,
 e.g. <a hef="https://ringgaard.com/c/1234">https://ringgaard.com/c/1234</a> for case #1234.
-You can only edit the case if you're the owner of the case.
+You can only edit a case if you're the owner of the case.
 Also, the case can only be viewed by others if it has been shared.
 By default a case is private, so it cannot be viewed by anyone else.
 
@@ -36,13 +46,73 @@ search bar.
 If the topic is already in the knowledge base, you can just select it from
 the search list.
 This creates a topic that is an extension of an existing topic and you can click
-to see the existing information.
+<h-icon>expand_more</h-icon> to see the existing information.
 Otherwise, pressing Enter without selecting a topic will create a new topic.
 
-<h3>Case manager</h3>
+<h3>Managing your case files</h3>
 
-<p>Case list with icons...
-<p>Deleting cases...
+<p>The KnolCase home screen (<a hef="https://ringgaard.com/c/">https://ringgaard.com/c/</a>)
+shows you a list of all your case files on the computer.
+Case files are local to the computer and user, so you can only see the case
+files you have created on this computer with this user account.
+The case list shows the case number, status,  name, description, creation date,
+and last modification date.
+The most recently modified cases are shown first.
+You can open a case by clicking on it in the list.
+You can delete a case by clicking the <h-icon>delete</h-icon> button.
+Only the local link will be deleted for linked cases and collaborations.
+<p>The status icons show the status of each case:
+
+<table>
+<tr>
+  <td><h-icon>share</h-icon></td>
+  <td>case that you have shared so anyone with the case number can view it;
+      a * is shown next to the icon if the case has been modified since it was last shared</td>
+</tr>
+<tr>
+  <td><h-icon>lock</h-icon></td>
+  <td>case that you have shared secretly so it can only be viewed by other users with the secret key;
+      only an encrypted copy of the case will be stored on the server</td>
+</tr>
+<tr>
+  <td><h-icon>link</h-icon></td>
+  <td>link to case that someone else has shared</td>
+</tr>
+<tr>
+  <td><h-icon>key</h-icon></td>
+  <td>link with secret key to encrypted case that someone else has shared with you</td>
+</tr>
+<tr>
+  <td><h-icon>public</h-icon></td>
+  <td>case that you have published making all topics in the case available in <a href="/knolbase">KnolBase</a></td>
+</tr>
+
+<tr>
+  <td><h-icon>people</h-icon></td>
+  <td>link to collaboration case which can be viewed and edited by all participants in the collaboration</td>
+</tr>
+<tr>
+  <td>(no&nbsp;icon)</td>
+  <td>private case that is only stored locally and not shared with anyone</td>
+</tr>
+<table>
+
+<p>The case manager menu (<h-icon>more_vert</h-icon>) has the following
+commands:
+<ul>
+<li><b>Backup</b>: You case files are stored in the browser's local database.
+You can make a backup up of these to a file for safekeeping. You can also use this
+to move your case files to another computer.</li>
+<li><b>Restore</b>: Read case file backup into your browser's local database.
+This can be used to restore your case files if you have accidentally deleted them,
+e.g. by clearing your cookies and local data.
+You should be careful with having the same case files on multiple computers at the
+same time as this can lead to conflicting updates. You can use collaborations for
+cases that you need to access from more than one computer.</li>
+<li><b>Settings</b>: Normally you don't need to change the user settings and it
+is only needed for more advanced usage.</li>
+<li><b>Help</b>: Open this help page.</li>
+</ul>
 
 </p>
 
