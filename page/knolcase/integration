@@ -2,15 +2,106 @@
 
 <home-section>
 
-<h2>Data import and export</h2>
+<h2>Importing and exporting data</h2>
 
-<p>SLING, JSON, CSV, TSV, (Turtle RDF), QuickStatements...
+You can import data from local files on your computer into a case by selecting
+"Import from file" in KnolCase menu (<h-icon>more_vert</h-icon>).
+Choose the file format in the file dialog and then select the file to import.
+The following file format are supported:
+<ul>
 
-<p>Wikidata export...
+<li><b>SLING frames</b> (*.sling): The case data as well as the knowledge base is
+stored internally in <a href="https://github.com/ringgaard/sling">SLING</a> format.
+You can import data in either SLING text or binary format.
+The input file should consist of a stream of SLING frames.
+Each frame is imported as a new topic, and each frame slot is imported as a
+statement with a property and a value. Since SLING is the native format, it gives
+you the most precise import in terms of data types and structure.
+</li>
 
-<p>Backup/restore...
-<p>Upload files...
-<p>Caching images
+<li><b>JSON objects</b> (*.json): You can import JSON files with either a stream
+of objects, e.g. one JSON object per line, or as one big array of JSON objects.
+Each object is imported as a new topic and each key-value pair is imported as
+one statement. The keys can either be property ids, e.g. "P569" or property
+names or aliases, e.g. "birthdate". If the key ends with #, the value is
+interpreted as an item id instead of a string.
+</li>
+
+<li><b>Tab-separated values</b> (*.tsv): TSV files are text files consisting of
+lines separated by newlines, and each line has fields separated by tab.
+The first line contains the field name, and each of the remaining lines are
+imported as a new topic. Field names can be property ids, names or aliases. If
+the field name ends with #, the value is interpreted as an item id instead of a
+string.
+</li>
+
+
+
+<li><b>Comma-separated values</b> (*.csv):
+<kb-topic qid="Q47479849" title="RFC4180"></kb-topic>-compliant CSV files can
+be imported in the same way as tab-separated files.</li>
+
+<li><b>QuickStatements</b> (*.qs):
+<kb-topic qid="Q29032512" title="QuickStatements"></kb-topic> is a popular format for
+importing data into <kb-topic qid="Q2013" title="Wikidata"></kb-topic>, but you can also
+use it for importing data into case files. It is a simple text format which
+makes it easy to generate data in Wikidata format, but you can also use the
+<kb-topic qid="Q5583871" title="OpenRefine"></kb-topic> tool for cleaning up and
+transforming you data, and then export the data in QuickStatements format.
+KnolBase has a W3C Reconciliation Service API which you can use in OpenRefine
+for reconciling your data.
+</kb-topic></li>
+</ul>
+
+<h3>Wikidata export</h3>
+
+<p>You can export case topics to Wikidata by selecting the topic(s) and clicking
+the Wikidata button in the KnolCase toolbar.
+The first time you do this, you are asked to authorize SLING to make changes to
+Wikidata on your behalf.
+For existing topics, which already have a Wikidata QID, the item will be updated
+with new facts from the topic.
+Otherwise, new Wikidata items will be created, and the new QID will be added to
+the topic.
+Exporting to Wikidata will never overwrite or delete any existing information
+in Wikidata.
+
+<p>Not all facts from topics can be exported to Wikidata. Statements which use
+non-Wikidata properties or values will be skipped. Wikidata is also more strict
+in terms of data types for properties, so statements where the data value type
+does not match the property type will also be skipped.
+
+<h3>Upload files</h3>
+
+You can upload files from you computer to a case using the "Upload files"
+command in the KnolCase menu (<h-icon>more_vert</h-icon>). This uploads the
+selected files to the SLING drive server (drive.ringgaard.com), and adds a
+document topic to the case for each uploaded file with information about the
+filename, date, size, URL, and file type.
+
+<p>The uploaded files can be accessed by anyone with the URL, but the URLs contain
+a 64-bit crypto random key that makes it virtually impossible to guess the URL,
+so in reality you need access to the case in order to view the uploaded files.
+This should be good enough in most cases, but you should not use it to store
+state secrets.
+
+<h3>Backup and restore</h3>
+
+<p>Your case files are stored in the browser's local database.
+You can make a backup of all these by selecting "Backup" in the case manager
+menu (<h-icon>more_vert</h-icon>).
+This saves all the cases to a file that you can store in a safe place for
+disaster recovery.
+You can also use this to move your case files to another computer.
+
+<p>The backup can be restored by clicking "Restore" in the case manager
+menu (<h-icon>more_vert</h-icon>) and selecting the backup file.
+This reads the backed up cases into your browser's local database.
+This can be used to restore your case files if you have accidentally deleted them,
+e.g. by clearing your cookies and local data.
+You should be careful with having the same case files on multiple computers at the
+same time as this can lead to conflicting updates. You can use collaborations for
+cases that you need to access from more than one computer.
 
 </p>
 

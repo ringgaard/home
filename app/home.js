@@ -1195,7 +1195,7 @@ Component.register(TopicList);
 export class TodaysBirthdays extends Component {
   async oninit() {
     if (!birthdays) {
-      let r = await fetch("/home/birthdays");
+      let r = await fetch("/home/birthdays", {cache: "reload"});
       if (r.ok) birthdays = await r.json();
     }
     this.update(birthdays.birthdays);

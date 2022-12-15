@@ -29,7 +29,7 @@ Ctrl-A selects all topics in the current folder.
 The topic(s) will be stored in SLING text format in the clipboard.
 
 <p>Topics in the clipboard can be inserted into a folder with Ctrl-V.
-This inserts the topic(s) right before the (first) selected topic
+This inserts the topic(s) right after the (first) selected topic
 or at the end if no topics are selected in the current folder.
 
 <p>A topic can be in multiple folders at the same time. When topics are copied
@@ -80,8 +80,9 @@ select "Copy image address" in the context menu (Chrome).
 
 <p>Pictures on the internet often disappear after a short time. To prevent the
 pictures in your case topics from disappearing, you can cache the images on the
-SLING media cache service by selecting "Cache images" in the KnolCase menu in
-the top right-hand corner. Then images will be cached in the background and you
+SLING media cache service by selecting "Cache images" in the KnolCase menu
+(<h-icon>more_vert</h-icon>) in the top right-hand corner.
+Then all the images in the case file will be cached in the background and you
 will still be able to view them after they have disappeared from their original
 location.
 

@@ -97,23 +97,6 @@ Only the local link will be deleted for linked cases and collaborations.
 </tr>
 <table>
 
-<p>The case manager menu (<h-icon>more_vert</h-icon>) has the following
-commands:
-<ul>
-<li><b>Backup</b>: You case files are stored in the browser's local database.
-You can make a backup up of these to a file for safekeeping. You can also use this
-to move your case files to another computer.</li>
-<li><b>Restore</b>: Read case file backup into your browser's local database.
-This can be used to restore your case files if you have accidentally deleted them,
-e.g. by clearing your cookies and local data.
-You should be careful with having the same case files on multiple computers at the
-same time as this can lead to conflicting updates. You can use collaborations for
-cases that you need to access from more than one computer.</li>
-<li><b>Settings</b>: Normally you don't need to change the user settings and it
-is only needed for more advanced usage.</li>
-<li><b>Help</b>: Open this help page.</li>
-</ul>
-
 </p>
 
 </home-section>
