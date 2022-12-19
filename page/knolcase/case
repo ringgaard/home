@@ -19,7 +19,7 @@ There are no backup copies on ringgaard.com of your case files, so they will be 
 You're advised to back up your case data on a regular basis.
 </em></blockquote>
 
-<p>Each case file is assigned a unique case number.
+<p>Each case file is assigned a unique case number by a central case numbering service.
 You can view or edit a case by going to the url for the case,
 e.g. <a hef="https://ringgaard.com/c/1234">https://ringgaard.com/c/1234</a> for case #1234.
 You can only edit a case if you're the owner of the case.
@@ -49,6 +49,10 @@ This creates a topic that is an extension of an existing topic and you can click
 <h-icon>expand_more</h-icon> to see the existing information.
 Otherwise, pressing Enter without selecting a topic will create a new topic.
 
+<p>After you have made changes to the case, you can save it by
+clicking <h-icon>save</h-icon> or by pressing Ctrl+S.
+The case file is stored in the local database in your browser.
+
 <h3>Managing your case files</h3>
 
 <p>The KnolCase home screen (<a hef="https://ringgaard.com/c/">https://ringgaard.com/c/</a>)
@@ -66,8 +70,7 @@ Only the local link will be deleted for linked cases and collaborations.
 <table>
 <tr>
   <td><h-icon>share</h-icon></td>
-  <td>case that you have shared so anyone with the case number can view it;
-      a * is shown next to the icon if the case has been modified since it was last shared</td>
+  <td>case that you have shared so anyone with the case number can view it</td>
 </tr>
 <tr>
   <td><h-icon>lock</h-icon></td>
@@ -86,10 +89,13 @@ Only the local link will be deleted for linked cases and collaborations.
   <td><h-icon>public</h-icon></td>
   <td>case that you have published making all topics in the case available in <a href="/knolbase">KnolBase</a></td>
 </tr>
-
 <tr>
   <td><h-icon>people</h-icon></td>
   <td>link to collaboration case which can be viewed and edited by all participants in the collaboration</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td>case has been modified since it was last shared</td>
 </tr>
 <tr>
   <td>(no&nbsp;icon)</td>

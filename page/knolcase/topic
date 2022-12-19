@@ -4,16 +4,94 @@
 
 <h2>Case topics</h2>
 
+<img src="/home/image/topic.jpg" style="float: right">
+
+<p>A topic is similar to a <kb-topic qid="Q16222597" title="Wikidata item"></kb-topic>,
+but is it local to the case file.
+Topics are used to represent all the things in human knowledge, including
+concepts, objects, subjects, and entities.
+If a topic represents a concept or an abstract object, it usually has a
+<kb-topic qid="P279" title="subclass of"></kb-topic> property.
+If the topic represents a concrete object, e.g. a person, it usually has an <kb-topic qid="P31" title="instance of"></kb-topic>,
+property which describes its type.
+Many common topics will already be in KnolBase and Wikidata, so topics in
+case files will often be new entities like persons, organization, locations,
+and documents, but you can make topics for any entities and concepts you're interested in.
+
+<p>Each topic is assigned a unique topic id which contains the case number as well as
+a serial number within the case, e.g. topic number 10 in case #1234 will be assigned
+t/1234/10 as its topic id.
+Topic ids are never reused even if you delete the topic.
+
+<p>A topic usually has a name and a description.
+Topic names do not have to be unique.
+The desciption can be used for disambiguating topics with the same name.
+You can also add one or more aliases for the topic.
+Theses can be different names the entity is known under, and spelling variations of these.
+
+<p>A topic consists of a number of statements.
+A statement has a property and a value.
+You can use all the <a href="https://www.wikidata.org/wiki/Wikidata:List_of_properties">properties defined by Wikidata</a>,
+but you can also just use text for properties.
+The datatype for the property value is determined by the property, but in most
+cases you can override the predefined datatype, e.g. you can just specify a text
+value for a reference property. KnolCase supports the following datatypes:
+<ul>
+<li><b>Text</b>: A simple string value. Text values can be localized by adding @ll to the string,
+where "ll" is the two letter abbreviation for the language.</li>
+<li><b>Number</b>: Numeric values can either be integers or decimal numbers.</li>
+<li><b>Date</b>: Dates are specified with a precision. A normal date has year, month, and day of month,
+but you can also specify dates where the precision is month, year, decade, century or millennium.</li>
+<li><b>Reference</b>: Link to another topic.</li>
+<li><b>Quantity</b>: A quantity is a number with a unit of measurement.</li>
+<li><b>Geopoint</b>: Geographical reference with lattitude and longitude.</li>
+</ul>
+
+<p>You can <a href="https://www.wikidata.org/wiki/Help:Qualifiers">qualify</a>
+a statement with other statement to expand on, annotate, or
+contextualize beyond what can be expressed in just a simple property-value pair.
+
+Qualifiers are used in order to further describe or refine the value of a
+property given in a statement.
+
+A statement should still provide useful data even without a qualifier;
+the qualifier is just there to provide additional information.
+
+Qualifier can modify what a topic means, indicate how the value of
+a property was determined, constrain the validity of the value, or offer further
+details that cannot otherwise be expressed using simple property-value pairs.
+
+Qualifiers are aldo used for temporal information like
+<kb-topic qid="P585" title="point in time"></kb-topic> for
+an event, or <kb-topic qid="P580" title="start"></kb-topic> and
+<kb-topic qid="P582" title="end time"></kb-topic>
+to specify the period where the statement applies.
+
+<p>You can make a topic an extension of another topic by adding an "is:"
+statement to the topic. If you publish the topic, it will be merged with the
+topic it is extending. This can be used to add additional facts to an already
+existing topic. If you add multiple "is:" statements to a topic, it will be
+merged will all the extended topics during reconciliation.
+
 <p>Adding topics...
+
 
 <p>Linked cases...
 <p>Save case...
 
 <p>Editing topics...
 
+<p>You can edit a topic by clicking the <h-icon>edit</h-icon> button in the
+topic toolbar or by pressing Enter when the topic is selected.
+
 <p>Uses Wikidata properties, but can use custom properties
 approximately 5000 properties plus 5000 reference properties
 notable properties:
+
+<p>You can make a statement a qualifier of the previous statementby pressing Space at the beginning of the line.
+A qualified statement can be unqualified by pressing Backspace at the beginning of the line.
+
+<p>Repeat property by pressing Tab on a blank line
 
 <pre>
 name (shortcut n)
@@ -44,6 +122,11 @@ employer (empl)
 <p>Importing facts in extended topics
 
 <h3>Case folders</h3>
+
+<p>Topics are organized into folders. The folder list is to the left of the
+topic panel and you can open and close it by clicking the <h-icon>menu</h-icon>
+icon in the upper-left corner. The current folder is shown in bold and you can
+switch to another folder by clicking it in the folder list.
 
 <p>Copy and pasting topics...
 <p>Copy topic id and name to clipboard...

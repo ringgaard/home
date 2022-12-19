@@ -17,7 +17,7 @@ or applications in a quick and easy manner.
 <h3>Copying and moving topics</h3>
 
 <p>You can cut, copy, and paste topics.
-Ctrl-C copies the selected topic(s) to the clipboard.
+Ctrl+C copies the selected topic(s) to the clipboard.
 You select a topic by clicking on the background of the topic card.
 A topic has a blue border when it is selected.
 
@@ -25,10 +25,10 @@ A topic has a blue border when it is selected.
 down the Shift key when selecting the last topic.
 You can also use the up and down keys to change the selection. Holding down the
 Shift key will extend or shrink the selection.
-Ctrl-A selects all topics in the current folder.
+Ctrl+A selects all topics in the current folder.
 The topic(s) will be stored in SLING text format in the clipboard.
 
-<p>Topics in the clipboard can be inserted into a folder with Ctrl-V.
+<p>Topics in the clipboard can be inserted into a folder with Ctrl+V.
 This inserts the topic(s) right after the (first) selected topic
 or at the end if no topics are selected in the current folder.
 
@@ -40,16 +40,16 @@ will be shown in the other folders with a reference to the topic.
 <p>Topics can also be copied between cases. This will assign new topic ids
 to the pasted topics but it preserves the internal links between the topics.
 
-<p>You can move topics by cutting them to the clipboard with Ctrl-X.
+<p>You can move topics by cutting them to the clipboard with Ctrl+X.
 This will delete the topics from the current folder and add them to
 the <i>scraps folder</i>.
 You can then go to another folder and paste the topics into this.
 This will move the topics from the scraps folder to the new folder.
-The scrap folder is emptied when you save the case (Ctrl-S) or select "Clear"
+The scrap folder is emptied when you save the case (Ctrl+S) or select "Clear"
 from the scraps folder context menu.
 
-<p>Ctrl-D copies the id of the selected topic to the clipboard and
-Ctrl-E copies the topic name to the clipboard.
+<p>Ctrl+D copies the id of the selected topic to the clipboard and
+Ctrl+E copies the topic name to the clipboard.
 You can copy all the topics in the case file to the clipboard by selecting
 "Copy all" in the KnolCase menu in the top right-hand corner.
 
@@ -61,7 +61,7 @@ In topic edit mode, you can select one or more statements, by selecting
 them with the mouse, or by holding down Shift when moving around with the
 arrow keys, just like you would do in any other text editor.
 
-<p>Statements can be copied to the clipboard with Ctrl-C or cut with Ctrl-X.
+<p>Statements can be copied to the clipboard with Ctrl+C or cut with Ctrl+X.
 When you copy a statement (i.e. a property with a value), the resolved property
 and topic ids are preserved, so when you paste them back into the same topic
 or another topic, they will refer to the same property and topic ids as the

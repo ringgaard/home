@@ -113,7 +113,7 @@ identifying entities, e.g. in <a href="/kb/Q54872">RDF</a> and
 You can look up items by their URIs, e.g. "https://schema.org/Person" is a URI for <a href="/kb/Q5">human</a>.
 Items with <a href="/kb/P2888">exact match</a>,
 <a href="/kb/P1709">equivalent class</a> and
-<a href="/kb/P1709">P1628</a> are indexed.
+<a href="/kb/P1628">equivalent property</a> are indexed.
 KnolCase also uses a URI mapping to map URI prefixes to cross-reference
 properties in the knowledge base.
 </li>
