@@ -73,53 +73,155 @@ topic it is extending. This can be used to add additional facts to an already
 existing topic. If you add multiple "is:" statements to a topic, it will be
 merged will all the extended topics during reconciliation.
 
-<p>Adding topics...
-
-
-<p>Linked cases...
-<p>Save case...
-
-<p>Editing topics...
+<h3>Editing topics</h3>
 
 <p>You can edit a topic by clicking the <h-icon>edit</h-icon> button in the
 topic toolbar or by pressing Enter when the topic is selected.
+The topic editor works much like a normal text editor where you can use the
+cursor and editing keys to move around and edit the topic facts.
+Each line is a statement with a property and a value separated by colon.
 
-<p>Uses Wikidata properties, but can use custom properties
-approximately 5000 properties plus 5000 reference properties
-notable properties:
+<p>You add new statements by starting to type the property name on a blank line.
+You can add blank lines by pressing Enter.
+A search box with the matching properties is shown below the statement line.
+The search list is updated as you type,  but you can also use Shift+Space to
+open and close the search list.
 
-<p>You can make a statement a qualifier of the previous statementby pressing Space at the beginning of the line.
+Properties are ranked based on how common they are for the topic type
+(<kb-topic qid="P31" title="instance of"></kb-topic> and
+<kb-topic qid="P106" title="occupation"></kb-topic>).
+
+You can select the property from the search list using the up and down keys or
+click on the topic in the list.
+Pressing Tab will select the first match in the list.
+This adds the property to the statement and moves the cursor to the statement
+value after the colon.
+You can repeat the previous property by pressing Tab on a blank line.
+
+<p>There are approximately 5000 properties in Wikidata plus more than
+5000 cross reference properties. In addition to this, you can define custom
+properties, or just use a text string as the property name. However, some
+properties are more common than others, so you can select these with one-letter
+shortcuts:
+<ul>
+<li><b>name</b> (shortcut n): name of the topic</li>
+<li><b>alias</b> (shortcut a): other names for the topic</li>
+<li><b>description</b> (shortcut d): topic description for disambiguation</li>
+<li><b>instance of</b> (shortcut t): topic type</li>
+<li><b>comment</b> (shortcut *): unstructured note</li>
+</ul>
+
+<p>Many topics are persons (aka <kb-topic qid="Q5" title="humans"></kb-topic>
+in Wikidata lingo). Some common properties for persons are:
+<ul>
+<li><kb-topic qid="P569" title="date of birth"></kb-topic> (dob)</li>
+<li><kb-topic qid="P19" title="place of birth"></kb-topic> (pob)</li>
+<li><kb-topic qid="P570" title="date of death"></kb-topic> (dod)</li>
+<li><kb-topic qid="P20" title="date of death"></kb-topic> (pod)</li>
+<li><kb-topic qid="P551" title="residence"></kb-topic> (res)</li>
+<li><kb-topic qid="P27" title="country of citizenship"></kb-topic> (citi)</li>
+<li><kb-topic qid="P69" title="educated at"></kb-topic> (edu)</li>
+<li><kb-topic qid="P106" title="occupation"></kb-topic> (occ)</li>
+<li><kb-topic qid="P108" title="employer"></kb-topic> (empl)</li>
+</ul>
+
+<p>You can use Ctrl+M (male) and Ctrl+F (female) as shortcuts to add
+<kb-topic qid="P31" title="instance of"></kb-topic>: <kb-topic qid="Q5" title="human"></kb-topic>
+and <kb-topic qid="P21" title="sex or gender"></kb-topic>: <kb-topic qid="Q6581097" title="male"></kb-topic>
+or <kb-topic qid="Q6581072" title="female"></kb-topic> to the topic.
+
+<p>Pressing Space at the beginning of the line make the statement a qualifier of
+the previous statement.
 A qualified statement can be unqualified by pressing Backspace at the beginning of the line.
 
-<p>Repeat property by pressing Tab on a blank line
+<p>Statement values are entered much in the same way as properties, but it
+searches for matching values in more places:
+<ul>
+<li>names and aliases for topics in the case file (⭐)</li>
+<li>linked cases (🗄️)
+<li>names and aliases for topics in linked cases (🔗)</li>
+<li>names and aliases for topics in KnolBase</li>
+<li>dates (supported formats: "YYYY-MM-DD", "DD.MM.YYYY", "MM/DD/YYYY", "YYYY-MM", "YYYY",
+"DD MMM YY, MMM YY", "YYY0s", "Month DD", "YYYY", "DD. Month, YYYY", "Month YYYY",
+"MM/YYYY")</li>
+<li>numbers (integers and decimal number)</li>
+<li>quantities with units and conversion from imperial units (feet, inches, pounds)</li>
+<li>geopoints with lattitude and longitude</li>
+<li>localized names with language code</li>
+<li>plug-in pattern matches</li>
+<li>new topic with name</li>
+</ul>
 
-<pre>
-name (shortcut n)
-alias (shortcut a)
-instance of (shortcut t)
-description (shortcut d)
+<p>The search ranking is based on overall item popularity as welll as how
+common the item type is for the property.
 
-persons: Ctrl+M (male), Ctrl+F (female)
+If you you do no select a value from the search list, the statement value will
+just be a text.
 
-date of birth (dob)
-place of birth (pob)
-date of death (dod)
-place of death (pod)
-residence (res)
-country of citizenship (citi)
-educated at (edu)
-occupation (occ)
-employer (empl)
-</pre>
+You can add unstructured notes to the topic by adding comments.
+Comments are displayed with a bullet (⚫︎) in front, and they are not published
+in the knowledge base.
 
-<p>comments...
+<p>You can select one or more statements, by selecting them with the mouse, or
+by holding down Shift when moving around with the arrow keys, just like you
+would do in any other text editor.
 
-<p>Topic edit, save, discard...
-<p>Selecting topics...
-<p>Delete topics and the scap folder...
+Statements can be copied to the clipboard with Ctrl+C or cut with Ctrl+X.
+When you copy a statement (i.e. a property with a value), the resolved property
+and topic ids are preserved, so when you paste them back into the same topic
+or another topic, they will refer to the same property and topic ids as the
+place you copied them from.
+
+<p>When you're done editing the topic, you can save the changes by clicking
+<h-icon>save_alt</h-icon> or by pressing Ctrl+S.
+If you regret the changes to the topic, you can discard them by clicking
+<h-icon>cancel</h-icon> or pressing Esc.
+
+<h3>Copying and moving topics</h3>
+
+<p>You can cut, copy, and paste topics.
+Ctrl+C copies the selected topic(s) to the clipboard.
+You select a topic by clicking on the background of the topic card.
+A topic has a blue border when it is selected.
+
+<p>You can select multiple topics by selecting the first one and then then holding
+down the Shift key when selecting the last topic.
+You can also use the up and down keys to change the selection. Holding down the
+Shift key will extend or shrink the selection.
+Ctrl+A selects all topics in the current folder.
+The topic(s) will be stored in SLING text format in the clipboard.
+
+<p>Topics in the clipboard can be inserted into the current folder with Ctrl+V.
+This inserts the topic(s) right after the (first) selected topic
+or at the end if no topics are selected.
+
+<p>A topic can be in multiple folders at the same time. When topics are copied
+and pasted within the same case file, it just adds references to the existing
+underlying topics in the case. If a topic is edited in one folder, the changes
+will be shown in the other folders with a reference to the topic.
+
+<p>Topics can also be copied between cases. This will assign new topic ids
+to the pasted topics but it preserves the internal links between the topics.
+
+<p>You can move topics by cutting them to the clipboard with Ctrl+X.
+This will delete the topics from the current folder and add them to
+the <i>scraps folder</i>.
+You can then go to another folder and paste the topics into this.
+This will move the topics from the scraps folder to the new folder.
+The scrap folder is emptied when you save the case (Ctrl+S) or select "Clear"
+from the scraps folder context menu.
+
+<p>Ctrl+D copies the id of the selected topic to the clipboard and
+Ctrl+E copies the topic name to the clipboard.
+You can copy all the topics in the case file to the clipboard by selecting
+"Copy all" in the KnolCase menu in the top right-hand corner.
+
+<!---
 <p>Merge topics...
 <p>Extending existing topics...
 <p>Importing facts in extended topics
+<p>Linked cases...
+-->
 
 <h3>Case folders</h3>
 
@@ -128,12 +230,10 @@ topic panel and you can open and close it by clicking the <h-icon>menu</h-icon>
 icon in the upper-left corner. The current folder is shown in bold and you can
 switch to another folder by clicking it in the folder list.
 
-<p>Copy and pasting topics...
-<p>Copy topic id and name to clipboard...
-<p>Select all topics...
-<p>Move up/down...
-<p>Add/delete/move folders...
-<p>Rename/delete folder...
+<p>You can add new folders by clicking <h-icon>create_new_folder</h-icon> above
+the folder list. Each folder has a context menu (<h-icon>more_vert</h-icon>) with
+functions for renaming the folder, moving the folder up and down in the list,
+and for deleting the folder. A folder can only be deleted if it is empty.
 
 </p>
 </home-section>
