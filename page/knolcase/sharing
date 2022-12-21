@@ -4,11 +4,95 @@
 
 <h2>Case sharing</h2>
 
-<p>Sharing a case...
-<p>Encrypted sharing...
-<p>Publishing...
+<p>Your case files are stored locally on your own computer so no one else can
+view them.
+If you want to share your case file with others, you can click on the
+<h-icon>share</h-icon> button in the toolbar.
+Then you can choose between the following levels of sharing:
+<ul>
+<li><b>Private</b>: By default your case file is private and no one else can
+view it. If you have shared or published you case file, you can always make it
+private again by selecting 'Private'. This will delete the case file from the
+case server.</li>
+<li><b>Share</b>:
+If you choose 'Share', your case file will be stored on the central case server.
+You can click on the <h-icon>content_copy</h-icon> button to copy the sharing URL to the clipboard.
+Others can then view the case file by opening the case URL (e.g. https://ringgaard.com/c/1234)
+but they cannot modify it.
+The master copy of the case file will still be on your own computer.
+If you modify the case after it has been shared (shown in the case list
+with a * in the status column), the changes will not be visible to others until
+you share the case again.
+</li>
+<li><b>Restrict</b>:
+Case sharing URLs are easy to guess because case ids are small consecutive
+numbers, so they don't provide any real privacy. If you want to share your
+case file with a closed audience, you can use restricted sharing instead.
+This will only store an encrypted copy of the case file on the case server.
+A secret 128-bit key is generated locally on your computer and the case data
+is encrypted using AES-CBC encryption by your browser.
+This makes it practically impossible to read you case file without knowledge of
+the secret key.
+Clicking <h-icon>content_copy</h-icon> will copy the secret URL to the clipboard,
+and you can then use any secure form of communication to send this URL to
+those you want to give access to the case. Others can reshare the URL, but you
+can refresh the secret key by first making it private and then restricted
+again. You master copy of the (unencrypted) case file will still be stored on
+you local computer together with the secret key.
+</li>
+<li><b>Publish</b>: You can publish all the topics in your case in
+<a href="/knolbase">KnolBase</a>.
+This will make the topics in the case visible to all users.
+KnolBase is rebuilt every night, so it can take up to 24 hours for your changes
+to become available.
+You can retract your changes by switching the case back to 'private'.
+If you have extended existing topics, these will be merged during reconciliation.
+Published topics will be available for searching in other case without having
+to use case linking.
+</li>
+</ul>
 
-<p>Collaboration...
+<h3>Collaborations</h3>
+
+<p>You can use case sharing to let other users view you cases, but they cannot
+make changes to them. If you want to work together with other users on a case,
+you can turn your case file into a <em>collaboration</em>. This will store the
+case file on a collaboration server. Then all participants in the collaboration
+can view and change the case file simultaneously. When a participant makes
+changes to the case, they will be propagated and displayed immediately to all
+other connected participants (like Google Docs).
+
+<p>Before you can collaborate on a case, you need to set yourself as the
+author of the case by adding an <kb-topic qid="P50" title="author"></kb-topic>
+statement to the main case topic.
+You can use your id from KnolCase or Wikidata, but if you are not in the
+knowledge base, you can add a topic to the case for yourself.
+Alternatively, you can make a biography case for yourself with your CV and
+publish this case. You can then set your topic id (Ctrl+D) from this case as the
+default author for new cases in the general settings (<h-icon>settings</h-icon>).
+
+<p>You can turn a local case into a collaboration by selecting 'Collaborate'
+in the case toolbar menu. You can then provide the URL for the collaboration server or
+use the default (wss://ringgaard.com/collab/) and then click "Collaborate".
+This moves the case from your own computer to the collaboration server and
+creates your credentials for accessing the collaboration.
+
+<p>After you have created the collaboration, you can start to invite other
+participants, by clicking the <h-icon>people</h-icon> button in the case
+toolbar.
+You can search for the new participant or add a new participant to the
+collaboration case itself. This adds the new participant to the main case
+topic and copies the invite URL to the clipboard. You can then use any
+(secure) communication medium to send the URL to the participant.
+
+<p>When the new participant clicks the URL, the collaboration server will check
+if the invite is valid. Please notice that invite URLs expires each time the
+collaboration server is restarted. This means that invites to the default
+collaboration server must be activated before the next day. If the invite is
+valid, credentials for the participant is created and stored on their local
+computer. Next time they want to access the collaboration, they can just click
+on the collaboration case in the case list, and a connection to the
+collaboration server will be established using the stored credentials.
 
 </p>
 
