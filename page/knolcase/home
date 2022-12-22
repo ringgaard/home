@@ -28,7 +28,7 @@ ultimately be available in places like Google search knowledge panels, Siri,
 as well as many other places.</p>
 
 <div style="display: flex; margin: 2rem; justify-content: center;">
-  <button onclick="location.href='/c/'">Launch KnolCase</button>
+  <button onclick="location.href='/c/'">Open KnolCase</button>
 </div>
 
 <div style="background-color: #ecf0f1; padding: 6px; margin: 24px;">
@@ -60,17 +60,952 @@ keyboard.</li>
 </ul>
 </div>
 
-<h3>KnolCase articles</h3>
+
+<!---------------------------- toc ---------------------------->
+
+<a href="/c/1001">
+<img class="picture-box" src="/home/image/knolcase.png" style="max-width: 90%; max-height: 500px; display: block; margin: auto;">
+</a>
+
+<h2><a id="toc">Table of content</a></h2>
 
 <ul>
-<li><a href="case">Creating and managing case files</a></li>
-<li><a href="clipboard">Clipboard</a></li>
-<li><a href="integration">Importing and exporting data</a></li>
+
+<li>
+  <a href="#case">Case files</a>
+  <ul>
+    <li><a href="#newcase">Opening a new case</a>
+    <li><a href="#caselist">Managing your case files</a>
+  </ul>
+</li>
+
+<li>
+  <a href="#topic">Case topics</a>
+  <ul>
+    <li><a href="#edit">Editing topics</a>
+    <li><a href="#clipboard">Copying and moving topics</a>
+    <li><a href="#folder">Case folders</a>
+  </ul>
+</li>
+
+<li>
+  <a href="#sharing">Case sharing</a>
+  <ul>
+    <li><a href="#collaborate">Collaborations</a>
+  </ul>
+</li>
+
+<li>
+  <a href="#integration">Importing and exporting data</a>
+  <ul>
+    <li><a href="#wikidata">Wikidata export</a>
+    <li><a href="#upload">Upload files</a>
+    <li><a href="#backup">Backup and restore</a>
+  </ul>
+</li>
+
+<li>
+  <a href="#plugin">Plug-ins</a>
+  <ul>
+    <li><a href="#picture">Pictures</a>
+    <li><a href="#article">Articles</a>
+    <li><a href="#table">Data tables</a>
+    <li><a href="#sites">Site plug-ins</a>
+    <li><a href="#extref">External references</a>
+  </ul>
+</li>
+
 </ul>
 
-<h3>Screenshot of KnolCase</h3>
+<!---------------------------- case files ---------------------------->
 
-<a href="/c/1001"><img class="picture-box" src="/home/image/sling-case-screenshot.png" style="max-width: 90%; margin: 1rem;"></a>
+<h2><a id="case">Case files</a></h2>
+
+<p>KnolCase organizes topics and facts around case files.
+A case file groups topics about a subject into a single document.
+Case files are stored locally on your own computer in the browser's local
+database (<kb-topic qid="Q125176" title="IndexedDB"></kb-topic>).
+
+<blockquote><em>NB: Please notice that if you use KnolCase in <kb-topic qid="Q2890907" title="incognito mode"></kb-topic>,
+your case file will be deleted by the browser when you close the browser window,
+so you shouldn't use KnolCase in incognito mode for cases that you want to keep.
+You should also be careful when clearing cookies and browsing data.
+It is important NOT to delete the local site data (for ringgaard.com).
+Otherwise all your case files will be deleted.
+There are no backup copies on ringgaard.com of your case files, so they will be gone for good.
+You're advised to back up your case data on a regular basis.
+</em></blockquote>
+
+<p>Each case file is assigned a unique case number by a central case numbering service.
+You can view or edit a case by going to the url for the case,
+e.g. <a hef="https://ringgaard.com/c/1234">https://ringgaard.com/c/1234</a> for case #1234.
+You can only edit a case if you're the owner of the case.
+Also, the case can only be viewed by others if it has been shared.
+By default a case is private, so it cannot be viewed by anyone else.
+
+<p>A case file contains a number of topics grouped into folders.
+A topic can be in multiple folders.
+The first topic in the Main folder is the case topic, which is the topic for the case itself.
+The case topic cannot be deleted.
+It contains information about the case file like name, description, author, and case number,
+but you can add any information you like to the main topic, e.g. a
+<kb-topic qid="P921" title="main subject"></kb-topic> with a reference to the central entity of the case.
+
+<h3><a id="newcase">Opening a new case</a></h3>
+
+<p>Click the <h-icon>add</h-icon> button to open a new case.
+Type the name of the case you want to research and an optional description.
+Then click "Create".
+This opens the new case and you can now start to add topics to the case.
+
+<p>You add new topics to the case by typing the name of the topic in the
+search bar.
+If the topic is already in the knowledge base, you can just select it from
+the search list.
+This creates a topic that is an extension of an existing topic and you can click
+<h-icon>expand_more</h-icon> to see the existing information.
+Otherwise, pressing Enter without selecting a topic will create a new topic.
+
+<p>After you have made changes to the case, you can save it by
+clicking <h-icon>save</h-icon> or by pressing Ctrl+S.
+The case file is stored in the local database in your browser.
+
+<h3><a id="caselist">Managing your case files</a></h3>
+
+<p>The KnolCase home screen (<a hef="https://ringgaard.com/c/">https://ringgaard.com/c/</a>)
+shows you a list of all your case files on the computer.
+Case files are local to the computer and user, so you can only see the case
+files you have created on this computer with this user account.
+The case list shows the case number, status,  name, description, creation date,
+and last modification date.
+The most recently modified cases are shown first.
+You can open a case by clicking on it in the list.
+You can delete a case by clicking the <h-icon>delete</h-icon> button.
+Only the local link will be deleted for linked cases and collaborations.
+<p>The status icons show the status of each case:
+
+<table>
+<tr>
+  <td><h-icon>share</h-icon></td>
+  <td>case that you have shared so anyone with the case number can view it</td>
+</tr>
+<tr>
+  <td><h-icon>lock</h-icon></td>
+  <td>case that you have shared secretly so it can only be viewed by other users with the secret key;
+      only an encrypted copy of the case will be stored on the server</td>
+</tr>
+<tr>
+  <td><h-icon>link</h-icon></td>
+  <td>link to case that someone else has shared</td>
+</tr>
+<tr>
+  <td><h-icon>key</h-icon></td>
+  <td>link with secret key to encrypted case that someone else has shared with you</td>
+</tr>
+<tr>
+  <td><h-icon>public</h-icon></td>
+  <td>case that you have published making all topics in the case available in <a href="/knolbase">KnolBase</a></td>
+</tr>
+<tr>
+  <td><h-icon>people</h-icon></td>
+  <td>link to collaboration case which can be viewed and edited by all participants in the collaboration</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td>case has been modified since it was last shared</td>
+</tr>
+<tr>
+  <td>(no&nbsp;icon)</td>
+  <td>private case that is only stored locally and not shared with anyone</td>
+</tr>
+</table>
+
+<!---------------------------- case topics ---------------------------->
+
+<h2><a id="topic">Case topics</a></h2>
+
+<img src="/home/image/topic.jpg" style="float: right">
+
+<p>A topic is similar to a <kb-topic qid="Q16222597" title="Wikidata item"></kb-topic>,
+but is it local to the case file.
+Topics are used to represent all the things in human knowledge, including
+concepts, objects, subjects, and entities.
+If a topic represents a concept or an abstract object, it usually has a
+<kb-topic qid="P279" title="subclass of"></kb-topic> property.
+If the topic represents a concrete object, e.g. a person, it usually has an <kb-topic qid="P31" title="instance of"></kb-topic>,
+property which describes its type.
+Many common topics will already be in KnolBase and Wikidata, so topics in
+case files will often be new entities like persons, organization, locations,
+and documents, but you can make topics for any entities and concepts you're interested in.
+
+<p>Each topic is assigned a unique topic id which contains the case number as well as
+a serial number within the case, e.g. topic number 10 in case #1234 will be assigned
+t/1234/10 as its topic id.
+Topic ids are never reused even if you delete the topic.
+
+<p>A topic usually has a name and a description.
+Topic names do not have to be unique.
+The desciption can be used for disambiguating topics with the same name.
+You can also add one or more aliases for the topic.
+Theses can be different names the entity is known under, and spelling variations of these.
+
+<p>A topic consists of a number of statements.
+A statement has a property and a value.
+You can use all the <a href="https://www.wikidata.org/wiki/Wikidata:List_of_properties">properties defined by Wikidata</a>,
+but you can also just use text for properties.
+The datatype for the property value is determined by the property, but in most
+cases you can override the predefined datatype, e.g. you can just specify a text
+value for a reference property. KnolCase supports the following datatypes:
+<ul>
+<li><b>Text</b>: A simple string value. Text values can be localized by adding @ll to the string,
+where "ll" is the two letter abbreviation for the language.</li>
+<li><b>Number</b>: Numeric values can either be integers or decimal numbers.</li>
+<li><b>Date</b>: Dates are specified with a precision. A normal date has year, month, and day of month,
+but you can also specify dates where the precision is month, year, decade, century or millennium.</li>
+<li><b>Reference</b>: Link to another topic.</li>
+<li><b>Quantity</b>: A quantity is a number with a unit of measurement.</li>
+<li><b>Geopoint</b>: Geographical reference with lattitude and longitude.</li>
+</ul>
+
+<p>You can <a href="https://www.wikidata.org/wiki/Help:Qualifiers">qualify</a>
+a statement with other statement to expand on, annotate, or
+contextualize beyond what can be expressed in just a simple property-value pair.
+
+Qualifiers are used in order to further describe or refine the value of a
+property given in a statement.
+
+A statement should still provide useful data even without a qualifier;
+the qualifier is just there to provide additional information.
+
+Qualifier can modify what a topic means, indicate how the value of
+a property was determined, constrain the validity of the value, or offer further
+details that cannot otherwise be expressed using simple property-value pairs.
+
+Qualifiers are aldo used for temporal information like
+<kb-topic qid="P585" title="point in time"></kb-topic> for
+an event, or <kb-topic qid="P580" title="start"></kb-topic> and
+<kb-topic qid="P582" title="end time"></kb-topic>
+to specify the period where the statement applies.
+
+<p>You can make a topic an extension of another topic by adding an "is:"
+statement to the topic. If you publish the topic, it will be merged with the
+topic it is extending. This can be used to add additional facts to an already
+existing topic. If you add multiple "is:" statements to a topic, it will be
+merged will all the extended topics during reconciliation.
+
+<h3><a id="edit">Editing topics</a></h3>
+
+<p>You can edit a topic by clicking the <h-icon>edit</h-icon> button in the
+topic toolbar or by pressing Enter when the topic is selected.
+The topic editor works much like a normal text editor where you can use the
+cursor and editing keys to move around and edit the topic facts.
+Each line is a statement with a property and a value separated by colon.
+
+<p>You add new statements by starting to type the property name on a blank line.
+You can add blank lines by pressing Enter.
+A search box with the matching properties is shown below the statement line.
+The search list is updated as you type,  but you can also use Shift+Space to
+open and close the search list.
+
+Properties are ranked based on how common they are for the topic type
+(<kb-topic qid="P31" title="instance of"></kb-topic> and
+<kb-topic qid="P106" title="occupation"></kb-topic>).
+
+You can select the property from the search list using the up and down keys or
+click on the topic in the list.
+Pressing Tab will select the first match in the list.
+This adds the property to the statement and moves the cursor to the statement
+value after the colon.
+You can repeat the previous property by pressing Tab on a blank line.
+
+<p>There are approximately 5000 properties in Wikidata plus more than
+5000 cross reference properties. In addition to this, you can define custom
+properties, or just use a text string as the property name. However, some
+properties are more common than others, so you can select these with one-letter
+shortcuts:
+<ul>
+<li><b>name</b> (shortcut n): name of the topic</li>
+<li><b>alias</b> (shortcut a): other names for the topic</li>
+<li><b>description</b> (shortcut d): topic description for disambiguation</li>
+<li><b>instance of</b> (shortcut t): topic type</li>
+<li><b>comment</b> (shortcut *): unstructured note</li>
+</ul>
+
+<p>Many topics are persons (aka <kb-topic qid="Q5" title="humans"></kb-topic>
+in Wikidata lingo). Some common properties for persons are:
+<ul>
+<li><kb-topic qid="P569" title="date of birth"></kb-topic> (dob)</li>
+<li><kb-topic qid="P19" title="place of birth"></kb-topic> (pob)</li>
+<li><kb-topic qid="P570" title="date of death"></kb-topic> (dod)</li>
+<li><kb-topic qid="P20" title="date of death"></kb-topic> (pod)</li>
+<li><kb-topic qid="P551" title="residence"></kb-topic> (res)</li>
+<li><kb-topic qid="P27" title="country of citizenship"></kb-topic> (citi)</li>
+<li><kb-topic qid="P69" title="educated at"></kb-topic> (edu)</li>
+<li><kb-topic qid="P106" title="occupation"></kb-topic> (occ)</li>
+<li><kb-topic qid="P108" title="employer"></kb-topic> (empl)</li>
+</ul>
+
+<p>You can use Ctrl+M (male) and Ctrl+F (female) as shortcuts to add
+<kb-topic qid="P31" title="instance of"></kb-topic>: <kb-topic qid="Q5" title="human"></kb-topic>
+and <kb-topic qid="P21" title="sex or gender"></kb-topic>: <kb-topic qid="Q6581097" title="male"></kb-topic>
+or <kb-topic qid="Q6581072" title="female"></kb-topic> to the topic.
+
+<p>Pressing Space at the beginning of the line make the statement a qualifier of
+the previous statement.
+A qualified statement can be unqualified by pressing Backspace at the beginning of the line.
+
+<p>Statement values are entered much in the same way as properties, but it
+searches for matching values in more places:
+<ul>
+<li>names and aliases for topics in the case file (⭐)</li>
+<li>linked cases (🗄️)
+<li>names and aliases for topics in linked cases (🔗)</li>
+<li>names and aliases for topics in KnolBase</li>
+<li>dates (supported formats: "YYYY-MM-DD", "DD.MM.YYYY", "MM/DD/YYYY", "YYYY-MM", "YYYY",
+"DD MMM YY, MMM YY", "YYY0s", "Month DD", "YYYY", "DD. Month, YYYY", "Month YYYY",
+"MM/YYYY")</li>
+<li>numbers (integers and decimal number)</li>
+<li>quantities with units and conversion from imperial units (feet, inches, pounds)</li>
+<li>geopoints with lattitude and longitude</li>
+<li>localized names with language code</li>
+<li>plug-in pattern matches</li>
+<li>new topic with name</li>
+</ul>
+
+<p>The search ranking is based on overall item popularity as welll as how
+common the item type is for the property.
+
+If you you do no select a value from the search list, the statement value will
+just be a text.
+
+You can add unstructured notes to the topic by adding comments.
+Comments are displayed with a bullet (⚫︎) in front, and they are not published
+in the knowledge base.
+
+<p>You can select one or more statements, by selecting them with the mouse, or
+by holding down Shift when moving around with the arrow keys, just like you
+would do in any other text editor.
+
+Statements can be copied to the clipboard with Ctrl+C or cut with Ctrl+X.
+When you copy a statement (i.e. a property with a value), the resolved property
+and topic ids are preserved, so when you paste them back into the same topic
+or another topic, they will refer to the same property and topic ids as the
+place you copied them from.
+
+<p>When you're done editing the topic, you can save the changes by clicking
+<h-icon>save_alt</h-icon> or by pressing Ctrl+S.
+If you regret the changes to the topic, you can discard them by clicking
+<h-icon>cancel</h-icon> or pressing Esc.
+
+<h3><a id="clipboard">Copying and moving topics</a></h3>
+
+<p>You can cut, copy, and paste topics.
+Ctrl+C copies the selected topic(s) to the clipboard.
+You select a topic by clicking on the background of the topic card.
+A topic has a blue border when it is selected.
+
+<p>You can select multiple topics by selecting the first one and then then holding
+down the Shift key when selecting the last topic.
+You can also use the up and down keys to change the selection. Holding down the
+Shift key will extend or shrink the selection.
+Ctrl+A selects all topics in the current folder.
+The topic(s) will be stored in SLING text format in the clipboard.
+
+<p>Topics in the clipboard can be inserted into the current folder with Ctrl+V.
+This inserts the topic(s) right after the (first) selected topic
+or at the end if no topics are selected.
+
+<p>A topic can be in multiple folders at the same time. When topics are copied
+and pasted within the same case file, it just adds references to the existing
+underlying topics in the case. If a topic is edited in one folder, the changes
+will be shown in the other folders with a reference to the topic.
+
+<p>Topics can also be copied between cases. This will assign new topic ids
+to the pasted topics but it preserves the internal links between the topics.
+
+<p>You can move topics by cutting them to the clipboard with Ctrl+X.
+This will delete the topics from the current folder and add them to
+the <i>scraps folder</i>.
+You can then go to another folder and paste the topics into this.
+This will move the topics from the scraps folder to the new folder.
+The scrap folder is emptied when you save the case (Ctrl+S) or select "Clear"
+from the scraps folder context menu.
+
+<p>Ctrl+D copies the id of the selected topic to the clipboard and
+Ctrl+E copies the topic name to the clipboard.
+You can copy all the topics in the case file to the clipboard by selecting
+"Copy all" in the KnolCase menu in the top right-hand corner.
+
+<!---
+<p>Merge topics...
+<p>Extending existing topics...
+<p>Importing facts in extended topics
+<p>Linked cases...
+-->
+
+<h3><a id="folder">Case folders</a></h3>
+
+<p>Topics are organized into folders. The folder list is to the left of the
+topic panel and you can open and close it by clicking the <h-icon>menu</h-icon>
+icon in the upper-left corner. The current folder is shown in bold and you can
+switch to another folder by clicking it in the folder list.
+
+<p>You can add new folders by clicking <h-icon>create_new_folder</h-icon> above
+the folder list. Each folder has a context menu (<h-icon>more_vert</h-icon>) with
+functions for renaming the folder, moving the folder up and down in the list,
+and for deleting the folder. A folder can only be deleted if it is empty.
+
+<!---------------------------- sharing ---------------------------->
+
+<h2><a id="sharing">Case sharing</a></h2>
+
+<p>Your case files are stored locally on your own computer so no one else can
+view them.
+If you want to share your case file with others, you can click on the
+<h-icon>share</h-icon> button in the toolbar.
+Then you can choose between the following levels of sharing:
+<ul>
+<li><b>Private</b>: By default your case file is private and no one else can
+view it. If you have shared or published your case file, you can always make it
+private again by selecting 'Private'. This will delete the case file from the
+case server.</li>
+<li><b>Share</b>:
+If you choose 'Share', your case file will be stored on the central case server.
+You can click on the <h-icon>content_copy</h-icon> button to copy the sharing URL to the clipboard.
+Others can then view the case file by opening the case URL (e.g. https://ringgaard.com/c/1234)
+but they cannot modify it.
+The master copy of the case file will still be on your own computer.
+If you modify the case after it has been shared (shown in the case list
+with a * in the status column), the changes will not be visible to others until
+you share the case again.
+</li>
+<li><b>Restrict</b>:
+Case sharing URLs are easy to guess because case ids are small consecutive
+numbers, so they don't provide any real privacy. If you want to share your
+case file with a closed audience, you can use restricted sharing instead.
+This will only store an encrypted copy of the case file on the case server.
+A secret 128-bit key is generated locally on your computer and the case data
+is encrypted using AES-CBC encryption by your browser.
+This makes it practically impossible to read your case file without knowledge of
+the secret key.
+Clicking <h-icon>content_copy</h-icon> will copy the secret URL to the clipboard,
+and you can then use any secure form of communication to send this URL to
+those you want to give access to the case. Others can reshare the URL, but you
+can refresh the secret key by first making it private and then restricted
+again. Your master copy of the (unencrypted) case file will still be stored on
+your local computer together with the secret key.
+</li>
+<li><b>Publish</b>: You can publish all the topics in your case in
+<a href="/knolbase">KnolBase</a>.
+This will make the topics in the case visible to all users.
+KnolBase is rebuilt every night, so it can take up to 24 hours for your changes
+to become available.
+You can retract your changes by switching the case back to 'private'.
+If you have extended existing topics, these will be merged during reconciliation.
+Published topics will be available for searching in other cases without having
+to use case linking.
+</li>
+</ul>
+
+<h3><a id="collaborate">Collaborations</a></h3>
+
+<p>You can use case sharing to let other users view your cases, but they cannot
+make changes to them. If you want to work together with other users on a case,
+you can turn your case file into a <em>collaboration</em>. This will store the
+case file on a collaboration server. Then all participants in the collaboration
+can view and change the case file simultaneously. When a participant makes
+changes to the case, they will be propagated and displayed immediately to all
+other connected participants (like Google Docs).
+
+<p>Before you can collaborate on a case, you need to set yourself as the
+author of the case by adding an <kb-topic qid="P50" title="author"></kb-topic>
+statement to the main case topic.
+You can use your id from KnolCase or Wikidata, but if you are not in the
+knowledge base, you can add a topic to the case for yourself.
+Alternatively, you can make a biography case for yourself with your CV and
+publish this case. You can then set your topic id (Ctrl+D) from this case as the
+default author for new cases in the general settings (<h-icon>settings</h-icon>).
+
+<p>You can turn a local case into a collaboration by selecting 'Collaborate'
+in the case toolbar menu. You can then provide the URL for the collaboration server or
+use the default (wss://ringgaard.com/collab/) and then click "Collaborate".
+This moves the case from your own computer to the collaboration server and
+creates your credentials for accessing the collaboration.
+
+<p>After you have created the collaboration, you can start to invite other
+participants, by clicking the <h-icon>people</h-icon> button in the case
+toolbar.
+You can search for the new participant or add a new participant to the
+collaboration case itself. This adds the new participant to the main case
+topic and copies the invite URL to the clipboard. You can then use any
+(secure) communication medium to send the URL to the participant.
+
+<p>When the new participant clicks the URL, the collaboration server will check
+if the invite is valid. Please notice that invite URLs expires each time the
+collaboration server is restarted. This means that invites to the default
+collaboration server must be activated before the next day. If the invite is
+valid, credentials for the participant are created and stored on their local
+computer. Next time they want to access the collaboration, they can just click
+on the collaboration case in the case list, and a connection to the
+collaboration server will be established using the stored credentials.
+
+</p>
+
+<!---------------------------- integration ---------------------------->
+
+<h2><a id="integration">Importing and exporting data</a></h2>
+
+You can import data from local files on your computer into a case by selecting
+"Import from file" in KnolCase menu (<h-icon>more_vert</h-icon>).
+Choose the file format in the file dialog and then select the file to import.
+The following file format are supported:
+<ul>
+
+<li><b>SLING frames</b> (.sling): The case data as well as the knowledge base is
+stored internally in <a href="https://github.com/ringgaard/sling">SLING</a> format.
+You can import data in either SLING text or binary format.
+The input file should consist of a stream of SLING frames.
+Each frame is imported as a new topic, and each frame slot is imported as a
+statement with a property and a value. Since SLING is the native format, it gives
+you the most precise import in terms of data types and structure.
+</li>
+
+<li><b>JSON objects</b> (.json): You can import JSON files with either a stream
+of objects, e.g. one JSON object per line, or as one big array of JSON objects.
+Each object is imported as a new topic and each key-value pair is imported as
+one statement. The keys can either be property ids, e.g. "P569" or property
+names or aliases, e.g. "birthdate". If the key ends with #, the value is
+interpreted as an item id instead of a string.
+</li>
+
+<li><b>Tab-separated values</b> (.tsv): TSV files are text files consisting of
+lines separated by newlines, and each line has fields separated by tab.
+The first line contains the field name, and each of the remaining lines are
+imported as a new topic. Field names can be property ids, names or aliases. If
+the field name ends with #, the value is interpreted as an item id instead of a
+string.
+</li>
+
+<li><b>Comma-separated values</b> (.csv):
+<kb-topic qid="Q47479849" title="RFC4180"></kb-topic>-compliant CSV files can
+be imported in the same way as tab-separated files.</li>
+
+<li><b>QuickStatements</b> (.qs):
+<kb-topic qid="Q29032512" title="QuickStatements"></kb-topic> is a popular format for
+importing data into <kb-topic qid="Q2013" title="Wikidata"></kb-topic>, but you can also
+use it for importing data into case files. It is a simple text format which
+makes it easy to generate data in Wikidata format, but you can also use the
+<kb-topic qid="Q5583871" title="OpenRefine"></kb-topic> tool for cleaning up and
+transforming you data, and then export the data in QuickStatements format.
+KnolBase has a W3C Reconciliation Service API which you can use in OpenRefine
+for reconciling your data.
+</kb-topic></li>
+</ul>
+
+<h3><a id="wikidata">Wikidata export</a></h3>
+
+<p>You can export case topics to Wikidata by selecting the topic(s) and clicking
+the Wikidata button in the KnolCase toolbar.
+The first time you do this, you are asked to authorize SLING to make changes to
+Wikidata on your behalf.
+For existing topics, which already have a Wikidata QID, the item will be updated
+with new facts from the topic.
+Otherwise, new Wikidata items will be created, and the new QID will be added to
+the topic.
+Exporting to Wikidata will never overwrite or delete any existing information
+in Wikidata.
+
+<p>Not all facts from topics can be exported to Wikidata. Statements which use
+non-Wikidata properties or values will be skipped. Wikidata is also more strict
+in terms of data types for properties, so statements where the data value type
+does not match the property type will also be skipped.
+
+<h3><a id="upload">Upload files</a></h3>
+
+You can upload files from you computer to a case using the "Upload files"
+command in the KnolCase menu (<h-icon>more_vert</h-icon>). This uploads the
+selected files to the SLING drive server (drive.ringgaard.com), and adds a
+document topic to the case for each uploaded file with information about the
+filename, date, size, URL, and file type.
+
+<p>The uploaded files can be accessed by anyone with the URL, but the URLs contain
+a 64-bit crypto random key that makes it virtually impossible to guess the URL,
+so in reality you need access to the case in order to view the uploaded files.
+This should be good enough in most cases, but you should not use it to store
+state secrets.
+
+<h3><a id="backup">Backup and restore</a></h3>
+
+<p>Your case files are stored in the browser's local database.
+You can make a backup of all these by selecting "Backup" in the case manager
+menu (<h-icon>more_vert</h-icon>).
+This saves all the cases to a file that you can store in a safe place for
+disaster recovery.
+You can also use this to move your case files to another computer.
+
+<p>The backup can be restored by clicking "Restore" in the case manager
+menu (<h-icon>more_vert</h-icon>) and selecting the backup file.
+This reads the backed up cases into your browser's local database.
+This can be used to restore your case files if you have accidentally deleted them,
+e.g. by clearing your cookies and local data.
+You should be careful with having the same case files on multiple computers at the
+same time as this can lead to conflicting updates. You can use collaborations for
+cases that you need to access from more than one computer.
+
+</p>
+
+<!---------------------------- plugins ---------------------------->
+
+<h2><a id="plugin">Plug-ins</a></h2>
+
+KnolCase has a number of
+<a href="https://github.com/ringgaard/sling/tree/master/case/plugin"><i>plug-ins</i></a>
+that can be activated by pasting URLs into the search box or a topic,
+letting you import information from other sites or applications in a quick and
+easy manner.
+
+Plug-ins are loaded on-the-fly when you paste a URL that matches the plug-in URL
+pattern into the search box or a topic.
+If you paste a URL into the search box, you can select the plug-in in the search results.
+This will add a new topic produced by the plug-on to the current folder.
+
+Pasting a URL matching a plug-in into a topic will add the retrieved information
+from the plug-in to the selected topic.
+
+External references are checked against the cross-reference register in KnolBase
+and the topic is extended with any matches found.
+
+<h3><a id="picture">Pictures</a></h3>
+
+<p>"<kb-topic qid="Q1304336" title="A picture is worth a thousand words"></kb-topic>" it is said.
+You can add pictures to a topic by selecting a topic and pasting an image URL
+into it (i.e. a URL ending with .jpg, .jpeg, .gif, .png, .mp4, .webm, .webp, or .avif).
+This adds the picture to the photo gallery of the topic.
+You can browse the photo gallery by clicking on the photo to the right in the
+topic card.
+To get the URL for a picture on any webpage, right-click on the image and
+select "Copy image address" in the context menu (Chrome).
+
+<p>Pictures on the internet often disappear after a short time. To prevent the
+pictures in your case topics from disappearing, you can cache the images on the
+SLING media cache service by selecting "Cache images" in the KnolCase menu
+(<h-icon>more_vert</h-icon>) in the top right-hand corner.
+Then all the images in the case file will be cached in the background and you
+will still be able to view them after they have disappeared from their original
+location.
+
+<p>Some sites do not allow <kb-topic qid="Q719934" title="hot-linking"></kb-topic>
+which prevents images from these sites from being displayed properly in KnolCase.
+In this case, you can paste the image into the topic instead of just the image URL.
+You can copy an image by right-clicking on an image on a  webpage and selecting
+"Copy image" in the context menu (Chrome).
+When you paste an image into a topic, it will first be stored on
+drive.ringgaard.com using a randomized URL, and then this image is added to the
+topic.
+
+<p>You can also paste <i>gallery URLs</i> into a topic. A gallery URL starts with
+"gallery:" followed by a list of image URLs separated by space. This format is
+supported by the
+<a href="https://ringgaard.com/photosearch/">Reddit photo search</a> tool.
+Albums from Reddit and Imgur are also supported.
+You can search for images for a topic by clicking the
+<h-icon>image_search</h-icon> button on the topic toolbar.
+
+<h3><a id="article">Articles</a></h3>
+
+<p>Pasting a URL from an article or webpage into the search box will create a
+new topic for this page. You can also select a topic and paste the URL to add
+information to an existing topic.
+This is useful for keeping references to webpages and articles where you have
+found information about a topic.
+
+<p>KnolCase uses the meta tags from the webpage to create a topic with
+information about the page.
+It supports Facebook OpenGraph, Twitter Cards, JSON-LD, Dublin Core, Sailthru,
+as well as a number of generic meta tags:
+<ul>
+<li>title</li>
+<li>description</li>
+<li>webpage type</li>
+<li>summary</li>
+<li>language</li>
+<li>author</li>
+<li>image</li>
+<li>canonical url</li>
+<li>publisher</li>
+<li>publication date</li>
+</ul>
+
+<p>KnolCase has a database of more than 3000 news sites with their Wikidata QIDs
+to identify the publisher of a webpage.
+
+<p>For example, if you want to document the source for some fact in a topic, you
+can add a <kb-topic qid="P1343" title="described by source"></kb-topic>
+qualifier with the source:
+<ol>
+<li>Press Enter to make room for a new statement</li>
+<li>Press Space on the new line to start a qualifier</li>
+<li>Type 'source' and then Tab to add a <kb-topic qid="P1343" title="described by source"></kb-topic> property</li>
+<li>Paste the URL for the source and press Tab.</li>
+</ol>
+
+<p>This will create a new topic for the web article with meta data and add this as the source.</p>
+
+<h3><a id="table">Data tables</a></h3>
+
+<p>You can import tables from spreadsheets by copying some rows and columns
+into the clipboard and pasting these into a folder in KnolCase.
+You can copy data from any source that supports comma-separated or tab-separated
+values (CVS/TSV format).
+
+<p>The first row should contain the property/column names. These can be property
+ids (PIDs) or property names.
+
+<p>Each of the remaining rows are imported as a new topic.
+If a column name ends with #, e.g. ID#, it is expected to contain item or topic
+ids.
+Otherwise, the value is parsed according to the data type of the property, e.g.
+dates, number, URLs, quantities, etc.
+
+<h3><a id="sites">Site plug-ins</a></h3>
+
+<p>KnolCase also has more specialized plug-ins that can import data from
+specific sites:
+
+<ul>
+
+<li><b>Twitter</b><br/>
+The twitter plug-in retrieves information about
+<kb-topic qid="Q918" title="Twitter"></kb-topic> users.
+If you paste a user profile URL from <a href="https://twitter.com">twitter.com</a>, the
+following information is retrieved from the Twitter API:
+<ul>
+<li>name</li>
+<li>description</li>
+<li>gender (he/she)</li>
+<li>location</li>
+<li>profile photo</li>
+<li>twitter username</li>
+</ul>
+The plug-in also tries to convert URLs in the description to external references, e.g. Facebook or Instagram.
+
+<li><b>VIAF</b><br/>
+<kb-topic qid="Q54919" title="VIAF"></kb-topic> (Virtual International Authority File)
+is an international authority file with information about authors and publishers.
+It is a joint project of several national libraries and operated by
+<kb-topic qid="Q190593" title="OCLC"></kb-topic>.
+The VIAF plug-in can retrieve the following information from
+<a href="https://viaf.org">viaf.org</a> in
+<kb-topic qid="Q3919686" title="MARC 21"></kb-topic> format:
+<ul>
+<li>name</li>
+<li>aliases</li>
+<li>description</li>
+<li>gender</li>
+<li>birth date</li>
+<li>death date</li>
+<li>description</li>
+</ul>
+Authority File references from more than 50 national libraries and other
+institutions, e.g. Library of Congress, ISNI and German National Library, are
+also retrieved and mapped to Wikidata references.
+</li>
+
+<li><b>CVR</b><br/>
+<kb-topic qid="Q795419" title="CVR"></kb-topic> is the Danish Central Business
+Register with information about all Danish companies, organizations and their branches.
+KnolBase contains all of the CVR register and is updated daily.
+The CVR plug-in can take URLs from <a href="https://virk.dk/">virk.dk</a> and
+create or extend topics with references to the CVR entity in KnolBase.
+</li>
+
+<li><b>OpenCorporates</b><br/>
+<kb-topic qid="Q7095760" title="OpenCorporates"></kb-topic> is the largest open
+database of companies in the world with information about more than 200 million
+companies from more than
+<a href="https://opencorporates.com/registers">140 countries/jurisdictions</a>.
+OpenCorporates has kindly provided a free license to Ringgaard Research for
+retrieving company information from
+<a href="https://opencorporates.com/">opencorporates.com</a>.
+</li>
+
+<li><b>E-mail</b><br/>
+If you paste an <kb-topic qid="P968" title="email address"></kb-topic> into a
+topic, the email plug-in will add it to the selected topic.
+</li>
+
+<li><b>Phone number</b><br/>
+If you paste a <kb-topic qid="P1329" title="phone number"></kb-topic> with an
+international dialing prefix (i.e. +45) into a topic, the phone plug-in will add
+the telephone number to the selected topic.
+</li>
+
+<li><b>Linktree</b><br/>
+<kb-topic qid="Q96177589" title="Linktree"></kb-topic> is a social media
+reference landing page site that is often used on sites like Instagram and
+Twitter which do not allow linking to multiple sites. If you paste a
+<a href="https://linktr.ee/">linktr.ee</a> URL, all the links for the user will
+be added to the topic.
+This is often a quick and easy way to add all the social links for a person to a topic.
+</li>
+
+<li><b>Google Maps</b><br/>
+You can paste a URL from <kb-topic qid="Q12013" title="Google Maps"></kb-topic>
+to add a <kb-topic qid="P625" title="coordinate location"></kb-topic> to a
+topic.
+</li>
+
+<li><b>IMDB</b><br/>
+<kb-topic qid="Q37312" title="Internet Movie Database"></kb-topic> is is an
+online database of information related to films and television. It has
+biographies of many actors and other film people.
+The imdb plug-in can retrieve the following information:
+<ul>
+<li>name</li>
+<li>birth name</li>
+<li>nickname</li>
+<li>birth date</li>
+<li>place of birth</li>
+<li>death date</li>
+<li>place of death</li>
+<li>cause of death</li>
+<li>country of origin</li>
+<li>gender</li>
+<li>spouses</li>
+<li>children</li>
+<li>parents</li>
+<li>relatives</li>
+<li>height</li>
+<li>IMDB ID</li>
+<li>social media accounts</li>
+</ul>
+</li>
+
+<li><b>Listal</b><br/>
+<kb-topic qid="Q111033516" title="Listal.com"></kb-topic> is a social networking
+website that is based around the entertainment industry. It has profiles and
+pictures of many celebrities like actors, models, social media stars etc.
+The listal plug-in can retrieve the following information:
+<ul>
+<li>name</li>
+<li>birth name</li>
+<li>gender</li>
+<li>birth date</li>
+<li>death date</li>
+<li>country of origin</li>
+<li>country of residence</li>
+<li>occupation</li>
+<li>spouse or partner</li>
+<li>height</li>
+<li>hair and eye color</li>
+<li>IMDB ID</li>
+<li>profile picture</li>
+</ul>
+</li>
+
+<li><b>Wikidata</b><br/>
+If you paste a URL from wikidata.org, it will be imported as a new topic with
+all the properties from the Wikidata item.
+<a href="/knolbase">KnolBase</a> already contains all items from Wikidata, so
+this is mostly useful for new items that are not yet in Knolbase.
+</li>
+
+<li><b>Wikipedia</b><br/>
+If you paste an article URL from Wikipedia, a new extension topic for the
+Wikidata item corresponding to the Wikipedia article is added to the current
+folder.
+</li>
+
+<!--
+<p>Babepedia profile from babepedia.com
+<p>Se & Hør profiles from hjemmestrik.dk
+<p>Social media profiles from r/BeautifulFemales
+<p>Video transcoding for avi, wmv, and mp4 video files
+-->
+
+</ul>
+
+These plug-ins let you add a lot of information to topics by just copy and
+pasting URLs.
+For example, you can make a web search for a topic by clicking the
+<h-icon>search</h-icon> button in the topic toolbar to find the sites with
+information about the topic. You can copy the URL for the webpage using Ctrl+L Ctrl+C.
+Sometimes you might not even need to visit the webpage.
+You can copy the result URL by left-clicking on the blue link and selecting
+"Copy link address".
+
+<h3><a id="extref">External references</a></h3>
+
+<p>You can paste URLs from many other sites with information about the topic.
+This adds an external references of the appropriate type to the selected topic.
+The following sites are supported:
+
+<ul style="columns: auto 200px;">
+<li>academic.microsoft.com</li>
+<!-- <li>adultfilmdatabase.com</li> -->
+<li>bellazon.com</li>
+<li>bgafd.co.uk</li>
+<li>blogger.com</li>
+<li>blogspot.com</li>
+<li>boobpedia.com</li>
+<li>cameo.com</li>
+<li>crunchbase.com</li>
+<li>danskefilm.dk</li>
+<li>dblp.org</li>
+<li>dfi.dk</li>
+<li>discogs.com</li>
+<li>discord.gg</li>
+<li>egafd.com</li>
+<li>facebook.com</li>
+<li>filmpolski.pl</li>
+<li>filmweb.pl</li>
+<li>fina.org</li>
+<li>findagrave.com</li>
+<li>geni.com</li>
+<li>github.com</li>
+<li>honeydrip.com</li>
+<li>iafd.com</li>
+<li>imdb.com</li>
+<li>instagram.com</li>
+<li>linkedin.com</li>
+<li>linktr.ee</li>
+<li>medium.com</li>
+<li>models.com</li>
+<li>mubi.com</li>
+<li>muckrack.com</li>
+<li>music.apple.com</li>
+<li>myspace.com</li>
+<li>onlyfans.com</li>
+<li>open.spotify.com</li>
+<li>orcid.org</li>
+<li>patreon.com</li>
+<li>pinterest.com</li>
+<li>playboyplus.com</li>
+<li>reddit.com</li>
+<li>researchgate.net</li>
+<li>scholar.google.com</li>
+<li>snapchat.com</li>
+<li>soundcloud.com</li>
+<li>themoviedb.org</li>
+<li>the-sports.org</li>
+<li>tiktok.com</li>
+<li>t.me</li>
+<li>tumblr.com</li>
+<li>twitch.tv</li>
+<li>twitter.com</li>
+<li>vimeo.com</li>
+<li>vimeo.com</li>
+<!-- <li>vintage-erotica-forum.com</li> -->
+<li>vk.com</li>
+<li>worldathletics.org</li>
+<li>youtube.com</li>
+</ul>
+
+<p>Please <a href="/contact">contact us</a> if you have other sites with
+Wikidata reference properties that you want to use. If the property has a
+<kb-topic qid="P8966" title="URL match pattern"></kb-topic> this is usually
+easy to accomplish.
+</p>
 
 </home-section>
 
