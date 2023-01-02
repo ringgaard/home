@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="December 2022"
+  case="1313"
+  title="Bybjerg og Carmen"
+  description="Arne Bybjerg Pedersen (1928-2022) was a Danish entrepreneur and founder of Carmen Curlers"
+  image="https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large_vertical_lg/image/161/1615354/24262320-til-bm-erhverv.jpg">
+</home-cotm>
+
+<home-cotm
   time="November 2022"
   case="1284"
   title="Glamour Girls of the Silver Screen"
