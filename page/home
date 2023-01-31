@@ -22,13 +22,13 @@ topics through properties, essentially forming a network of linked topics.</p>
 <button onclick="location.href='/cotm'">Featured cases</button>
 </home-feature>
 
-<home-feature>
+<home-feature style="min-width: 350px;">
 <home-cotm
-  time="December 2022"
-  case="1313"
-  title="Bybjerg og Carmen"
-  description="Arne Bybjerg Pedersen (1928-2022) was a Danish entrepreneur and founder of Carmen Curlers"
-  image="https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large_vertical_lg/image/161/1615354/24262320-til-bm-erhverv.jpg">
+  time="January 2023"
+  case="1309"
+  title="Miss America"
+  description="Miss America 1921-2023 and all state pageant winners"
+  image="https://upload.wikimedia.org/wikipedia/en/9/9d/Miss_America_Logo.jpg">
 </home-cotm>
 </home-feature>
 

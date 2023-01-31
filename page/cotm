@@ -2,6 +2,20 @@
 
 <home-section>
 
+<h2>2021</h2>
+
+<div class="cotm-grid">
+
+<home-cotm
+  time="January 2023"
+  case="1309"
+  title="Miss America"
+  description="Miss America 1921-2023 and all state pageant winners"
+  image="https://upload.wikimedia.org/wikipedia/en/9/9d/Miss_America_Logo.jpg">
+</home-cotm>
+
+</div>
+
 <h2>2022</h2>
 
 <div class="cotm-grid">

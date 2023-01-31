@@ -939,6 +939,7 @@ export class HomeCotm extends Component {
         padding: 10px;
         border: 1px solid #eeeeee;
         background-color: #ffffff;
+        overflow: hidden;
       }
       $ a {
         text-decoration: none;
