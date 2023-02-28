@@ -24,11 +24,11 @@ topics through properties, essentially forming a network of linked topics.</p>
 
 <home-feature style="min-width: 350px;">
 <home-cotm
-  time="January 2023"
-  case="1309"
-  title="Miss America"
-  description="Miss America 1921-2023 and all state pageant winners extracted from Wikipedia"
-  image="https://upload.wikimedia.org/wikipedia/en/9/9d/Miss_America_Logo.jpg">
+  time="February 2023"
+  case="1332"
+  title="America's Next Top Model"
+  description="All contestants in America's Next Top Model season 1-24"
+  image="https://upload.wikimedia.org/wikipedia/commons/4/4e/Americas_Next_top_model_text_logo.jpg">
 </home-cotm>
 </home-feature>
 

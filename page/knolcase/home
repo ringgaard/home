@@ -903,6 +903,13 @@ The listal plug-in can retrieve the following information:
 </ul>
 </li>
 
+<li><b>Famous Birthdays</b><br/>
+<kb-topic qid="Q54958736" title="FamousBirthdays.com"></kb-topic> is a website
+dedicated to cataloging the birthdays of famous people and compiling other
+facts about them. The plug-in retrieves name, description, birth date and birth
+place.
+</li>
+
 <li><b>Wikidata</b><br/>
 If you paste a URL from wikidata.org, it will be imported as a new topic with
 all the properties from the Wikidata item.
@@ -947,7 +954,7 @@ The following sites are supported:
 <li>bgafd.co.uk</li>
 <li>blogger.com</li>
 <li>blogspot.com</li>
-<li>boobpedia.com</li>
+<!-- <li>boobpedia.com</li> -->
 <li>cameo.com</li>
 <li>crunchbase.com</li>
 <li>danskefilm.dk</li>
@@ -957,6 +964,7 @@ The following sites are supported:
 <li>discord.gg</li>
 <li>egafd.com</li>
 <li>facebook.com</li>
+<li>fandom.com</li>
 <li>filmpolski.pl</li>
 <li>filmweb.pl</li>
 <li>fina.org</li>
@@ -965,10 +973,10 @@ The following sites are supported:
 <li>github.com</li>
 <li>honeydrip.com</li>
 <li>iafd.com</li>
+<li>itftennis.com</li>
 <li>imdb.com</li>
 <li>instagram.com</li>
 <li>linkedin.com</li>
-<li>linktr.ee</li>
 <li>medium.com</li>
 <li>models.com</li>
 <li>mubi.com</li>
@@ -999,6 +1007,7 @@ The following sites are supported:
 <li>vk.com</li>
 <li>wikitree.com</li>
 <li>worldathletics.org</li>
+<li>wtatennis.com</li>
 <li>youtube.com</li>
 </ul>
 

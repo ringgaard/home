@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="February 2023"
+  case="1332"
+  title="America's Next Top Model"
+  description="All contestants in America's Next Top Model season 1-24"
+  image="https://upload.wikimedia.org/wikipedia/commons/4/4e/Americas_Next_top_model_text_logo.jpg">
+</home-cotm>
+
+<home-cotm
   time="January 2023"
   case="1309"
   title="Miss America"
