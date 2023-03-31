@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="March 2023"
+  case="1368"
+  title="The umbrella murder"
+  description="A Danish citizen is interrogated in Copenhagen in 1993 for the famous umbrella murder in London. English police are sure that he is an agent of Bulgaria and that he is the murderer. The murder happened on Waterloo Bridge in London in 1978."
+  image="https://drive.ringgaard.com/i/28eaeefed6c57070.png">
+</home-cotm>
+
+<home-cotm
   time="February 2023"
   case="1332"
   title="America's Next Top Model"
