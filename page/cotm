@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="May 2023"
+  case="1262"
+  title="Poul Schlüter"
+  description="Statsminister Poul Schlüter var sin første kone, Majken, utro, da han omkring 1970 havde en affære med en anden kvinde og blev far til datteren Carina Harders."
+  image="https://drive.ringgaard.com/i/416a3cf5ee222194.png">
+</home-cotm>
+
+<home-cotm
   time="April 2023"
   case="1375"
   title="Offentlige foredrag i Naturvidenskab"
