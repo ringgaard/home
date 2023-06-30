@@ -411,7 +411,7 @@ searches for matching values in more places:
 <li>dates (supported formats: "YYYY-MM-DD", "DD.MM.YYYY", "MM/DD/YYYY", "YYYY-MM", "YYYY",
 "DD MMM YY, MMM YY", "YYY0s", "Month DD", "YYYY", "DD. Month, YYYY", "Month YYYY",
 "MM/YYYY")</li>
-<li>numbers (integers and decimal number)</li>
+<li>numbers (integers and decimal numbers)</li>
 <li>quantities with units and conversion from imperial units (feet, inches, pounds)</li>
 <li>geopoints with lattitude and longitude</li>
 <li>localized names with language code</li>
@@ -867,7 +867,7 @@ following information is retrieved from the Twitter API:
 <li>twitter username</li>
 </ul>
 The plug-in also tries to convert URLs in the description to external references, e.g. Facebook or Instagram.
-
+(disabled due to Twitter API restrictions)
 <li><b>VIAF</b><br/>
 <kb-topic qid="Q54919" title="VIAF"></kb-topic> (Virtual International Authority File)
 is an international authority file with information about authors and publishers.

@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="June 2023"
+  case="1401"
+  title="Møntkup for millioner"
+  description="I det svenske Kongelige Møntkabinets boks findes der en gylden skat, en af de fineste i verden. Værdi 25 milliarder svenske kroner. Men så opdages det, at mange af de mest værdifulde mønter er forsvundet. Snart er museets øverste chef mistænkt."
+  image="https://live.staticflickr.com/1037/4730172290_d0629abbe5_b.jpg">
+</home-cotm>
+
+<home-cotm
   time="May 2023"
   case="1262"
   title="Poul Schlüter"
