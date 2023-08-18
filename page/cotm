@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="July 2023"
+  case="1411"
+  title="Anni-Frid"
+  description="Anni-Frid Lyngstad was born in Norway as part of the Nazi Germany Lebensborn eugenics program. She was born at the end of WWII where the Lebensborn program ended, and her mother managed to escape with her to Sweden, where she later became one of the four members of ABBA."
+  image="https://i.redd.it/d36aog7wg8v11.jpg">
+</home-cotm>
+
+<home-cotm
   time="June 2023"
   case="1401"
   title="Møntkup for millioner"
