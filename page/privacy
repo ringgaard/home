@@ -6,6 +6,7 @@
 <li>The site keeps a standard  <a href="/kb/Q5153426">NCSA combined web log</a> of all requests to the site.</li>
 <li>The web log is used for standard web traffic measurements and for detecting spam, abuse, and attacks.</li>
 <li>Web logs are not shared with anyone outside the organization.</li>
+<li>Your IP address is logged when you confirm ownership of a copyrighted work.</li>
 <li>IP addresses that abuse the site will be blocked without further notice.</li>
 <li>All URLs for external references use <em>noreferrer</em> so the sites you navigate to are not informed about where you came from.</li>
 <li>All trafic between you and ringgaard.com is encrypted (<a href="/kb/Q44484">HTTPS</a>).</li>

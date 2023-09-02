@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="August 2023"
+  case="1413"
+  title="The Soul of a New Machine"
+  description="The Soul of a New Machine by Tracy Kidder chronicles the experiences of a computer engineering team at Data General racing to design a next-generation computer at a blistering pace under tremendous pressure. The machine was launched in 1980 as the Data General Eclipse MV/8000."
+  image="https://www.wired.com/wp-content/uploads/archive/wired/images/eagleteam.jpg">
+</home-cotm>
+
+<home-cotm
   time="July 2023"
   case="1411"
   title="Anni-Frid"
