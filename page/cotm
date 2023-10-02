@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="September 2023"
+  case="1417"
+  title="The Profumo Affair"
+  description="Having found fame and success as a model, Christine Keeler's short affair with cabinet minister John Profumo led to the downfall of Harold Macmillan's government."
+  image="https://www.christine-keeler.co.uk/uploads/2/9/5/9/29598945/background-images/131074573.jpeg">
+</home-cotm>
+
+<home-cotm
   time="August 2023"
   case="1413"
   title="The Soul of a New Machine"
