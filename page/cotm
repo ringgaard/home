@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="October 2023"
+  case="1421"
+  title="Spycatcher"
+  description="Spycatcher is a memoir written by Peter Wright, former MI5 officer and Assistant Director. Published first in Australia, the book was banned in England due to its allegations about government policy and incidents. In 2021, the Cabinet Office was still blocking freedom of information requests for files on the Spycatcher affair."
+  image="https://pics.cdn.librarything.com/picsizes/42/d4/42d406dcf0ec1c959367a315551444341587343_v5.jpg">
+</home-cotm>
+
+<home-cotm
   time="September 2023"
   case="1417"
   title="The Profumo Affair"
