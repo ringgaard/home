@@ -35,8 +35,8 @@ const cfg = {
   ],
 
   quicklinks: [
-    {name: "KnolCase", url: "/c/"},
-    {name: "KnolBase", url: "/kb/"},
+    {name: "KnolCase", url: "/c/", icon: "&#xf187;"},
+    {name: "KnolBase", url: "/kb/", icon: "&#xf1c0;"},
   ],
 
   menu: [
@@ -117,6 +117,19 @@ function social_links() {
   for (let site of social) {
     h.push(`<home-icon-link icon="${site.icon}" href="${site.url}">
             </home-icon-link>`);
+  }
+  return h.join("");
+}
+
+function quick_links() {
+  let h = new Array();
+  for (let item of cfg.quicklinks) {
+    if (item.icon) {
+      h.push(`<home-icon-link icon="${item.icon}" href="${item.url}">
+              </home-icon-link>`);
+    }
+  }
+  for (let site of social) {
   }
   return h.join("");
 }
@@ -409,7 +422,7 @@ export class HomeBanner extends Component {
     return `
       <home-logo></home-logo>
       <div class="title">${cfg.sitename}</div>
-      <div class="social">${social_links()}</div>
+      <div class="quicklinks">${quick_links()}</div>
     `;
   }
 
@@ -443,7 +456,7 @@ export class HomeBanner extends Component {
         margin: 16px 0px 16px 0px;
       }
 
-      $ .social {
+      $ .quicklinks {
         display: flex;
         margin-left: auto;
       }

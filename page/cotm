@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="November 2023"
+  case="1422"
+  title="Flash Crash"
+  description="The story of a trading prodigy who amassed $70 million from his childhood bedroom-until the US government accused him of helping trigger an unprecedented market collapse. On May 6, 2010, financial markets around the world tumbled simultaneously and without warning. The Flash Crash, as it became known, represented the fastest drop in market history."
+  image="https://image.cnbcfm.com/api/v1/image/102922297-GettyImages-483992136.jpg">
+</home-cotm>
+
+<home-cotm
   time="October 2023"
   case="1421"
   title="Spycatcher"
