@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="December 2023"
+  case="1430"
+  title="Henrik Kauffmann"
+  description="Henrik Kauffmann (1888 — 1963) was the Danish ambassador to the United States during World War II, who signed over part of Greenland to the US."
+  image="https://media.lex.dk/media/176023/standard_Kaufmann__Henrik.jpg">
+</home-cotm>
+
+<home-cotm
   time="November 2023"
   case="1422"
   title="Flash Crash"
