@@ -2,6 +2,20 @@
 
 <home-section>
 
+<h2>2024</h2>
+
+<div class="cotm-grid">
+
+<home-cotm
+  time="January 2023"
+  case="1426"
+  title="Flash Boys"
+  description="Flash Boys is about a small group of Wall Street guys who figure out that the U.S. stock market has been rigged for the benefit of insiders and that, post–financial crisis, the markets have become not more free but less, and more controlled by the big Wall Street banks. Working at different firms, they come to this realization separately; but after they discover one another, the flash boys band together and set out to reform the financial markets."
+  image="http://library.lol/covers/1161000/d7f45e3855e211d13f7367c4107a0fe5-d.jpg">
+</home-cotm>
+
+</div>
+
 <h2>2023</h2>
 
 <div class="cotm-grid">
