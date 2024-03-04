@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="February 2024"
+  case="1449"
+  title="Xi Jinping"
+  description="Kinas fremgang virker ustoppelig, det samme gør, trods protester, landets leder Xi Jinping. Xi Jinping står over for en række monumentale udfordringer, som ville få andre globale ledere til at vakle: politisk uro, anklager om folkedrab i Xinjiang, en handelskrig med USA, følgerne af coronaepidemien. Men Xi Jinpings magt synes intakt."
+  image="https://imgcdn.saxo.com/_9788743403883/0x500">
+</home-cotm>
+
+<home-cotm
   time="January 2024"
   case="1426"
   title="Flash Boys"
