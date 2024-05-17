@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="March 2024"
+  case="1483"
+  title="Gift med Gro"
+  description="Arne Olav Brundtland har skrevet en biografi om at være gift med Norges første kvindelige statsminister, Gro Harlem Brundtland (1981, 1986-1996)."
+  image="https://drive.ringgaard.com/i/483254b83b15c030.png">
+</home-cotm>
+
+<home-cotm
   time="February 2024"
   case="1449"
   title="Xi Jinping"
