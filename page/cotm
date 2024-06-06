@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="May 2024"
+  case="1487"
+  title="Ulla Terkelsen"
+  description="Ulla Terkelsen, f. 1944 i Aarhus, er en dansk udenrigskorrespondent. Hun fyldte 80 i maj 2024, og er stadig aktiv korrespondent."
+  image="https://aarhuspanorama.dk/wp-content/uploads/2017/01/10266-Ulla-Terkelsen-05-1024x683.jpg">
+</home-cotm>
+
+<home-cotm
   time="March 2024"
   case="1483"
   title="Gift med Gro"
