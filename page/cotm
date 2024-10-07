@@ -7,11 +7,51 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="September 2024"
+  case="1507"
+  title="Danske modstandskvinder"
+  description="De har været mange år om at komme ud af busken, men i dag er der en hel gruppe kvinder, som står frem og fortæller den dramatiske historie om 2. verdenskrigs sidste år og deres farlige arbejde i den danske modstandsbevægelse."
+  image="https://piafrislaneth.dk/wp-content/uploads/2016/05/befrielsen-5501.jpg">
+</home-cotm>
+
+<home-cotm
+  time="August 2024"
+  case="1492"
+  title="August og Marie"
+  description="Marie Krogh blev den fjerde kvindelige dr. med i 1914. August Krogh modtog Nobelprisen i 1920. Sammen opklarede de lungernes gådefulde egenskaber, der fører ilten ud i blodet. Dertil fik de insulinopskriften til Danmark, og lagde fundamentet for Novo Nordisk."
+  image="https://www.politikensforlag.dk/_cover_media/270b/9788740062502.jpg">
+</home-cotm>
+
+<home-cotm
+  time="July 2024"
+  case="1434"
+  title="Susanne Krage"
+  description="Danish author, artist, and former call girl who was married to Henrik Stangerup."
+  image="https://billeder.jyllands-posten.dk/pictures/image/12960537/tcxpa0/ALTERNATES/master-3_2/title-mangler">
+</home-cotm>
+
+<home-cotm
+  time="June 2024"
+  case="1429"
+  title="Pastir Loda"
+  description="Pastir Loda is a book by Vladimir Nazor. It is now, after some work by Denny Vrandečić and me, in the public domain."
+  image="https://drive.ringgaard.com/i/6295ab8bbbb12cf9.png">
+</home-cotm>
+
+<home-cotm
   time="May 2024"
   case="1487"
   title="Ulla Terkelsen"
   description="Ulla Terkelsen, f. 1944 i Aarhus, er en dansk udenrigskorrespondent. Hun fyldte 80 i maj 2024, og er stadig aktiv korrespondent."
   image="https://aarhuspanorama.dk/wp-content/uploads/2017/01/10266-Ulla-Terkelsen-05-1024x683.jpg">
+</home-cotm>
+
+<home-cotm
+  time="April 2024"
+  case="1246"
+  title="Frøken Danmark"
+  description="The Miss Denmark is a national Beauty pageant in Denmark. The pageant was founded in 1926, where the winners were sent to Miss Universe and other titleholders to Miss World."
+  image="https://i.pinimg.com/originals/9d/40/9d/9d409d9b4632d35135cfb81886cafe7b.jpg">
 </home-cotm>
 
 <home-cotm
