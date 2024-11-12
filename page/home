@@ -23,13 +23,15 @@ topics through properties, essentially forming a network of linked topics.</p>
 </home-feature>
 
 <home-feature style="min-width: 350px;">
+
 <home-cotm
-  time="September 2024"
-  case="1507"
-  title="Danske modstandskvinder"
-  description="De har været mange år om at komme ud af busken, men i dag er der en hel gruppe kvinder, som står frem og fortæller den dramatiske historie om 2. verdenskrigs sidste år og deres farlige arbejde i den danske modstandsbevægelse."
-  image="https://piafrislaneth.dk/wp-content/uploads/2016/05/befrielsen-5501.jpg">
+  time="October 2024"
+  case="1517"
+  title="Obscure actresses"
+  description="Lesser-known stars of Hollywood described by the 'Those obscure objects of desire blog'."
+  image="https://drive.ringgaard.com/i/374ecb5045cb52f1.png">
 </home-cotm>
+
 </home-feature>
 
 </home-features>
@@ -113,4 +115,3 @@ other information sources.
 </home-features>
 
 </home-section>
-

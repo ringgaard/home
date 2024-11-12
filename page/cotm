@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="October 2024"
+  case="1517"
+  title="Obscure actresses"
+  description="Lesser-known stars of Hollywood described by the 'Those obscure objects of desire blog'."
+  image="https://drive.ringgaard.com/i/374ecb5045cb52f1.png">
+</home-cotm>
+
+<home-cotm
   time="September 2024"
   case="1507"
   title="Danske modstandskvinder"
@@ -323,4 +331,3 @@
 </div>
 
 </home-section>
-
