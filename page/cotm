@@ -7,6 +7,22 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="December 2024"
+  case="1515"
+  title="Dead Danes"
+  description="When Danish citizens die, their information is published in the Danish government gazette Statstidende. This provides authoritative information about birth and dead dates. More than 6000 Danes have now been matched with the knowledge base."
+  image="https://drive.ringgaard.com/i/18e4569798c8a716.png">
+</home-cotm>
+
+<home-cotm
+  time="November 2024"
+  case="1500"
+  title="Kraks Blå Bog 2006"
+  description="Kraks Blå Bog is the Danish Who's Who containing biographies of the 8000 most prominent Danes including their relatives. This case is private because of copyright but you can find all the persons <a href='/kb/c/1500'>here</a>."
+  image="https://drive.ringgaard.com/i/6861943150c9784b.png">
+</home-cotm>
+
+<home-cotm
   time="October 2024"
   case="1517"
   title="Obscure actresses"
@@ -26,7 +42,7 @@
   time="August 2024"
   case="1492"
   title="August og Marie"
-  description="Marie Krogh blev den fjerde kvindelige dr. med i 1914. August Krogh modtog Nobelprisen i 1920. Sammen opklarede de lungernes gådefulde egenskaber, der fører ilten ud i blodet. Dertil fik de insulinopskriften til Danmark, og lagde fundamentet for Novo Nordisk."
+  description="Marie Krogh blev den fjerde kvindelige dr. med. i 1914. August Krogh modtog Nobelprisen i 1920. Sammen opklarede de lungernes gådefulde egenskaber, der fører ilten ud i blodet. Dertil fik de insulinopskriften til Danmark, og lagde fundamentet for Novo Nordisk."
   image="https://www.politikensforlag.dk/_cover_media/270b/9788740062502.jpg">
 </home-cotm>
 
@@ -59,7 +75,7 @@
   case="1246"
   title="Frøken Danmark"
   description="The Miss Denmark is a national Beauty pageant in Denmark. The pageant was founded in 1926, where the winners were sent to Miss Universe and other titleholders to Miss World."
-  image="https://i.pinimg.com/originals/9d/40/9d/9d409d9b4632d35135cfb81886cafe7b.jpg">
+  image="https://konmuseum.dk/wp-content/uploads/Inga-Arvad.jpg">
 </home-cotm>
 
 <home-cotm
