@@ -176,7 +176,6 @@ app.page("/robots.txt", """User-agent: *
 Disallow: /kb/
 Disallow: /c/
 Disallow: /case/
-Disallow: /common/
 Disallow: /media/
 Disallow: /data/
 Allow: /
@@ -186,4 +185,3 @@ Allow: /
 log.info("HTTP server listening on port", flags.arg.port)
 app.run()
 log.info("Shutdown.")
-
