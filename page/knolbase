@@ -14,11 +14,11 @@ a number of other information sources:</p>
 <ul>
 <li><a href="/kb/Q52">Wikipedia</a> (aliases, photos, infoboxes, summaries, categories, popularity, 30 languages)</li>
 <li><a href="/kb/Q795419">CVR</a> (Danish Central Business Register)</a></li>
-<li><a href="/kb/">Reddit</a> (celebrities and photos)</a></li>
+<li><a href="/kb/Q7604468">Statstidende</a> (Danish government gazette)</a></li>
+<li><a href="/kb/Q1136">Reddit</a> (celebrities and photos)</a></li>
 <li><a href="/kb/Q918">Twitter</a> (photos)</a></li>
 <li><a href="/kb/Q37312">IMDB</a> (photos)</a></li>
 <li><a href="/kb/Q55259097">Global LEI index</a> (companies)</a></li>
-<li><a href="/kb/Q90405608">FactGrid</a> (research database for historians, optional)</a></li>
 <li><a href="/knolcase">KnolCase</a> (published case topics)</a></li>
 </ul>
 
@@ -181,7 +181,6 @@ The KnolBase reconciliation service supports the following APIs:
     {mnemonic: "viaf", prop: "P214", name: "VIAF ID"},
     {mnemonic: "mid", prop: "P646", name: "Freebase MID"},
     {mnemonic: "kg", prop: "P2671", name: "Google Knowledge Graph ID"},
-    {mnemonic: "fg", prop: "P8168", name: "FactGrid ID"},
   ];
 
   let h = new Array();
@@ -196,4 +195,3 @@ The KnolBase reconciliation service supports the following APIs:
 </script>
 
 </home-section>
-

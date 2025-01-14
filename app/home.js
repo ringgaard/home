@@ -1070,8 +1070,9 @@ export class BirthdayCard extends Component {
       h += '</a>';
     }
     h += '<p class="desc">';
-    h += p.description;
-    if (!p.description || !p.description.includes("born")) {
+    if (p.description) {
+      h += p.description;
+    } else if (!p.description.includes("born")) {
       h += `, born ${p.birthdate}`;
     }
     h += '</p>';
@@ -1240,4 +1241,3 @@ Component.register(TodaysBirthdays);
 
 // Defer displaying page until all components have been loaded.
 document.body.style.display = "";
-
