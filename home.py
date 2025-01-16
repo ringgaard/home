@@ -172,11 +172,15 @@ def birthday_list(request):
   return get_birthdays()
 
 # Robots.txt handler.
-app.page("/robots.txt", """User-agent: *
-Disallow: /kb/
+app.page("/robots.txt",
+"""User-agent: *
+Disallow: /
+
+User-agent: Googlebot
 Disallow: /c/
 Disallow: /case/
 Disallow: /media/
+Disallow: /thumb/
 Disallow: /data/
 Allow: /
 """, "text/plain")
