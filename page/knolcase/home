@@ -28,7 +28,7 @@ ultimately be available in places like Google search knowledge panels, Siri,
 as well as many other places.</p>
 
 <div style="display: flex; margin: 2rem; justify-content: center;">
-  <button onclick="location.href='/c/'">Open KnolCase</button>
+  <home-button href="/c/" label="Open KnolCase"></home-button>
 </div>
 
 <div style="background-color: #ecf0f1; padding: 6px; margin: 24px;">
@@ -1097,4 +1097,3 @@ easy to accomplish.
 </p>
 
 </home-section>
-

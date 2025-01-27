@@ -122,7 +122,7 @@ properties in the knowledge base.
 
 </p>
 <div style="display: flex; margin: 2rem; justify-content: center;">
-  <button onclick="location.href='/kb/'">Browse KnolBase</button>
+  <home-button href="/kb/" label="Browse KnolBase"></home-button>
 </div>
 
 <h3>W3C Reconciliation Service API</h3>

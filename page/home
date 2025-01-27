@@ -17,9 +17,9 @@ You can create your own case files with topics like persons, companies,
 organizations, places, articles, notes, documents, and references, and connect
 topics through properties, essentially forming a network of linked topics.</p>
 
-<button onclick="location.href='/knolcase'">Learn more</button>
-<button onclick="location.href='/c/'">Open case</button>
-<button onclick="location.href='/cotm'">Featured cases</button>
+<home-button href="/knolcase" label="Learn more"></home-button>
+<home-button href="/c/" label="Open case"></home-button>
+<home-button href="/cotm" label="Featured cases"></home-button>
 </home-feature>
 
 <home-feature style="min-width: 350px;">
@@ -52,7 +52,7 @@ management and natural language processing. Ringgaard Research was founded in
 September 2020 by Michael Ringgaard after working at Google Research for more
 than 13 years.
 </p>
-<button onclick="location.href='/about'">History</button>
+<home-button href="/about" label="History"></home-button>
 </home-feature>
 
 </home-features>
@@ -68,8 +68,8 @@ two billion facts about 100 million entities.
 Every day a new knowledge base is built from Wikidata as well as a number of
 other information sources.
 </p>
-<button onclick="location.href='/knolbase'">Learn more</button>
-<button onclick="location.href='/kb/'">Browse</button>
+<home-button href="/knolbase" label="Learn more"></home-button>
+<home-button href="/kb/" label="Browse"></home-button>
 </home-feature>
 
 <todays-birthdays></todays-birthdays>
@@ -90,7 +90,7 @@ other information sources.
   by using the SLING Python API (pysling). There is also a JS module so you can
   use SLING in the browser.
   </p>
-  <button onclick="location.href='https://github.com/ringgaard/sling'">SLING on GitHub</button>
+  <home-button href="https://github.com/ringgaard/sling" label="SLING on GitHub"></home-button>
 </home-feature>
 
 <home-feature>
@@ -100,7 +100,7 @@ other information sources.
   interface. It can be installed independently of the other SLING components
   and is distributed as a standalone Debian package.
   </p>
-  <button onclick="location.href='https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md'">SLINGDB on GitHub</button>
+  <home-button href="https://github.com/ringgaard/sling/blob/master/doc/guide/slingdb.md" label="SLINGDB on GitHub"></home-button>
 </home-feature>
 
 <home-feature>
@@ -109,7 +109,7 @@ other information sources.
   <p>Myelin is a JIT compiler for neural networks. It compiles neural network
   functions written in Python into optimized x64 assembly or GPU code at runtime.
   </p>
-  <button onclick="location.href='https://github.com/ringgaard/sling/blob/master/doc/guide/myelin.md'">Myelin on GitHub</button>
+  <home-button href="https://github.com/ringgaard/sling/blob/master/doc/guide/myelin.md" label="Myelin on GitHub"></home-button>
 </home-feature>
 
 </home-features>

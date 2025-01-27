@@ -167,22 +167,6 @@ body {
   line-height: 1.7;
 }
 
-button {
-  background: #00A0D6;
-  color: #fff;
-  border: 1px solid #00A0D6;
-  font: inherit;
-  font-weight: bold;
-  padding: 7px 20px;
-  border-radius: 32px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #fff;
-  color: #00A0D6;
-}
-
 pre {
   background: #ecf0f1;
   padding: 8px;
@@ -282,6 +266,43 @@ export class HomeIconLink extends Component {
 }
 
 Component.register(HomeIconLink);
+
+export class HomeButton extends Component {
+  render() {
+    return `<a href="${this.attrs.href}">${this.attrs.label}</a>`;
+  }
+
+  static stylesheet() {
+    return `
+      $ a {
+        display: inline-block;
+        background: #00A0D6;
+        color: #fff;
+        border: 1px solid #00A0D6;
+        font: inherit;
+        font-weight: bold;
+        padding: 7px 20px;
+        border-radius: 32px;
+        cursor: pointer;
+      }
+
+      $ a:link {
+        color: #fff;
+      }
+
+      $ a:visited {
+        color: #fff;
+      }
+
+      $ a:hover {
+        background: #fff;
+        color: #00A0D6;
+      }
+    `;
+  }
+}
+
+Component.register(HomeButton);
 
 export class HomeRibbon extends Component {
   static stylesheet() {
@@ -932,7 +953,10 @@ export class HomeCotm extends Component {
         </a>
       </div>
       <div class="descr">
-        <div class="case">Case #${p.case}</div>
+        <div class="case">
+          Case #${p.case}
+          <a class="topics" href="https://ringgaard.com/kb/PCASE/${p.case}">Topics</a>
+        </div>
         <div class="title">
           <a href="https://ringgaard.com/c/${p.case}" target="_blank">${p.title}</a>
         </div>
@@ -956,6 +980,13 @@ export class HomeCotm extends Component {
       }
       $ a {
         text-decoration: none;
+      }
+      $ a.topics {
+        float: right;
+        color: black;
+        background-color: #eeeeee;
+        padding: 4px;
+        border-radius: 8px;
       }
       $ img {
         height: 150px;

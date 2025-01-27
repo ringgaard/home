@@ -178,11 +178,13 @@ Disallow: /
 
 User-agent: Googlebot
 Disallow: /c/
+Disallow: /t/
 Disallow: /case/
 Disallow: /media/
 Disallow: /thumb/
 Disallow: /data/
 Allow: /
+Sitemap: https://ringgaard.com/sitemap/index.xml
 """, "text/plain")
 
 # Run HTTP server.
