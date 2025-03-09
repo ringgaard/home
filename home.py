@@ -184,7 +184,7 @@ Disallow: /media/
 Disallow: /thumb/
 Disallow: /data/
 Allow: /
-Sitemap: https://ringgaard.com/sitemap.xml
+Sitemap: https://ringgaard.com/siteindex.xml
 """, "text/plain")
 
 # Run HTTP server.
