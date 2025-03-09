@@ -184,6 +184,8 @@ Disallow: /media/
 Disallow: /thumb/
 Disallow: /data/
 Allow: /
+Allow: /kb/
+Allow: /kb/t/
 Sitemap: https://ringgaard.com/siteindex.xml
 """, "text/plain")
 
