@@ -2,6 +2,38 @@
 
 <home-section>
 
+<h2>2025</h2>
+
+<div class="cotm-grid">
+
+<home-cotm
+  time="March 2025"
+  case="1538"
+  title="Storfyrstinden"
+  description="Jutta Graae (1906-1997) was a Danish bank employee who became a member of the Danish resistance during the German occupation of Denmark in World War II."
+  image="https://drive.ringgaard.com/i/a5b7a2e21b693bc6.png">
+</home-cotm>
+
+<home-cotm
+  time="February 2025"
+  case="1533"
+  title="Hidden Figures"
+  description="African-American women working for NASA during the space program."
+  image="https://i.redd.it/u6oguaml54me1.jpeg">
+</home-cotm>
+
+
+<home-cotm
+  time="January 2025"
+  case="1539"
+  title="Annette Strøyberg"
+  description="Danish actress and model better known as Annette Vadim, the second wife of French filmmaker Roger Vadim."
+  image="https://ist1-1.filesor.com/pimpandhost.com/1/_/_/_/1/p/k/5/D/pk5D/Annette%20Vadim08-541764.jpg">
+</home-cotm>
+
+</div>
+
+
 <h2>2024</h2>
 
 <div class="cotm-grid">
@@ -74,7 +106,7 @@
   time="April 2024"
   case="1246"
   title="Frøken Danmark"
-  description="The Miss Denmark is a national Beauty pageant in Denmark. The pageant was founded in 1926, where the winners were sent to Miss Universe and other titleholders to Miss World."
+  description="Miss Denmark is a national beauty pageant in Denmark. The pageant was founded in 1926, where the winners were sent to Miss Universe and other titleholders to Miss World."
   image="https://konmuseum.dk/wp-content/uploads/Inga-Arvad.jpg">
 </home-cotm>
 
