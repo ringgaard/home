@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="May 2025"
+  case="1520"
+  title="Zodiac Killer"
+  description="The Zodiac Killer is the pseudonym of an unidentified serial killer who murdered five known victims in the San Francisco Bay Area between December 1968 and October 1969."
+  image="https://upload.wikimedia.org/wikipedia/commons/f/fc/Zodiac-Killer.jpg">
+</home-cotm>
+
+<home-cotm
   time="April 2025"
   case="1532"
   title="Yank pin-up models"
