@@ -176,6 +176,9 @@ app.page("/robots.txt",
 """User-agent: *
 Disallow: /
 
+User-agent: GPTBot
+Disallow: /
+
 User-agent: Googlebot
 Disallow: /c/
 Disallow: /t/
