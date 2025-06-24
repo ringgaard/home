@@ -282,6 +282,7 @@ export class HomeButton extends Component {
         font: inherit;
         font-weight: bold;
         padding: 7px 20px;
+        margin: 7px;
         border-radius: 32px;
         cursor: pointer;
       }
