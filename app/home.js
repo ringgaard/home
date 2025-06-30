@@ -990,7 +990,7 @@ export class HomeCotm extends Component {
         border-radius: 8px;
       }
       $ img {
-        height: 150px;
+        height: 200px;
         max-width: 300px;
       }
       $ .picture {

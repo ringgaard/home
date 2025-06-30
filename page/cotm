@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="June 2025"
+  case="1556"
+  title="Ana Dias"
+  description="Ana Dias (born 1984) is a Portuguese photographer, best known for her photography for Playboy magazine."
+  image="https://drive.ringgaard.com/i/fbb8f84055b22840.png">
+</home-cotm>
+
+<home-cotm
   time="May 2025"
   case="1520"
   title="Zodiac Killer"
