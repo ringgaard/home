@@ -1250,7 +1250,7 @@ export class TodaysBirthdays extends Component {
 
   render() {
     return html`
-      <div><b><a href="/birthdays">Today's birthdays</a></b></div>`,
+      <div><b><a href="/birthdays">Today's birthdays</a></b></div>
       ${new TopicList(this.state)}
     `;
   }
