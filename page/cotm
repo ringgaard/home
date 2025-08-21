@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="July 2025"
+  case="1524"
+  title="Koppel family"
+  description="The Koppel family is a Danish family of Polish descent with many musicians, actors, writers, and other artists."
+  image="https://imgix.billedbladet.dk/2024-03-06/design-uden-navn-16.png">
+</home-cotm>
+
+<home-cotm
   time="June 2025"
   case="1556"
   title="Ana Dias"
