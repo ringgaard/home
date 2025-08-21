@@ -3,7 +3,7 @@
 
 // Homepage components for ringgaard.com.
 
-import {Component, stylesheet} from "/common/lib/component.js";
+import {Component, stylesheet, html} from "/common/lib/component.js";
 
 const cfg = {
   sitename: "Ringgaard Research",
@@ -1249,10 +1249,10 @@ export class TodaysBirthdays extends Component {
   }
 
   render() {
-    return [
-      `<div><b><a href="/birthdays">Today's birthdays</a></b></div>`,
-      new TopicList(this.state)
-    ];
+    return html`
+      <div><b><a href="/birthdays">Today's birthdays</a></b></div>`,
+      ${new TopicList(this.state)}
+    `;
   }
 
   static stylesheet() {
