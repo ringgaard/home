@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="August 2025"
+  case="1566"
+  title="Thomas Delaney"
+  description="Danish footballer Thomas Delaney was recently featured on the Danish TV show Fortidens hemmeligheder."
+  image="https://drive.ringgaard.com/d/7a7e91366a028a77/ig-CfOS8utDguk.jpg">
+</home-cotm>
+
+<home-cotm
   time="July 2025"
   case="1524"
   title="Koppel family"
