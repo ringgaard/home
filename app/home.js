@@ -937,6 +937,17 @@ export class HomeFeedback extends Component {
         font: inherit;
         outline: 0;
       }
+      $ button {
+        background: #00A0D6;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 7px 20px;
+        margin: 7px;
+        border-radius: 32px;
+        border-width: 0;
+        cursor: pointer;
+      }
     `;
   }
 }

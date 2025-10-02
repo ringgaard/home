@@ -24,7 +24,7 @@ you are welcome to contact us.
 <textarea id="message" name="message" placeholder="Enter your message."></textarea>
 
 <div>
-<button type="submit" id="submit">Submit</button>
+<button type="submit" id="submit">Send</button>
 <span id="status"></span>
 </div>
 
@@ -50,4 +50,3 @@ you are welcome to contact us.
 </home-features>
 
 </home-section>
-

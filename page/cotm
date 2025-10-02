@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="September 2025"
+  case="1565"
+  title="Betzy og Alette"
+  description="Alette Appel havde altid vist at hun var adopteret, men hun kendte ikke hendes biologiske forældre. NRKs Ukjent arving har sammen med Adam fra Rigsarkivet løst mysteriet. Hendes gudfar, Torben Madsen, var i virkeligheden hendes biologiske far, som havde fået hende med den norske skønhedsekspert Betzy Dahl (1922-2014)."
+  image="https://drive.ringgaard.com/i/b75c9aa9aea8b3f2.png">
+</home-cotm>
+
+<home-cotm
   time="August 2025"
   case="1566"
   title="Thomas Delaney"
