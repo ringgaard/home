@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="October 2025"
+  case="1568"
+  title="Peter Frödin"
+  description="Peter Frödin (born 1964) is a Danish actor, comedian and singer."
+  image="https://drive.ringgaard.com/i/6d9c0bcba8ebe3e5.png">
+</home-cotm>
+
+<home-cotm
   time="September 2025"
   case="1565"
   title="Betzy og Alette"
