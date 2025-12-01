@@ -7,6 +7,14 @@
 <div class="cotm-grid">
 
 <home-cotm
+  time="November 2025"
+  case="1572"
+  title="Jack the Stripper"
+  description="Jack the Stripper is the nickname of an unidentified serial killer responsible for what became known as the Hammersmith 'nude murders' between 1964 and 1965 in London."
+  image="https://upload.wikimedia.org/wikipedia/en/7/7e/Hammersmith_nude_murders_suspect_identikit.png">
+</home-cotm>
+
+<home-cotm
   time="October 2025"
   case="1568"
   title="Peter Frödin"
